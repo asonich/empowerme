@@ -1,0 +1,43 @@
+@import url('https://fonts.cdnfonts.com/css/gotham?styles=17581,17582,17585,17587,17579,17588');
+
+.page-title{
+    font-size: rem(36);
+    font-weight: 700;
+    line-height: rem(44);
+
+    @include tablet {
+        font-size: rem(60);
+        line-height: rem(72);
+    }
+
+}
+.page-description{
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: rem(28);
+
+    @include tablet {
+        font-size: rem(30);
+        line-height: rem(38); 
+    }
+}
+.section-title{
+    text-align: center;
+    font-weight: 700;
+    font-size: rem(30);
+    line-height: rem(38);
+    @include tablet {
+        font-size: rem(48);
+        line-height: rem(60px);
+        margin-bottom: 48px;
+    }
+}
+.section-description{
+    text-align: center;
+    font-size: rem(18);
+    line-height: rem(28);
+    @include tablet {
+        font-size: rem(20);
+        line-height: rem(30);
+    }
+}

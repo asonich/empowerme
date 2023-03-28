@@ -1,0 +1,38 @@
+header{
+    width: 100%;
+    @include tablet{
+        background-image: url(../../assets/images/header-bg.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    @include laptop{ 
+        padding: 20px 80px;
+    }
+    .container{
+        justify-content: space-between;
+        align-items: center;
+        .logo-col{
+            width: 20%;
+            .site-logo{
+                width: 100%;
+                max-width: 136px;
+            }
+        }
+        .navigation{
+            display: flex;
+            align-items: center;
+            width: 70%;
+            justify-content: space-between;
+            nav{
+                .nav-link{
+                    margin-right: 16px;
+                    font-size: rem(16);
+                    line-height: rem(24);
+                    font-weight: 700;
+                    color:$white;
+                }
+            }
+        }
+    }
+}
+    

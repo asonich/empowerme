@@ -1,0 +1,36 @@
+.title-only-hero {
+    width:100%;
+    position:relative;
+    padding: 64px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include tablet {
+        padding: 96px 0;
+    }
+    .container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+
+        .section-title,
+        .section-description {
+            color:$white;
+        }
+    }
+    
+}
+.short-right{
+    background-image: url(../../assets/images/title-only-short-right.svg);
+}
+.short-left{
+    background-image: url(../../assets/images/title-only-short-left.png);
+}
+.long-right{
+    background-image: url(../../assets/images/title-only-long-right.svg);
+}
+.long-left{
+    background-image: url(../../assets/images/left-long.png);
+}
+.centered{
+    background-image: url(../../assets/images/title-only-centered.png);
+}

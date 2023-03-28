@@ -1,0 +1,376 @@
+@import url("https://fonts.cdnfonts.com/css/gotham?styles=17581,17582,17585,17587,17579,17588");
+html, body, div, ul, ol, li, a, img, span, p, b, input, label {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Gotham', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+/* Colors */
+.container {
+	position: relative;
+	width: 100%;
+}
+
+.flex {
+	display: flex;
+}
+
+.grid {
+	display: grid;
+}
+
+.page-title {
+	font-size: 2.25rem;
+	font-weight: 700;
+	line-height: 2.75rem;
+}
+
+@media (min-width: 768px) {
+	.page-title {
+		font-size: 3.75rem;
+		line-height: 4.5rem;
+	}
+}
+
+.page-description {
+	font-weight: 400;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+}
+
+@media (min-width: 768px) {
+	.page-description {
+		font-size: 1.875rem;
+		line-height: 2.375rem;
+	}
+}
+
+.section-title {
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.875rem;
+	line-height: 2.375rem;
+}
+
+@media (min-width: 768px) {
+	.section-title {
+		font-size: 3rem;
+		line-height: 3.75pxrem;
+		margin-bottom: 48px;
+	}
+}
+
+.section-description {
+	text-align: center;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+}
+
+@media (min-width: 768px) {
+	.section-description {
+		font-size: 1.25rem;
+		line-height: 1.875rem;
+	}
+}
+
+.btn {
+	font-weight: 700;
+	border-radius: 40px;
+	border: 1px solid;
+}
+
+.btn__sm {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	padding: 8px 14px;
+}
+
+.btn__md {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	padding: 10px 16px;
+}
+
+.btn.lg {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	padding: 10px 24px;
+}
+
+.btn.xl {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	padding: 12px 20px;
+}
+
+.btn.xxl {
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	padding: 16px 28px;
+}
+
+.primary {
+	background-color: #006098;
+	border-color: #006098;
+	color: #ffffff;
+}
+
+.primary:hover {
+	background-color: #088AB2;
+}
+
+.primary:focus {
+	border: 1px solid #006098;
+	box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #F4EBFF;
+}
+
+.primary:disabled {
+	background-color: #CCDFEA;
+}
+
+.secondary {
+	background-color: #ffffff;
+	border-color: #D0D5DD;
+	color: #344054;
+}
+
+.secondary:hover {
+	background-color: #F9FAFB;
+}
+
+.secondary:focus {
+	border: 1px solid #006098;
+	box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #F2F4F7;
+}
+
+.secondary:disabled {
+	border-color: #EAECF0;
+	color: #D0D5DD;
+}
+
+header {
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	header {
+		background-image: url(../../assets/images/header-bg.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+@media (min-width: 993px) {
+	header {
+		padding: 20px 80px;
+	}
+}
+
+header .container {
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .container .logo-col {
+	width: 20%;
+}
+
+header .container .logo-col .site-logo {
+	width: 100%;
+	max-width: 136px;
+}
+
+header .container .navigation {
+	display: flex;
+	align-items: center;
+	width: 70%;
+	justify-content: space-between;
+}
+
+header .container .navigation nav .nav-link {
+	margin-right: 16px;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.title-only-hero {
+	width: 100%;
+	position: relative;
+	padding: 64px 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+	.title-only-hero {
+		padding: 96px 0;
+	}
+}
+
+.title-only-hero .container {
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.title-only-hero .container .section-title,
+.title-only-hero .container .section-description {
+	color: #ffffff;
+}
+
+.short-right {
+	background-image: url(../../assets/images/title-only-short-right.svg);
+}
+
+.short-left {
+	background-image: url(../../assets/images/title-only-short-left.png);
+}
+
+.long-right {
+	background-image: url(../../assets/images/title-only-long-right.svg);
+}
+
+.long-left {
+	background-image: url(../../assets/images/left-long.png);
+}
+
+.centered {
+	background-image: url(../../assets/images/title-only-centered.png);
+}
+
+.leaders-block .container {
+	width: 100;
+	max-width: 1280px;
+	padding: 0 24px;
+	margin: 0 auto;
+}
+
+@media (min-width: 993px) {
+	.leaders-block .container {
+		padding: 0;
+	}
+}
+
+.leaders-block .container .section-title {
+	margin-top: 96px;
+	color: #006098;
+	text-align: center;
+}
+
+.leaders-block .container .leaders {
+	grid-template-columns: 1fr;
+	row-gap: 32px;
+}
+
+@media (min-width: 768px) {
+	.leaders-block .container .leaders {
+		column-gap: 32px;
+		row-gap: 64px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.leaders-block .container .leaders .leader-col {
+	display: flex;
+	padding: 16px;
+	box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+	border-radius: 24px;
+	flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+	.leaders-block .container .leaders .leader-col {
+		flex-wrap: nowrap;
+	}
+}
+
+.leaders-block .container .leaders .leader-col .leader-photo {
+	max-width: 295px;
+	border-radius: 16px;
+	margin-bottom: 26px;
+	max-height: 280px;
+	aspect-ratio: 1/1;
+}
+
+@media (min-width: 768px) {
+	.leaders-block .container .leaders .leader-col .leader-photo {
+		margin-bottom: 0px;
+		max-width: 240px;
+		height: 295px;
+		margin-right: 26px;
+	}
+}
+
+.leaders-block .container .leaders .leader-col .leader-info {
+	color: #006098;
+}
+
+.leaders-block .container .leaders .leader-col .leader-info .leader-name {
+	margin-bottom: 4px;
+	font-weight: 700;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+}
+
+@media (min-width: 993px) {
+	.leaders-block .container .leaders .leader-col .leader-info .leader-name {
+		margin-bottom: 8px;
+		font-size: 1.875rem;
+		line-height: 2.375rem;
+	}
+}
+
+.leaders-block .container .leaders .leader-col .leader-info .leader-position {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin-bottom: 16px;
+}
+
+@media (min-width: 993px) {
+	.leaders-block .container .leaders .leader-col .leader-info .leader-position {
+		font-weight: 500;
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+	}
+}
+
+.leaders-block .container .leaders .leader-col .leader-info .leader-description {
+	color: #000000;
+	line-height: 1.5rem;
+	margin-bottom: 24px;
+}
+
+.leaders-block .container .leaders .leader-col .leader-info .more {
+	text-transform: capitalize;
+	color: #006098;
+	font-weight: 700;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+
+/*# sourceMappingURL=style.css.map */
