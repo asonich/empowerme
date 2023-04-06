@@ -1,0 +1,187 @@
+footer{
+    width: 100%;
+    position: relative;
+    top: 24px;
+    .footer-cta{
+        .upper-block{
+            width: 100%;
+            min-height: 118px;
+            background-image: url(../../assets/images/footer-upper-mob.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-y: bottom;
+            @include tablet {
+                min-height: 188px;
+                background-image: url(../../assets/images/footer-upper-bg.svg);
+            }
+            @include full-width {
+                min-height: 196px;
+            }
+            @include full-width-xl{
+                min-height: 236px;
+            }
+        }
+        .cta-block{
+            background-color: #51baea;
+            .cta-heading{
+                font-size: rem(30);
+                color:$white;
+                text-align: center;
+                @include tablet {
+                    font-size: rem(60);
+                    max-width: 1088px;
+                    margin: 0 auto;
+                    
+                }
+            }
+            .secondary{
+                margin: 0 auto;
+                margin-top: 32px;
+                display: block;
+                width:157px;
+                text-align: center; 
+            }
+            
+        }
+        .bottom-block{
+            width: 100%;
+            min-height: 304px;
+            background-image: url(../../assets/images/footer-bottom-mob.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-y: bottom;
+            
+            @include tablet{
+                min-height: 151px;
+                background-image: url(../../assets/images/footer-bottom-bg.svg);
+            }
+            @include full-width {
+                min-height: 164px;
+            }
+            @include full-width-xl{
+                min-height: 195px;
+            }
+        }
+    } 
+    .without {
+        .upper-block{
+            @include tablet{
+                min-height: 80px;
+                background-image: url(../../assets/images/footer-upper-bg-2.svg);
+            }
+            @include full-width {
+                min-height: 93px;
+            }
+           
+        }
+        .cta-block{
+            min-height: 434px; 
+            background-image: url(../../assets/images/footer-without-cta.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-y: bottom;
+            @include full-width {
+                min-height: 493px;
+            }
+            @include full-width-xl{
+                min-height: 580px;
+            }
+            .cta-heading,.secondary{
+                display: none;
+            }
+        }
+        .bottom-block{
+            display: none;
+        }
+    }
+    .main-footer{
+        background-color: $blue-1;
+        padding-bottom: 64px;
+        .container{
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+            .upper-footer{
+                margin-bottom: 104px;
+            }
+            .bottom-footer{
+                justify-content: space-between;
+                flex-wrap: wrap;
+                @include tablet{
+                    flex-wrap: nowrap;
+                }
+                .footer-navigation{
+                    max-width: 700px;
+                    grid-template-columns: repeat(2,1fr);
+                    column-gap: 30px;
+                    @include tablet{
+                        grid-template-columns: repeat(5,1fr);
+                    }
+                    .nav-col{
+                        .nav-heading{ 
+                            color:$blue-8;
+                            font-size: rem(14);
+                            font-weight: 700;
+                        }
+                        .nav-items{
+                            margin-top: 16px;
+                            
+                            .nav-item{
+                                color:$blue-3;
+                                font-weight: 700;
+                                line-height: rem(20);
+                                padding-bottom: 12px;
+                                display: block;
+                            } 
+                        }
+                    }
+                }
+                .footer-additional-links{
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    max-width: 434px;
+                    .social-links{
+                        display: flex;
+                        justify-content: center;
+                        margin-bottom: 32px;
+                        @include tablet{
+                            justify-content: flex-end;
+                        }
+                        .social-link{
+                            margin-right: 24px;
+                            &:last-of-type{
+                                margin: 0;
+                            }
+                        }
+                    }
+                    .additional-pages{
+                        margin-bottom: 16px;
+                        display: flex;
+                        justify-content: flex-end;
+                        .additional-link{
+                            color:$white;
+                            font-size: rem(12);
+                            padding: 0 10px;
+                            border-right: 1px solid;
+                            &:last-of-type{
+                                border:none;
+                                padding-right: 0;
+                            }
+                            
+                        }
+                    }
+                    .footer-info{
+                        justify-content: flex-end;
+                        a,p{
+                            color:$white;
+                            font-size: rem(12);
+                        }
+                        a{
+                            padding-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 

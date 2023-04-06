@@ -1,0 +1,39 @@
+.features{
+    padding: 0 16px;
+    @include tablet{
+        padding: 96px 0;
+    }
+    
+    .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include tablet{
+            flex-wrap: nowrap;
+        }
+        .text-col{
+            max-width: 624px;
+            padding: 0 32px;
+            p{
+                text-align: left;
+            }
+           .section-title{
+                color:$blue-1;
+           }
+        }
+        .features-image{
+            width: 100%;
+            max-width: 528px;
+
+        }
+    }
+    .left {
+        flex-direction: row;
+    }
+    .right{
+        flex-direction: row-reverse;
+    }
+}  
