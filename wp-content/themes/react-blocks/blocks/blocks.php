@@ -26,4 +26,12 @@ $blocks = [
         'category'        => 'happen-blocks',
         'icon'            => 'block-default',
     ],
+    'features_block' => [
+        'name'            => 'features_block',
+        'title'           => ('Features Block title'),
+        'description'     => ('Features Block description'),
+        'render_callback' => 'render_acf_block_callback',
+        'category'        => 'happen-blocks',
+        'icon'            => 'block-default',
+    ],
 ];
