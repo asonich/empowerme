@@ -42,6 +42,11 @@
 					<a href="" class="btn btn__md secondary">Community Login</a>
 					<a href="" class="btn btn__md primary">Partner With Us</a>
 				</div>
+				<div class="burger-button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 			</div>
 		</div>
 	</header><!-- #masthead -->
