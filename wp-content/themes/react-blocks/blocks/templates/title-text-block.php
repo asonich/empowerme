@@ -18,7 +18,7 @@ if ( ! empty( $block['anchor'] ) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$class_name = 'title-only-hero';
+$class_name = 'title-text-block';
 if ( ! empty( $block['className'] ) ) {
     $class_name .= ' ' . $block['className'];
 }
@@ -31,10 +31,10 @@ $description = get_field( 'description' ) ?: 'Your description here...';
 
 ?>
 
-<div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); if ($background) echo " ".$background; ?>">
+<div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); ?>">
     <div class="container">
-        <div class="page-title" ><?php echo esc_html( $title ); ?></div>
-        <div class="page-description"><?php echo esc_html( $description ); ?></div>
+        <div class="section-title" ><?php echo esc_html( $title ); ?></div>
+        <div class="section-description"><?php echo esc_html( $description ); ?></div>
     </div>
     
 </div>

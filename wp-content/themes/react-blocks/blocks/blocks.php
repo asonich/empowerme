@@ -18,6 +18,22 @@ $blocks = [
         'category'        => 'happen-blocks',
         'icon'            => 'block-default',
     ],
+    'title_text_block' => [
+        'name'            => 'title_text_block',
+        'title'           => ('Title Text '),
+        'description'     => ('Description'),
+        'render_callback' => 'render_acf_block_callback',
+        'category'        => 'happen-blocks',
+        'icon'            => 'block-default',
+    ],
+    'title_video_hero' => [ 
+        'name'            => 'title_video_hero',
+        'title'           => ('Title Video Hero '),
+        'description'     => ('Description'),
+        'render_callback' => 'render_acf_block_callback',
+        'category'        => 'happen-blocks',
+        'icon'            => 'block-default',
+    ],
     'leaders_block' => [
         'name'            => 'leaders_block',
         'title'           => ('Leaders Block'),
@@ -34,4 +50,13 @@ $blocks = [
         'category'        => 'happen-blocks',
         'icon'            => 'block-default',
     ],
+    'eyebrow_text_block' => [
+        'name'            => 'eyebrow_text_block',
+        'title'           => ('Eyebrow text block'),
+        'description'     => ('Eyebrow text description'),
+        'render_callback' => 'render_acf_block_callback',
+        'category'        => 'happen-blocks',
+        'icon'            => 'block-default',
+    ],
+
 ];

@@ -35,18 +35,45 @@
 			<div class="navigation">
 				<nav class="menu">
 				<?php foreach( $nav as $link) {?>
-					<a href="<?php echo $link['parent_link']['url']?>" class="nav-link"><?php echo $link['parent_link']['title']?></a>
+					<div class="nav-item">
+						<a href="<?php echo $link['parent_link']['url']?>" class="nav-link"><?php echo $link['parent_link']['title']?></a>
+						
+						<?php if ($link['sub_links']) { ?>
+							<span class="sub-menu-btn"></span>
+							<div class="sub-links">
+								<?php foreach( $link['sub_links'] as $sub_link) {?>
+									<div class="nav-item">
+										<a href="<?php echo $sub_link['link']['url']?>" class="nav-link"><?php echo $sub_link['link']['title']?></a>
+											<?php if ($sub_link['sub_links']) { ?>
+												<span class="sub-2">❯</span>
+												<div class="sub-sub-links">
+													<?php foreach( $sub_link['sub_links'] as $sub_sub_link) {?>
+														
+															<a href="<?php echo $sub_sub_link['link']['url']?>" class="nav-link"><?php echo $sub_sub_link['link']['title']?></a>
+														
+													<?php } ?>	
+												</div>
+											<?php } ?>
+									</div>
+									
+								<?php } ?>
+							</div>
+							
+						<?php } ?>
+					</div>
+					
 				<?php };?>	
 				</nav>
 				<div class="button-col">
 					<a href="" class="btn btn__md secondary">Community Login</a>
 					<a href="" class="btn btn__md primary">Partner With Us</a>
 				</div>
-				<div class="burger-button">
+				
+			</div>
+			<div class="burger-button">
 					<span></span>
 					<span></span>
 					<span></span>
-				</div>
 			</div>
 		</div>
 	</header><!-- #masthead -->

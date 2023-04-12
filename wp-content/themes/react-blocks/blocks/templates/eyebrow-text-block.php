@@ -1,6 +1,6 @@
 <?php
 /**
- * Simple Hero Block Template.
+ * Eyebrow Block Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -9,7 +9,7 @@
  *          This is either the post ID currently being displayed inside a query loop,
  *          or the post ID of the post hosting this block.
  * @param   array $context The context provided to the block by the post or it's parent block.
- */
+ */ 
 
 // Support custom "anchor" values.
 $anchor = '';
@@ -18,23 +18,22 @@ if ( ! empty( $block['anchor'] ) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$class_name = 'title-only-hero';
+$class_name = 'eyebrow-text';
 if ( ! empty( $block['className'] ) ) {
     $class_name .= ' ' . $block['className'];
 }
 
 
 // Load values and assign defaults.
-$background = get_field( 'background' );
-$title = get_field( 'title' ) ?: 'Your title here...';
-$description = get_field( 'description' ) ?: 'Your description here...';
+
+
+$eyebrow = get_field( 'text' ) ?: 'Your text here...';
 
 ?>
 
-<div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); if ($background) echo " ".$background; ?>">
+<div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); ?>">
     <div class="container">
-        <div class="page-title" ><?php echo esc_html( $title ); ?></div>
-        <div class="page-description"><?php echo esc_html( $description ); ?></div>
+            <p class="eyebrow"><?php echo $eyebrow ?> </p>
     </div>
     
 </div>
