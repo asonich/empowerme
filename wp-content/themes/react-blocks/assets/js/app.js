@@ -1,6 +1,18 @@
 console.log('Worked');
 const toggles = document.querySelectorAll(".sub-menu-btn");
 const toggles2 = document.querySelectorAll(".sub-2");
+const open_menu = document.getElementById('open');
+const close_menu = document.getElementById('close');
+let header = document.getElementById('masthead');
+open_menu.addEventListener("click",()=>{
+  header.classList.add("open")
+});
+close_menu.addEventListener("click",()=>{
+  header.classList.remove("open");
+});  
+
+
+
 function toggleAccord(e) {
   e.preventDefault();
   if (this.parentNode.classList.contains("active")) {

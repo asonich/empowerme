@@ -8,6 +8,7 @@
     @include tablet {
         font-size: rem(60);
         line-height: rem(72);
+        margin-bottom: 24px;
     }
 
 }
@@ -26,6 +27,8 @@
     font-weight: 700;
     font-size: rem(30);
     line-height: rem(38);
+    color: $blue-1;
+    margin: 0 auto;
     @include tablet {
         font-size: rem(48);
         line-height: rem(60px);
@@ -39,5 +42,25 @@
     @include tablet {
         font-size: rem(20);
         line-height: rem(30);
+    }
+}
+.eyebrow{
+    max-width: 1056px;
+    font-size: rem(18);
+    line-height: rem(28);
+    color: $blue-1;
+    margin: 0 auto;
+    display: block; 
+    b{
+      color: $blue-9;
+    }
+ 
+    @include tablet {
+        font-size: rem(20);
+        line-height: rem(30);
+    }
+    @include laptop {
+        font-size: rem(48);
+        line-height: rem(60);
     }
 }

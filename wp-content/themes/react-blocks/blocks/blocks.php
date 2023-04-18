@@ -58,5 +58,30 @@ $blocks = [
         'category'        => 'happen-blocks',
         'icon'            => 'block-default',
     ],
+    'cols_info_block' => [
+        'name'            => 'cols_info_block',
+        'title'           => ('Cols Info Title'),
+        'description'     => ('Cols Info description'),
+        'render_callback' => 'render_acf_block_callback',
+        'category'        => 'happen-blocks',
+        'icon'            => 'block-default',
+    ],
+    'eyebrow_video_text_block' => [
+        'name'            => 'eyebrow_video_text_block',
+        'title'           => ('Eyebrow Video text block'),
+        'description'     => ('Eyebrow Video text description'),
+        'render_callback' => 'render_acf_block_callback',
+        'category'        => 'happen-blocks',
+        'icon'            => 'block-default',
+    ],
+    'testimonials_block' => [
+        'name'            => 'testimonials_block',
+        'title'           => ('Testimonials block'),
+        'description'     => ('Testimonials description'),
+        'render_callback' => 'render_acf_block_callback',
+        'category'        => 'happen-blocks',
+        'icon'            => 'block-default',
+    ],
+    
 
 ];
