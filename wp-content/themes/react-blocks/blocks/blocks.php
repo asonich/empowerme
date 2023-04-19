@@ -82,6 +82,24 @@ $blocks = [
         'category'        => 'happen-blocks',
         'icon'            => 'block-default',
     ],
+    'staggered_cols_info_block' => [
+        'name'            => 'staggered_cols_info_block',
+        'title'           => ('Staggered Cols Info Title'),
+        'description'     => ('Staggered Cols Info description'),
+        'render_callback' => 'render_acf_block_callback',
+        'category'        => 'happen-blocks', 
+        'icon'            => 'block-default',
+    ],
+    'related_blog_posts_block' => [
+        'name'            => 'related_blog_posts_block',
+        'title'           => ('Related Blog Posts Title'),
+        'description'     => ('Related Blog Posts description'),
+        'render_callback' => 'render_acf_block_callback',
+        'category'        => 'happen-blocks',
+        'icon'            => 'block-default',
+    ],
+
+
     
 
 ];

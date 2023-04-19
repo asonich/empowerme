@@ -22,6 +22,14 @@
         line-height: rem(38); 
     }
 }
+.section-pre-title{
+    text-align: center;
+    font-size: rem(16);
+    font-weight: 700;
+    line-height: rem(24);
+    color:$blue-1;
+    margin-bottom: 12px;
+}
 .section-title{
     text-align: center;
     font-weight: 700;
@@ -32,7 +40,7 @@
     @include tablet {
         font-size: rem(48);
         line-height: rem(60px);
-        margin-bottom: 48px;
+        margin-bottom: 20px;
     }
 }
 .section-description{

@@ -35,15 +35,18 @@ $eyebrow = get_field('eyebrow');
 <?php if ($cols): ?> 
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); if ($cols_setup) echo " ".$cols_setup; ?>">
     <div class="container">
-    <?php if ($title){ ?>
-        <div class="section-title" ><?php echo esc_html( $title ); ?></div>
-    <?php } ?>
-    <?php if ($description){ ?>
-        <div class="section-description"><?php echo esc_html( $description ); ?></div>
-        <?php } ?> 
-    <?php if ($eyebrow){ ?>
-        <div class="eyebrow"><?php echo  $eyebrow; ?></div>
-    <?php } ?>        
+        <div class="section-heading-block">
+            <?php if ($title){ ?>
+                <div class="section-title" ><?php echo esc_html( $title ); ?></div>
+            <?php } ?>
+            <?php if ($description){ ?>
+                <div class="section-description"><?php echo esc_html( $description ); ?></div>
+            <?php } ?> 
+            <?php if ($eyebrow){ ?>
+                <div class="eyebrow"><?php echo  $eyebrow; ?></div>
+            <?php } ?>      
+        </div>  
+      
         <div class="cols grid <?php if ($cols_setup) echo " ".$cols_setup;?> <?php if ($cols_style) echo " ".$cols_style;?>">
         <?php foreach ($cols as $col) {?>
             <div class="col">
