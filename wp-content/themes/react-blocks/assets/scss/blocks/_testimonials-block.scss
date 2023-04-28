@@ -3,7 +3,8 @@
     padding: 96px 0;
     .container{
         .section-title{
-            max-width: 773px;  
+            max-width: 773px;
+            line-height: rem(60);  
         }
         .testimonial{
             border-radius: 24px;
@@ -44,6 +45,7 @@
                     color: $white;
                     z-index: 2;
                     position: relative;
+                    margin-bottom: 32px;
                     @include desktop{
                         font-size: rem(24);
                         line-height: rem(32);
@@ -53,6 +55,18 @@
                     }
                    
                     
+                }
+                .author-name{
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: $white;
+                }
+                .author-info{
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: $white;
                 }
                 
             }

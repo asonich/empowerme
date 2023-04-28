@@ -30,6 +30,7 @@ $pre_title = get_field('pre_title');
 $title = get_field( 'title' ) ?: 'Your title here...';
 $description = get_field( 'description' ) ?: 'Your description here...';
 $posts = get_field('related_posts');
+
 ?>
 
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); ?>">
@@ -48,9 +49,11 @@ $posts = get_field('related_posts');
                 <div class="post-info">
                     <p class="post-title"><?php echo (get_the_title($post)); ?></p>
                     <p class="post-content"><?php echo get_the_excerpt($post)?></p>
-                    <a href="" class="post-link"></a>
+                    
                 </div>
-               
+                <div class="post-navigation">
+                    <a href="<?php get_post_permalink($post); ?>" class="post-link">Read More</a>
+                </div>
             </div>
          <?php } ?>   
         </div>

@@ -4,7 +4,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     @include tablet {
-        padding: 96px 0;
+        padding: 96px 0; 
     }
     @include full-width{
         padding: 111px 0;

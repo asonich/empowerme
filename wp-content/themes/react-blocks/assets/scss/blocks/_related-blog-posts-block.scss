@@ -2,11 +2,17 @@
     width:100%;
     padding: 96px 0;
     .container{
-        .section-heading-block{
-            
-        }
+        
+         
         .posts{
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: 1fr;
+            @include tablet{
+                grid-template-columns: repeat(2,1fr);
+            }
+            @include laptop{
+                grid-template-columns: repeat(3,1fr);
+            }
+            
             padding: 0 32px;
             column-gap: 32px;
             row-gap: 32px;

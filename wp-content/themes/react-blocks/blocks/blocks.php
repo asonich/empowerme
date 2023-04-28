@@ -98,6 +98,15 @@ $blocks = [
         'category'        => 'happen-blocks',
         'icon'            => 'block-default',
     ],
+    'big_features_block' => [
+        'name'            => 'big_features_block',
+        'title'           => ('Big Features  Title'),
+        'description'     => ('Big Features description'),
+        'render_callback' => 'render_acf_block_callback',
+        'category'        => 'happen-blocks',
+        'icon'            => 'block-default',
+    ],
+    
 
 
     

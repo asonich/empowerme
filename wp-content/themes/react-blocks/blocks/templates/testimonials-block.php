@@ -31,6 +31,8 @@ $description = get_field( 'description' );
 $testimonial_image = get_field('testimonial_image');
 $mobile_image = get_field('mobile_image');
 $testimonial_text = get_field('testimonial_text');
+$author = get_field('author_name');
+$author_title = get_field('author_info');
 ?>
 <?php if ($testimonial_text): ?> 
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); ?>">
@@ -44,6 +46,8 @@ $testimonial_text = get_field('testimonial_text');
         <div class="testimonial flex <?php if ($alignment) echo " ".$alignment; ?>">
             <div class="testimonial-col">
                 <p class="testimonial-info"><?php echo $testimonial_text; ?></p>
+                <p class="author-name"><?php echo $author; ?></p>
+                <p class="author-info"><?php echo $author_title; ?></p>
             </div>
            
             <img class="testimonial-image" src="<?php echo $testimonial_image['url']?>" alt="<?php echo $testimonial_image['alt']?>">
