@@ -40,23 +40,23 @@ $posts = get_field('related_posts');
         <p class="section-title" ><?php echo esc_html( $title ); ?></p>
         <p class="section-description"><?php echo esc_html( $description ); ?></p>
         </div>
-       
+
         <div class="posts grid">
-         <?php  foreach ($posts as $post) {?> 
-             
+         <?php  foreach ($posts as $post) {?>
+
             <div class="post">
                 <?php echo (get_the_post_thumbnail($post));?>
                 <div class="post-info">
                     <p class="post-title"><?php echo (get_the_title($post)); ?></p>
-                    <p class="post-content"><?php echo get_the_excerpt($post)?></p>
-                    
+                    <p class="single-post-content "><?php echo get_the_excerpt($post)?></p>
+
                 </div>
-                <div class="post-navigation">
-                    <a href="<?php get_post_permalink($post); ?>" class="post-link">Read More</a>
-                </div>
+<!--                <div class="post-navigation">-->
+<!--                    <a href="--><?php //get_post_permalink($post); ?><!--" class="post-link" >Read More</a>-->
+<!--                </div>-->
             </div>
-         <?php } ?>   
+         <?php } ?>
         </div>
     </div>
-    
+
 </div>
