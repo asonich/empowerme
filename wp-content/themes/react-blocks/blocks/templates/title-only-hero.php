@@ -26,15 +26,19 @@ if ( ! empty( $block['className'] ) ) {
 
 // Load values and assign defaults.
 $background = get_field( 'background' );
-$title = get_field( 'title' ) ?: 'Your title here...';
-$description = get_field( 'description' ) ?: 'Your description here...';
+$title = get_field( 'title' ) ;
+$description = get_field( 'description' ) ;
 
 ?>
 
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); if ($background) echo " ".$background; ?>">
     <div class="container">
-        <div class="page-title" ><?php echo esc_html( $title ); ?></div>
-        <div class="page-description"><?php echo esc_html( $description ); ?></div>
+        <?php if ($title) { ?>
+            <div class="page-title" ><?php echo esc_html( $title ); ?></div>
+        <?php } ?>
+        <?php if ($description) { ?>
+            <div class="page-description"><?php echo esc_html( $description ); ?></div>
+        <?php } ?>
     </div>
     
 </div>

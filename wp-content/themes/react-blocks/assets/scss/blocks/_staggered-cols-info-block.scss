@@ -64,13 +64,14 @@
                     margin-top: 20px;
                     font-size: rem(16);
                     line-height: rem(24);
-                    color: $blue-1;
+                    color: $white;
+                    background-color: $blue-9;
                     font-weight: 700;
-                    &::after{
-                        content: '🡢';
-                        margin-left: 8px;
-                        
-                    }
+                    width: max-content;
+                    padding: 10px 24px;
+                    border-radius: 40px;
+
+                    
                 }
             }
             .left-col,.right-col{

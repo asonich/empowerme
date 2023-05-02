@@ -15,7 +15,8 @@
                 width:100%;
                 border-radius: 16px;
                 margin-bottom: 30px;
-
+                aspect-ratio: 1/1;
+                object-fit: cover;
                 @include laptop{
                     margin-bottom: 0px;
                     max-width: 528px;
@@ -64,5 +65,11 @@
                 }
             }
         }
+    }
+    .right{
+        .features-content{
+            flex-direction: row-reverse;
+        }
+       
     }
 }  

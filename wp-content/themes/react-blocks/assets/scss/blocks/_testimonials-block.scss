@@ -6,6 +6,10 @@
             max-width: 773px;
             line-height: rem(60);  
         }
+        .section-description{
+            margin-bottom: 48px;
+            color:#475467;
+        }
         .testimonial{
             border-radius: 24px;
             flex-wrap: wrap;
@@ -61,6 +65,7 @@
                     font-size: 18px;
                     line-height: 28px;
                     color: $white;
+                    margin-bottom: 6px;
                 }
                 .author-info{
                     font-weight: 500;

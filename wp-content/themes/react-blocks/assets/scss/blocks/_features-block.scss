@@ -26,7 +26,11 @@
         }
         .features-image{
             width: 100%;
-            max-width: 528px;
+            max-width: 461px;
+            @include laptop {
+                max-width: 528px;
+            }
+            border-radius: 16px;
 
         }
     }
