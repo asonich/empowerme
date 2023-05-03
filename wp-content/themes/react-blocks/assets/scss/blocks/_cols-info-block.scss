@@ -62,10 +62,16 @@
                     color: $blue-1;
                     font-weight: 700;
                     &::after{
-                        content: '🡢';
+                        content: '';
                         margin-left: 8px;
-                        
-                    }
+                        width: 11.67px;
+                        height: 11.67px;
+                        display: inline-block;
+                        background-image: url(../../assets/images/icon-arrow.svg);
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    } 
                 }
             }
 
