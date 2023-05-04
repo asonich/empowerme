@@ -49,10 +49,9 @@ $posts = get_field('related_posts');
                 <div class="post-info">
                     <p class="post-title"><?php echo (get_the_title($post)); ?></p>
                     <p class="post-content-block"><?php echo get_the_excerpt($post)?></p>
-                    
                 </div>
                 <div class="post-navigation">
-                    <a href="<?php get_post_permalink($post); ?>" class="post-link">Read More</a>
+                    <a href="<?php get_post_permalink($post);  ?>" target="_blank" class="post-link">Read More</a>
                 </div>
             </div>
          <?php } ?>   

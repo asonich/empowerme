@@ -27,33 +27,33 @@
     
 }
 .short-right{
-    background-image: url(../../assets/images/small-hero-section-bg-3-mobile.svg);
+    background-image: url("../../assets/images/small-hero-section-bg-3-mobile.svg");
     @include tablet{
-        background-image: url(../../assets/images/small-hero-section-bg-3.svg);
+        background-image: url("../../assets/images/small-hero-section-bg-3.svg");
     }
    
 }
 .short-left{
-    background-image: url(../../assets/images/small-hero-section-bg-1-mobile.svg);
+    background-image: url("../../assets/images/small-hero-section-bg-1-mobile.svg");
     @include tablet{
-        background-image: url(../../assets/images/small-hero-section-bg-1.svg);
+        background-image: url("../../assets/images/small-hero-section-bg-1.svg");
     } 
 }
 .long-right{
-    background-image: url(../../assets/images/small-hero-section-bg-4-mobile.svg);
+    background-image: url("../../assets/images/small-hero-section-bg-4-mobile.svg");
     @include tablet{
-        background-image: url(../../assets/images/small-hero-section-bg-4.svg);
+        background-image: url("../../assets/images/small-hero-section-bg-4.svg");
     }
 }
 .long-left{
-    background-image: url(../../assets/images/small-hero-section-bg-2-mobile.svg);
+    background-image: url("../../assets/images/small-hero-section-bg-2-mobile.svg");
     @include tablet{
-        background-image: url(../../assets/images/small-hero-section-bg-2.svg);
+        background-image: url("../../assets/images/small-hero-section-bg-2.svg");
     }
 }
 .centered{
-    background-image: url(../../assets/images/small-hero-section-bg-5-mobile.svg);
+    background-image: url("../../assets/images/small-hero-section-bg-5-mobile.svg");
     @include tablet{
-        background-image: url(../../assets/images/small-hero-section-bg-5.svg);
+        background-image: url("../../assets/images/small-hero-section-bg-5.svg");
     }
 } 

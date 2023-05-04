@@ -65,7 +65,7 @@ $eyebrow = get_field('eyebrow');
                             <?php } ?>
                             </div>
                             <?php if ($col['link']){ ?>
-                                <a href="<?php echo $col['link']['url'] ?>" class="col-link"><?php echo $col['link']['title'] ?></a>
+                                <a href="<?php echo $col['link']['url'] ?>" class="col-link" target="<?php if ($col['link']['target']){ echo $col['link']['target']; } else { echo '_self';} ?>"><?php echo $col['link']['title'] ?></a>
                             <?php } ?>
                         </div>
                     <?php } ?>   
@@ -87,7 +87,7 @@ $eyebrow = get_field('eyebrow');
                                 <?php } ?>
                                 </div>
                                 <?php if ($col['link']){ ?>
-                                    <a href="<?php echo $col['link']['url'] ?>" class="col-link"><?php echo $col['link']['title'] ?></a>
+                                    <a href="<?php echo $col['link']['url'] ?>" class="col-link" target="<?php if ($col['link']['target']){ echo $col['link']['target']; } else { echo '_self';} ?>"><?php echo $col['link']['title'] ?></a>
                                 <?php } ?>
                             </div>
                         <?php } ?>   

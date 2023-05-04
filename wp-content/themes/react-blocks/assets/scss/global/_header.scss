@@ -49,7 +49,7 @@ header{
                         width: 20px;
                         height: 20px;
                         display: block;
-                        background-image: url(../../assets/images/chevron-down.svg);
+                        background-image: url("../../assets/images/chevron-down.svg");
                         background-repeat: no-repeat;
                         background-position: center center;
                         cursor: pointer;
@@ -149,7 +149,7 @@ header{
             .close-button{
                 width: 15px;
                 height: 15px;
-                background-image: url(../../assets/images/close-icon.svg);
+                background-image: url("../../assets/images/close-icon.svg");
                 background-size: cover;
                 background-repeat: no-repeat;
                 cursor: pointer;
@@ -196,7 +196,7 @@ header{
                     width: 20px;
                     height: 20px;
                     display: block;
-                    background-image: url(../../assets/images/chevron-down-black.svg);
+                    background-image: url("../../assets/images/chevron-down-black.svg");
                     background-repeat: no-repeat;
                     background-position: center center;
                     cursor: pointer;

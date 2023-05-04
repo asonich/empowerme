@@ -290,7 +290,7 @@ header .container .navigation nav .nav-item .sub-menu-btn {
 	width: 20px;
 	height: 20px;
 	display: block;
-	background-image: url(../../assets/images/chevron-down.svg);
+	background-image: url("../../assets/images/chevron-down.svg");
 	background-repeat: no-repeat;
 	background-position: center center;
 	cursor: pointer;
@@ -399,7 +399,7 @@ header .mobile-menu .upper-container {
 header .mobile-menu .upper-container .close-button {
 	width: 15px;
 	height: 15px;
-	background-image: url(../../assets/images/close-icon.svg);
+	background-image: url("../../assets/images/close-icon.svg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	cursor: pointer;
@@ -449,7 +449,7 @@ header .mobile-menu .mobile-menu-container .nav-item .sub-menu-btn {
 	width: 20px;
 	height: 20px;
 	display: block;
-	background-image: url(../../assets/images/chevron-down-black.svg);
+	background-image: url("../../assets/images/chevron-down-black.svg");
 	background-repeat: no-repeat;
 	background-position: center center;
 	cursor: pointer;
@@ -486,7 +486,7 @@ footer {
 footer .footer-cta .upper-block {
 	width: 100%;
 	min-height: 118px;
-	background-image: url(../../assets/images/footer-upper-mob.svg);
+	background-image: url("../../assets/images/footer-upper-mob.svg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position-y: bottom;
@@ -495,7 +495,7 @@ footer .footer-cta .upper-block {
 @media (min-width: 768px) {
 	footer .footer-cta .upper-block {
 		min-height: 188px;
-		background-image: url(../../assets/images/footer-upper-bg.svg);
+		background-image: url("../../assets/images/footer-upper-bg.svg");
 	}
 }
 
@@ -543,7 +543,7 @@ footer .footer-cta .cta-block .secondary {
 footer .footer-cta .bottom-block {
 	width: 100%;
 	min-height: 304px;
-	background-image: url(../../assets/images/footer-bottom-mob.svg);
+	background-image: url("../../assets/images/footer-bottom-mob.svg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position-y: bottom;
@@ -552,7 +552,7 @@ footer .footer-cta .bottom-block {
 @media (min-width: 768px) {
 	footer .footer-cta .bottom-block {
 		min-height: 151px;
-		background-image: url(../../assets/images/footer-bottom-bg.svg);
+		background-image: url("../../assets/images/footer-bottom-bg.svg");
 	}
 }
 
@@ -571,7 +571,7 @@ footer .footer-cta .bottom-block {
 @media (min-width: 768px) {
 	footer .without .upper-block {
 		min-height: 80px;
-		background-image: url(../../assets/images/footer-upper-bg-2.svg);
+		background-image: url("../../assets/images/footer-upper-bg-2.svg");
 	}
 }
 
@@ -583,7 +583,7 @@ footer .footer-cta .bottom-block {
 
 footer .without .cta-block {
 	min-height: 434px;
-	background-image: url(../../assets/images/footer-without-cta.svg);
+	background-image: url("../../assets/images/footer-without-cta.svg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position-y: bottom;
@@ -628,39 +628,39 @@ footer .with-white .cta-block .secondary {
 
 footer .with-white .bottom-block {
 	min-height: 196px;
-	background-image: url(../../assets/images/footer-white-cta-botom-block-320.svg);
+	background-image: url("../../assets/images/footer-white-cta-botom-block-320.svg");
 }
 
 @media (min-width: 480px) {
 	footer .with-white .bottom-block {
-		background-image: url(../../assets/images/footer-white-cta-botom-block-375.svg);
+		background-image: url("../../assets/images/footer-white-cta-botom-block-375.svg");
 	}
 }
 
 @media (min-width: 768px) {
 	footer .with-white .bottom-block {
-		background-image: url(../../assets/images/footer-white-cta-botom-block-768.svg);
+		background-image: url("../../assets/images/footer-white-cta-botom-block-768.svg");
 	}
 }
 
 @media (min-width: 993px) {
 	footer .with-white .bottom-block {
 		min-height: 239px;
-		background-image: url(../../assets/images/footer-white-cta-botom-block-1280.svg);
+		background-image: url("../../assets/images/footer-white-cta-botom-block-1280.svg");
 	}
 }
 
 @media (min-width: 1200px) {
 	footer .with-white .bottom-block {
 		min-height: 249px;
-		background-image: url(../../assets/images/footer-white-cta-botom-block-1440.svg);
+		background-image: url("../../assets/images/footer-white-cta-botom-block-1440.svg");
 	}
 }
 
 @media (min-width: 1600px) {
 	footer .with-white .bottom-block {
 		min-height: 246px;
-		background-image: url(../../assets/images/footer-white-cta-botom-block-1920.svg);
+		background-image: url("../../assets/images/footer-white-cta-botom-block-1920.svg");
 	}
 }
 
@@ -788,7 +788,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 .post-hero {
 	width: 100%;
 	position: relative;
-	background-image: url("../../assets/images/header-section-blog-bg-mob.svg");
+	background-image: url(../../assets/images/header-section-blog-bg-mob.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 64px 0;
@@ -796,7 +796,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 @media (min-width: 768px) {
 	.post-hero {
-		background-image: url("../../assets/images/header-section-blog-bg.svg");
+		background-image: url(../../assets/images/header-section-blog-bg.svg);
 	}
 }
 
@@ -1231,52 +1231,52 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 }
 
 .short-right {
-	background-image: url(../../assets/images/small-hero-section-bg-3-mobile.svg);
+	background-image: url("../../assets/images/small-hero-section-bg-3-mobile.svg");
 }
 
 @media (min-width: 768px) {
 	.short-right {
-		background-image: url(../../assets/images/small-hero-section-bg-3.svg);
+		background-image: url("../../assets/images/small-hero-section-bg-3.svg");
 	}
 }
 
 .short-left {
-	background-image: url(../../assets/images/small-hero-section-bg-1-mobile.svg);
+	background-image: url("../../assets/images/small-hero-section-bg-1-mobile.svg");
 }
 
 @media (min-width: 768px) {
 	.short-left {
-		background-image: url(../../assets/images/small-hero-section-bg-1.svg);
+		background-image: url("../../assets/images/small-hero-section-bg-1.svg");
 	}
 }
 
 .long-right {
-	background-image: url(../../assets/images/small-hero-section-bg-4-mobile.svg);
+	background-image: url("../../assets/images/small-hero-section-bg-4-mobile.svg");
 }
 
 @media (min-width: 768px) {
 	.long-right {
-		background-image: url(../../assets/images/small-hero-section-bg-4.svg);
+		background-image: url("../../assets/images/small-hero-section-bg-4.svg");
 	}
 }
 
 .long-left {
-	background-image: url(../../assets/images/small-hero-section-bg-2-mobile.svg);
+	background-image: url("../../assets/images/small-hero-section-bg-2-mobile.svg");
 }
 
 @media (min-width: 768px) {
 	.long-left {
-		background-image: url(../../assets/images/small-hero-section-bg-2.svg);
+		background-image: url("../../assets/images/small-hero-section-bg-2.svg");
 	}
 }
 
 .centered {
-	background-image: url(../../assets/images/small-hero-section-bg-5-mobile.svg);
+	background-image: url("../../assets/images/small-hero-section-bg-5-mobile.svg");
 }
 
 @media (min-width: 768px) {
 	.centered {
-		background-image: url(../../assets/images/small-hero-section-bg-5.svg);
+		background-image: url("../../assets/images/small-hero-section-bg-5.svg");
 	}
 }
 
@@ -1517,32 +1517,32 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 }
 
 .top-bg {
-	background-image: url(../../assets/images/hero-video-bg-1-mobile.svg);
+	background-image: url("../../assets/images/hero-video-bg-1-mobile.svg");
 }
 
 @media (min-width: 768px) {
 	.top-bg {
-		background-image: url(../../assets/images/hero-video-bg-1.svg);
+		background-image: url("../../assets/images/hero-video-bg-1.svg");
 	}
 }
 
 .centered-bg {
-	background-image: url(../../assets/images/hero-video-bg-2-mobile.svg);
+	background-image: url("../../assets/images/hero-video-bg-2-mobile.svg");
 }
 
 @media (min-width: 768px) {
 	.centered-bg {
-		background-image: url(../../assets/images/hero-video-bg-2.svg);
+		background-image: url("../../assets/images/hero-video-bg-2.svg");
 	}
 }
 
 .bottom-bg {
-	background-image: url(../../assets/images/hero-video-bg-3-mobile.svg);
+	background-image: url("../../assets/images/hero-video-bg-3-mobile.svg");
 }
 
 @media (min-width: 768px) {
 	.bottom-bg {
-		background-image: url(../../assets/images/hero-video-bg-3.svg);
+		background-image: url("../../assets/images/hero-video-bg-3.svg");
 	}
 }
 
@@ -1636,7 +1636,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	width: 11.67px;
 	height: 11.67px;
 	display: inline-block;
-	background-image: url(../../assets/images/icon-arrow.svg);
+	background-image: url("../../assets/images/icon-arrow.svg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1687,7 +1687,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 96px 0;
-	background-image: url(../../assets/images/video-section.svg);
+	background-image: url("../../assets/images/video-section.svg");
 }
 
 .eyebrow-video-text .container {
@@ -1740,7 +1740,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 .testimonials-block .container .testimonial .testimonial-col::after {
 	content: '';
-	background-image: url(../../assets/images/mobile-group.svg);
+	background-image: url("../../assets/images/mobile-group.svg");
 	position: absolute;
 	width: 100%;
 	max-width: 513px;
@@ -1833,7 +1833,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	}
 	.testimonials-block .container .left .testimonial-col::after {
 		content: '';
-		background-image: url(../../assets/images/left-group.svg);
+		background-image: url("../../assets/images/left-group.svg");
 		position: absolute;
 		height: 100%;
 		left: 100%;
@@ -1860,7 +1860,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	}
 	.testimonials-block .container .right .testimonial-col::before {
 		content: '';
-		background-image: url(../../assets/images/right-group.svg);
+		background-image: url("../../assets/images/right-group.svg");
 		position: absolute;
 		width: 123px;
 		height: 100%;

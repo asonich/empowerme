@@ -6,13 +6,13 @@ footer{
         .upper-block{
             width: 100%;
             min-height: 118px;
-            background-image: url(../../assets/images/footer-upper-mob.svg);
+            background-image: url("../../assets/images/footer-upper-mob.svg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position-y: bottom;
             @include tablet {
                 min-height: 188px;
-                background-image: url(../../assets/images/footer-upper-bg.svg);
+                background-image: url("../../assets/images/footer-upper-bg.svg");
             }
             @include full-width {
                 min-height: 196px;
@@ -23,7 +23,7 @@ footer{
         }
         .cta-block{
             background-color: #51baea;
-            .cta-heading{
+            .cta-heading{ 
                 font-size: rem(30);
                 color:$white;
                 text-align: center;
@@ -48,14 +48,14 @@ footer{
         .bottom-block{
             width: 100%;
             min-height: 304px;
-            background-image: url(../../assets/images/footer-bottom-mob.svg);
+            background-image: url("../../assets/images/footer-bottom-mob.svg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position-y: bottom;
             
             @include tablet{
                 min-height: 151px;
-                background-image: url(../../assets/images/footer-bottom-bg.svg);
+                background-image: url("../../assets/images/footer-bottom-bg.svg");
             }
             @include full-width {
                 min-height: 164px;
@@ -69,7 +69,7 @@ footer{
         .upper-block{
             @include tablet{
                 min-height: 80px;
-                background-image: url(../../assets/images/footer-upper-bg-2.svg);
+                background-image: url("../../assets/images/footer-upper-bg-2.svg");
             }
             @include full-width {
                 min-height: 93px;
@@ -78,7 +78,7 @@ footer{
         }
         .cta-block{
             min-height: 434px; 
-            background-image: url(../../assets/images/footer-without-cta.svg);
+            background-image: url("../../assets/images/footer-without-cta.svg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position-y: bottom;
@@ -114,25 +114,25 @@ footer{
         .bottom-block{
             
             min-height: 196px;
-            background-image: url(../../assets/images/footer-white-cta-botom-block-320.svg);
+            background-image: url("../../assets/images/footer-white-cta-botom-block-320.svg");
             @include phone-lg {
-                background-image: url(../../assets/images/footer-white-cta-botom-block-375.svg);
+                background-image: url("../../assets/images/footer-white-cta-botom-block-375.svg");
             }
             @include tablet {
 
-                background-image: url(../../assets/images/footer-white-cta-botom-block-768.svg);
+                background-image: url("../../assets/images/footer-white-cta-botom-block-768.svg");
             }
             @include laptop {
                 min-height: 239px;
-                background-image: url(../../assets/images/footer-white-cta-botom-block-1280.svg);
+                background-image: url("../../assets/images/footer-white-cta-botom-block-1280.svg");
             }
             @include desktop {
                 min-height: 249px;
-                background-image: url(../../assets/images/footer-white-cta-botom-block-1440.svg);
+                background-image: url("../../assets/images/footer-white-cta-botom-block-1440.svg");
             }
             @include full-width{
                 min-height: 246px;
-                background-image: url(../../assets/images/footer-white-cta-botom-block-1920.svg);
+                background-image: url("../../assets/images/footer-white-cta-botom-block-1920.svg");
             }
         }
         
