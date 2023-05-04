@@ -32,7 +32,7 @@ $description = get_field( 'description' );
 $cols = get_field( 'columns' );
 $eyebrow = get_field('eyebrow');
 ?>
-<?php if ($cols): ?> 
+<?php if ($cols): ?>
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); if ($cols_setup) echo " ".$cols_setup; ?>">
     <div class="container">
         <div class="section-heading-block">
@@ -41,34 +41,34 @@ $eyebrow = get_field('eyebrow');
             <?php } ?>
             <?php if ($description){ ?>
                 <div class="section-description"><?php echo esc_html( $description ); ?></div>
-            <?php } ?> 
+            <?php } ?>
             <?php if ($eyebrow){ ?>
                 <div class="eyebrow"><?php echo  $eyebrow; ?></div>
-            <?php } ?>      
-        </div>  
-      
+            <?php } ?>
+        </div>
+
         <div class="cols grid <?php if ($cols_setup) echo " ".$cols_setup;?> <?php if ($cols_style) echo " ".$cols_style;?>">
         <?php foreach ($cols as $col) {?>
             <div class="col">
                 <div class="col-info">
-                <?php if ($col['icon']){ ?>   
+                <?php if ($col['icon']){ ?>
                     <img src="<?php echo $col['icon']['url'] ?>" alt="<?php echo $col['icon']['alt'] ?>" class="col-icon">
                 <?php } ?>
                 <?php if ($col['title']){ ?>
                     <p class="col-title"><?php echo $col['title'] ?></p>
                <?php } ?>
-               <?php if ($col['description']){ ?>    
+               <?php if ($col['description']){ ?>
                     <p class="col-description"><?php echo $col['description'] ?></p>
                 <?php } ?>
                 </div>
                 <?php if ($col['link']){ ?>
-                    <a href="<?php echo $col['link']['url'] ?>" class="col-link"><?php echo $col['link']['title'] ?></a>
+                    <a href="<?php echo $col['link']['url'] ?>" class="col-link" <?php if ($col['link']['target']){echo $col['link']['target'];}else {echo '_self';}?>"><?php echo $col['link']['title'] ?></a>
                 <?php } ?>
             </div>
             <?php } ?>
         </div>
     </div>
-    
+
 </div>
 <?php elseif (is_admin()) : ?>
     <p><?php _e('No content added'); ?></p>
