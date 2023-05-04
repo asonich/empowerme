@@ -9,7 +9,7 @@
  *          This is either the post ID currently being displayed inside a query loop,
  *          or the post ID of the post hosting this block.
  * @param   array $context The context provided to the block by the post or it's parent block.
- */ 
+ */
 
 // Support custom "anchor" values.
 $anchor = '';
@@ -23,7 +23,6 @@ if ( ! empty( $block['className'] ) ) {
     $class_name .= ' ' . $block['className'];
 }
 
-
 // Load values and assign defaults.
 $alignment = get_field( 'alignment' );
 $title = get_field( 'title' );
@@ -34,22 +33,21 @@ $testimonial_text = get_field('testimonial_text');
 $author = get_field('author_name');
 $author_title = get_field('author_info');
 ?>
-<?php if ($testimonial_text): ?> 
+<?php if ($testimonial_text): ?>
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); ?>">
-    <div class="container">   
+    <div class="container">
     <?php if ($title){ ?>
         <p class="section-title"><?php echo  $title ; ?></p>
     <?php } ?>
     <?php if ($description){ ?>
         <p class="section-description"><?php echo  $description ; ?></p>
-    <?php } ?>     
+    <?php } ?>
         <div class="testimonial flex <?php if ($alignment) echo " ".$alignment; ?>">
             <div class="testimonial-col">
                 <p class="testimonial-info"><?php echo $testimonial_text; ?></p>
                 <p class="author-name"><?php echo $author; ?></p>
                 <p class="author-info"><?php echo $author_title; ?></p>
             </div>
-           
             <img class="testimonial-image" src="<?php echo $testimonial_image['url']?>" alt="<?php echo $testimonial_image['alt']?>">
             <img class="mobile-image" src="<?php echo $mobile_image['url']?>" alt="<?php echo $mobile_image['alt']?>">
         </div>
