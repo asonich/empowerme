@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/wp-content/plugins/wp-all-import-pro/classes/XmlStreamReader/prewk/xml-string-streamer/src" isTestSource="false" packagePrefix="Prewk" />
+      <sourceFolder url="file://$MODULE_DIR$/wp-content/plugins/wp-all-import-pro/src" isTestSource="false" packagePrefix="Wpai" />
+      <sourceFolder url="file://$MODULE_DIR$/wp-content/plugins/wpai-acf-add-on/src" isTestSource="false" packagePrefix="wpai_acf_add_on" />
+      <sourceFolder url="file://$MODULE_DIR$/wp-includes" isTestSource="false" packagePrefix="PHPMailer" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
