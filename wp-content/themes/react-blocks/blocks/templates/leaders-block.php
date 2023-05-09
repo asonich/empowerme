@@ -64,6 +64,7 @@ $leaders = get_posts([
                             <p class="leader-position"><?php echo get_field('member_designation',$leader); ?></p>
                             <p class="leader-description"><?php echo mb_strimwidth(get_field('members_description_excerpt',$leader),0,100,'...'); ?></p>
                             <a href="#" class="more">Read More</a>
+
                         </div>   
                     </div>
                 <?php } ?>

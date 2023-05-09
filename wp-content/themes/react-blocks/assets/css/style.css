@@ -109,7 +109,7 @@ html {
 @media (min-width: 768px) {
 	.section-title {
 		font-size: 3rem;
-		line-height: 3.75pxrem;
+		line-height: 3.75rem;
 		margin-bottom: 20px;
 	}
 }
@@ -1680,6 +1680,18 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 .cols-info-block .container .no-box {
 	box-shadow: none;
 	border-radius: 0;
+}
+
+.gray {
+	background-color: #F2F4F7;
+}
+
+.white {
+	background-color: #ffffff;
+}
+
+.blue {
+	background-color: #99BFD6;
 }
 
 .eyebrow-video-text {

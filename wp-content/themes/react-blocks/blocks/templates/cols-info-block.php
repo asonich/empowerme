@@ -31,9 +31,10 @@ $title = get_field( 'title' );
 $description = get_field( 'description' );
 $cols = get_field( 'columns' );
 $eyebrow = get_field('eyebrow');
+$background = get_field('background_color');
 ?>
 <?php if ($cols): ?> 
-<div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); if ($cols_setup) echo " ".$cols_setup; ?>">
+<div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); if ($cols_setup) echo " ".$cols_setup; if ($background) echo " ".$background; ?>">
     <div class="container">
         <div class="section-heading-block">
             <?php if ($title){ ?>
