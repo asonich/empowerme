@@ -32,11 +32,11 @@ $description = get_field( 'description' );
 $cols = get_field( 'columns' );
 $length = count($cols);
 $eyebrow = get_field('eyebrow');
-
+$background = get_field('background_color');
 
 ?>
 <?php if ($cols): ?> 
-<div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); if ($cols_setup) echo " ".$cols_setup; ?>">
+<div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); if ($cols_setup) echo " ".$cols_setup; if ($background) echo " ".$background; ?>">
     <div class="container">
     <?php if ($title){ ?>
         <div class="section-title" ><?php echo esc_html( $title ); ?></div>
