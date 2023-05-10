@@ -13,6 +13,10 @@
  */
 
 get_header();
+
+$categories = get_categories('');
+ 
+
 ?>
 
 	<main id="primary" class="site-main">
@@ -22,36 +26,48 @@ get_header();
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
+				<div class="title-only-hero long-left">
+				<div class="container">
+					<div class="page-title" ><?php echo single_post_title();?></div>
+				</div>
+				
+			</div>
+			<div class="category-grid">
+				<div class="container">
+					<div class="category-navigation flex">
+						<p class="category current">All</p>
+						<?php foreach ($categories as $category) { ?>
+							<p class="category"><?php echo $category->name; ?></p>
+						<?php	}?>
+						
+					</div>
+					<div class="posts-grid grid">
+					
+					
+			
+							<?php endif;
+							while ( have_posts() ) :
+								the_post();
+								get_template_part( 'template-parts/post-content', get_post_type() );
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+							endwhile;  ?>
+        <?php else :
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+						get_template_part( 'template-parts/content', 'none' );
 
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
+		endif;?>		
+					
+					</div>
+					<?php the_posts_pagination( array(
+						'mid_size'  => 2,
+						'prev_text' => __( 'Prev', 'textdomain' ),
+						'next_text' => __( 'Next', 'textdomain' ),
+					) ); ?>
+					
+				</div>
+			</div>
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+
 get_footer();
