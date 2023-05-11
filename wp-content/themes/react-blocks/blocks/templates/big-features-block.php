@@ -45,16 +45,13 @@ $features = get_field('features');
                         <div class="feature-col">
                             <p class="feature-title"><?php echo $feature['title']; ?></p>
                             <p class="feature-description"><?php echo $feature['description']; ?></p>
-                            <a href="<?php echo $feature['link']['url']; ?>" class="feature-link" target="<?php if ($feature['link']['target']){ echo $feature['link']['target']; } else { echo '_self';} ?>" > <?php echo $feature['link']['title']; ?></a>
+                            <?php if ($feature['link']) { ?>
+                                <a href="<?php echo $feature['link']['url']; ?>" class="feature-link" target="<?php if ($feature['link']['target']){ echo $feature['link']['target']; } else { echo '_self';} ?>" > <?php echo $feature['link']['title']; ?></a>
+                            <?php } ?>
                         </div>
                     </div>
-                <?php } ?>    
+                <?php } ?>
             </div>
         </div>
-        
-
-        
-       
     </div>
-    
 </div>
