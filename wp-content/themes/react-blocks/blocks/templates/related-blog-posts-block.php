@@ -38,7 +38,11 @@ $posts = get_field('related_posts');
         <div class="section-heading-block">
         <p class="section-pre-title"><?php echo $pre_title; ?></p>
         <p class="section-title" ><?php echo esc_html( $title ); ?></p>
-        <p class="section-description"><?php echo esc_html( $description ); ?></p>
+           <?php if ($description)  { ?>
+                <p class="section-description">
+                    <?= $description; ?>
+                </p>
+           <?php } ?>
         </div>
        
         <div class="posts grid">

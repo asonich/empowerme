@@ -37,7 +37,7 @@ $description = get_field( 'description' );
             <div class="section-title" ><?php echo esc_html( $title ); ?></div>
         <?php } ?>
         <?php if ($description) { ?>
-            <div class="section-description"><?php echo esc_html( $description ); ?></div>
+            <div class="section-description"><?php echo $description; ?></div>
         <?php } ?>    
     </div>
     

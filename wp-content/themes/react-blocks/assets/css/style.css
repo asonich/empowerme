@@ -1620,6 +1620,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 .title-video-hero .container .hero-image {
 	display: block;
 	margin: 61px auto;
+	border-radius: 35px;
 }
 
 .top-bg {
