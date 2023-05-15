@@ -27,7 +27,7 @@ if ( ! empty( $block['className'] ) ) {
 // Load values and assign defaults.
 $align = get_field( 'alignment' );
 $title = get_field( 'title' ) ?: 'Your title here...';
-$description = get_field( 'description' ) ?: 'Your description here...';
+$description = get_field( 'description' );
 $image = get_field('image');
 $features = get_field('features');
 ?>
@@ -35,13 +35,17 @@ $features = get_field('features');
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name );?>">
     <div class="container <?php if ($align) echo " ".$align; ?>"> 
         <p class="section-title" ><?php echo esc_html( $title ); ?></p>
+        <?php if ($description) { ?>
         <p class="section-description"><?php echo esc_html( $description ); ?></p>
+        <?php } ?>
         <div class="features-content flex">
             <img src="<?php echo $image["url"]?>" alt="<?php echo $image["alt"]?>" class="features-image">
             <div class="features-list flex ">
                 <?php foreach ($features as $feature) { ?>
                     <div class="feature flex">
+                        <?php if ($feature['icon']) { ?>
                         <img src="<?php echo $feature['icon']['url']; ?>" alt="<?php echo $feature['icon']['url']; ?>" class="feature-icon">
+                        <?php } ?>
                         <div class="feature-col">
                             <p class="feature-title"><?php echo $feature['title']; ?></p>
                             <p class="feature-description"><?php echo $feature['description']; ?></p>
