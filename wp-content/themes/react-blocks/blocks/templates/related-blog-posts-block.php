@@ -28,7 +28,7 @@ if ( ! empty( $block['className'] ) ) {
 $background = get_field( 'background' );
 $pre_title = get_field('pre_title');
 $title = get_field( 'title' ) ?: 'Your title here...';
-$description = get_field( 'description' ) ?: 'Your description here...';
+$description = get_field( 'description' );
 $posts = get_field('related_posts');
 
 ?>
@@ -38,7 +38,7 @@ $posts = get_field('related_posts');
         <div class="section-heading-block">
         <p class="section-pre-title"><?php echo $pre_title; ?></p>
         <p class="section-title" ><?php echo esc_html( $title ); ?></p>
-           <?php if ($description)  { ?>
+        <?php if ($description)  { ?>
                 <p class="section-description">
                     <?= $description; ?>
                 </p>

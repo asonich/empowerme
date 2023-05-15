@@ -34,6 +34,7 @@ $leaders = get_posts([
     'posts_per_page' => -1,
     'fields' => 'ids'
   ]);
+ 
 ?>
 
 
@@ -49,7 +50,7 @@ $leaders = get_posts([
             if ($leader_category) array_push($categories, $leader_category);
         }
         $categories = array_unique($categories);
-        //var_dump($categories);
+        
 
         foreach ($categories as $category) {
             echo "<div class='section-title' >".$category."</div>";
@@ -63,7 +64,7 @@ $leaders = get_posts([
                             <p class="leader-name"><?php echo get_the_title($leader);?></p>
                             <p class="leader-position"><?php echo get_field('member_designation',$leader); ?></p>
                             <p class="leader-description"><?php echo mb_strimwidth(get_field('members_description_excerpt',$leader),0,100,'...'); ?></p>
-                            <p class="leader-popup-text"><?php echo get_field('members_description_excerpt',$leader); ?></p>
+                            <div class="leader-popup-text"><?php echo apply_filters('the_content',get_post($leader)->post_content); ?></div>
                             <a href="#" class="more">Read More</a>
 
                         </div>   
@@ -74,4 +75,17 @@ $leaders = get_posts([
         <?php } ?>
     </div>
     
+</div>
+<div class="popup">
+        <div class="popup-content" id="popup">
+            <div class="popup-container flex">
+                <img src="" alt="" class="leader-image">
+                <div class="leader-info">
+                    <p class="leader-name"></p>
+                    <p class="leader-position"></p>
+                    <p class="leader-description"></p>
+                </div>
+            </div>
+            <p class="close-popup"></p>
+        </div>
 </div>

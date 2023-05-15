@@ -89,9 +89,94 @@
                         font-size: rem(14);
                         line-height: rem(20);
                     }
+                    .leader-popup-text{
+                        display: none;
+                    }
+                }
+            }
+        }  
+      
+    }
+}
+.popup{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .46);
+    justify-content: center;
+    align-items: center;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 16px;
+    .popup-content{
+        max-width: 980px;
+        background-color: #fafafa;
+        border-radius: 30px;
+        padding: 45px 50px 50px 40px;
+        position: relative;
+        .popup-container{
+            flex-wrap: wrap;
+            @include tablet {
+                flex-wrap: nowrap;
+            }
+            .leader-image{
+                border-radius: 16px;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                margin-bottom: 20px;
+                @include tablet {
+                    margin-bottom:0;
+                }
+            }
+            .leader-info{
+                max-height: 427px;
+                overflow: auto;
+                margin-left: 20px;
+                .leader-name{
+                    margin-bottom: 4px;
+                    font-weight: 700;
+                    font-size: rem(18);
+                    line-height: rem(28);
+                    color:$blue-1;
+                    @include laptop{
+                        margin-bottom: 8px;
+                        font-size: rem(30);
+                        line-height: rem(38);
+                    }
+                }
+                .leader-position{
+                    font-size: rem(16);
+                    line-height: rem(24);
+                    margin-bottom: 16px;
+                    color:$blue-1;
+                    @include laptop{
+
+                        font-weight: 500;
+                        font-size: rem(18);
+                        line-height: rem(28);
+                    }
+                }
+                .leader-description{
+                    color:$black;
+                    line-height: rem(24);
+                    margin-bottom: 24px;
                 }
             }
         }
-
+    }
+    .close-popup{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 20px;
+        height: 20px;
+        background-image: url("../../assets/images/close-icon.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
     }
 }
+.active{
+    display: flex;
+} 

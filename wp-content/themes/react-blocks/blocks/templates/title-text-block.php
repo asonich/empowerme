@@ -34,10 +34,10 @@ $description = get_field( 'description' );
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); ?>">
     <div class="container">
         <?php if ($title) { ?>
-            <div class="section-title" ><?php echo esc_html( $title ); ?></div>
+            <div class="section-title" ><?php echo ( $title ); ?></div>
         <?php } ?>
         <?php if ($description) { ?>
-            <div class="section-description"><?php echo $description; ?></div>
+            <p class="section-description"><?php echo ( $description ); ?></p>
         <?php } ?>    
     </div>
     

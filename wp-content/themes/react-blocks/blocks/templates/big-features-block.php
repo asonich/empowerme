@@ -33,7 +33,7 @@ $features = get_field('features');
 ?>
 
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name );?>">
-    <div class="container <?php if ($align) echo " ".$align; ?>">
+    <div class="container <?php if ($align) echo " ".$align; ?>"> 
         <p class="section-title" ><?php echo esc_html( $title ); ?></p>
         <p class="section-description"><?php echo esc_html( $description ); ?></p>
         <div class="features-content flex">
@@ -46,12 +46,17 @@ $features = get_field('features');
                             <p class="feature-title"><?php echo $feature['title']; ?></p>
                             <p class="feature-description"><?php echo $feature['description']; ?></p>
                             <?php if ($feature['link']) { ?>
-                                <a href="<?php echo $feature['link']['url']; ?>" class="feature-link" target="<?php if ($feature['link']['target']){ echo $feature['link']['target']; } else { echo '_self';} ?>" > <?php echo $feature['link']['title']; ?></a>
-                            <?php } ?>
+                            <a href="<?php echo $feature['link']['url']; ?>" class="feature-link" target="<?php if ($feature['link']['target']){ echo $feature['link']['target']; } else { echo '_self';} ?>" > <?php echo $feature['link']['title']; ?></a>
+                            <?php } ?>    
                         </div>
                     </div>
-                <?php } ?>
+                <?php } ?>    
             </div>
         </div>
+        
+
+        
+       
     </div>
+    
 </div>
