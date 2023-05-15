@@ -1646,6 +1646,25 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	color: #006098;
 }
 
+.features .container .text-col .feature-link {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	color: #006098;
+}
+
+.features .container .text-col .feature-link::after {
+	content: '';
+	margin-left: 8px;
+	width: 11.67px;
+	height: 11.67px;
+	display: inline-block;
+	background-image: url("../../assets/images/icon-arrow.svg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .features .container .features-image {
 	width: 100%;
 	max-width: 461px;

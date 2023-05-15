@@ -15,9 +15,10 @@
 $anchor = '';
 if ( ! empty( $block['anchor'] ) ) {
     $anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
-}
+} 
 
-// Create class attribute allowing for custom "className" and "align" values.
+
+// Create class attribute allowing for custom "className" and "align" value
 $class_name = 'big-features';
 if ( ! empty( $block['className'] ) ) {
     $class_name .= ' ' . $block['className'];
@@ -37,7 +38,7 @@ $features = get_field('features');
         <p class="section-title" ><?php echo esc_html( $title ); ?></p>
         <?php if ($description) { ?>
         <p class="section-description"><?php echo esc_html( $description ); ?></p>
-        <?php } ?>
+        <?php } ?> 
         <div class="features-content flex">
             <img src="<?php echo $image["url"]?>" alt="<?php echo $image["alt"]?>" class="features-image">
             <div class="features-list flex ">

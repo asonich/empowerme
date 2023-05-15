@@ -27,8 +27,9 @@ if ( ! empty( $block['className'] ) ) {
 // Load values and assign defaults.
 $align = get_field( 'alignment' );
 $title = get_field( 'title' ) ?: 'Your title here...';
-$description = get_field( 'description' ) ?: 'Your description here...';
+$description = get_field( 'description' ) ;
 $image = get_field('image');
+$feature = get_field('link');
 ?>
 
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name );?>">
@@ -37,6 +38,9 @@ $image = get_field('image');
         <div class="text-col">
             <p class="section-title" ><?php echo esc_html( $title ); ?></p>
             <p class="section-description"><?php echo esc_html( $description ); ?></p>
+            <?php if ($feature) { ?>
+                        <a href="<?php echo $feature['url']; ?>" class="feature-link" target="<?php if ($feature['target']){ echo $feature['target']; } else { echo '_self';} ?>" > <?php echo $feature['title']; ?></a>
+            <?php } ?>    
         </div>
        
     </div>
