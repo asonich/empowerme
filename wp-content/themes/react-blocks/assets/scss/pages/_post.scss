@@ -270,6 +270,19 @@
                 width: 100%;
                 border-radius: 16px;
             }
+            ul {
+                list-style: circle;
+                li{
+                    font-size: rem(16);
+                    line-height: rem(24);
+                   
+                    color:$gray-6;
+                    @include tablet{
+                        font-size: rem(18);
+                        line-height: rem(28);
+                    }
+                }
+            }
         } 
     }
     .conclusion{

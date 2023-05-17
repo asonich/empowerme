@@ -1123,6 +1123,23 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	border-radius: 16px;
 }
 
+.post-content .paragraph-content .content ul {
+	list-style: circle;
+}
+
+.post-content .paragraph-content .content ul li {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: #475467;
+}
+
+@media (min-width: 768px) {
+	.post-content .paragraph-content .content ul li {
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+	}
+}
+
 .post-content .conclusion {
 	background-color: #F9FAFB;
 	border-radius: 16px;
@@ -1541,6 +1558,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	aspect-ratio: 1/1;
 	object-fit: cover;
 	margin-bottom: 20px;
+	max-width: 280px;
 }
 
 @media (min-width: 768px) {
@@ -1606,6 +1624,14 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 .active {
 	display: flex;
+}
+
+.testimonial {
+	padding-top: 96px;
+}
+
+.testimonial .leader-photo {
+	display: none;
 }
 
 .features {

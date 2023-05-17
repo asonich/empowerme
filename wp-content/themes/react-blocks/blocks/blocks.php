@@ -106,8 +106,16 @@ $blocks = [
         'category'        => 'happen-blocks',
         'icon'            => 'block-default',
     ],
+    'testimonials_grid_block' => [
+        'name'            => 'testimonials_grid_block',
+        'title'           => ('Testimonials Grid Block'),
+        'description'     => ('Testimonials Grid Block'),
+        'render_callback' => 'render_acf_block_callback',
+        'category'        => 'happen-blocks',
+        'icon'            => 'block-default',
+    ],
     
-
+ 
 
     
 
