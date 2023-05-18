@@ -272,13 +272,17 @@
             }
             ul {
                 list-style: circle;
+                list-style: disc;
+                list-style-type: "•";
+                padding-left: 10px;
                 li{
                     font-size: rem(16);
                     line-height: rem(24);
+                    padding-left: 10px;
                    
-                    color:$gray-6;
+                    color:$gray-6; 
                     @include tablet{
-                        font-size: rem(18);
+                        font-size: rem(18); 
                         line-height: rem(28);
                     }
                 }
