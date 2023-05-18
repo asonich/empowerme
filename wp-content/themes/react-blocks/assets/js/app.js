@@ -42,9 +42,11 @@ for (i = 0; i < toggles.length; i++) {
 for (i = 0; i < toggles2.length; i++) {
     toggles2[i].addEventListener("click", toggleAccord2);
   }
+  if (document.getElementById("popup") !== null) {
+   
 
   let popup_modal = document.querySelector('.popup');
-  let popup = document.getElementById('popup')
+  let popup = document.getElementById('popup');
   let elements = document.getElementsByClassName("more");
   let popup_content = document.querySelector('#popup .popup-container');
   let popup_image = document.querySelector('#popup .popup-container .leader-image');
@@ -74,4 +76,5 @@ for (i = 0; i < toggles2.length; i++) {
     popup_leader_info.querySelector('.leader-position').textContent='';
   
   } 
-    close_button.addEventListener('click', popupClose, false); 
+    close_button.addEventListener('click', popupClose, false);   
+  }
