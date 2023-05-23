@@ -59,20 +59,26 @@ html {
 }
 
 .section-heading-block {
-	margin-bottom: 64px;
+	margin-bottom: 30px;
+}
+
+@media (min-width: 993px) {
+	.section-heading-block {
+		margin-bottom: 64px;
+	}
 }
 
 .page-title {
 	font-size: 2.25rem;
 	font-weight: 700;
 	line-height: 2.75rem;
+	margin-bottom: 24px;
 }
 
 @media (min-width: 768px) {
 	.page-title {
 		font-size: 3.75rem;
 		line-height: 4.5rem;
-		margin-bottom: 24px;
 	}
 }
 
@@ -612,6 +618,7 @@ footer .without .bottom-block {
 
 footer .with-white .upper-block {
 	background-image: none;
+	min-height: unset;
 }
 
 footer .with-white .cta-block {
@@ -739,10 +746,12 @@ footer .main-footer .container .bottom-footer .footer-additional-links .social-l
 	display: flex;
 	justify-content: center;
 	margin-bottom: 32px;
+	margin-top: 48px;
 }
 
 @media (min-width: 993px) {
 	footer .main-footer .container .bottom-footer .footer-additional-links .social-links {
+		margin-top: 0;
 		justify-content: flex-end;
 	}
 }
@@ -1409,7 +1418,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 }
 
 .leaders-block {
-	padding-bottom: 96px;
+	padding-bottom: 46px;
 }
 
 .leaders-block .container {
@@ -1646,7 +1655,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 @media (min-width: 768px) {
 	.features {
-		padding: 96px 0;
+		padding: 46px 0;
 	}
 }
 
@@ -1813,7 +1822,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 .eyebrow-text {
 	width: 100%;
-	padding: 40px 16px;
+	padding: 46px 16px;
 }
 
 .eyebrow-text .container {
@@ -1824,7 +1833,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 .cols-info-block {
 	width: 100%;
-	padding: 96px 0;
+	padding: 46px 0;
 }
 
 .cols-info-block .container .section-title, .cols-info-block .container .section-description {
@@ -1963,7 +1972,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 96px 0;
+	padding: 46px 0;
 	background-image: url("../../assets/images/video-section.svg");
 }
 
@@ -1984,7 +1993,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 .testimonials-block {
 	width: 100%;
-	padding: 96px 0;
+	padding: 46px 0;
 }
 
 .testimonials-block .container .section-title {
@@ -2013,6 +2022,9 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	background-color: #51BAEA;
 	position: relative;
 	border-radius: 24px 24px 0px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .testimonials-block .container .testimonial .testimonial-col::after {
@@ -2024,6 +2036,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	height: 100%;
 	bottom: -35%;
 	left: 0;
+	z-index: 1;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -2065,6 +2078,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	line-height: 28px;
 	color: #ffffff;
 	margin-bottom: 6px;
+	z-index: 4;
 }
 
 .testimonials-block .container .testimonial .testimonial-col .author-info {
@@ -2072,6 +2086,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	font-size: 14px;
 	line-height: 20px;
 	color: #ffffff;
+	z-index: 4;
 }
 
 .testimonials-block .container .testimonial .testimonial-image {
@@ -2158,7 +2173,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 .staggered-cols-info-block {
 	width: 100%;
-	padding: 96px 0;
+	padding: 46px 0;
 	background-color: #F2F4F7;
 }
 
@@ -2300,7 +2315,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 .related-blog-posts-block {
 	width: 100%;
-	padding: 96px 0;
+	padding: 46px 0;
 }
 
 .related-blog-posts-block .container .posts {
@@ -2359,7 +2374,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 }
 
 .big-features {
-	padding: 96px 0;
+	padding: 46px 0;
 }
 
 .big-features .container .section-title, .big-features .container .section-description {
