@@ -17,5 +17,9 @@
  
 
 .section-heading-block{
-    margin-bottom: 64px;
+    margin-bottom: 30px;
+    @include laptop {
+        margin-bottom: 64px;
+    }
 }
+    
