@@ -86,9 +86,7 @@
                    
                     max-width: 50%;
                 }
-                @include laptop{
-                    max-width: unset;
-                }
+                
             }
             .mobile-image{
                 object-fit: cover;
