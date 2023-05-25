@@ -46,7 +46,7 @@ $leaders = get_posts([
                         <img src="<?php echo get_field('emw_community_logo_url',$leader) ?>" alt="<?php echo get_field('member_image_alt',$leader) ?>" class="leader-photo"> 
                         <div class="leader-info">
                             <p class="leader-name"><?php echo get_the_title($leader);?></p>
-                            <p class="leader-position"><?php echo get_field('member_designation',$leader); ?></p>
+                            <p class="leader-position"><?php echo get_field('emw_title',$leader); ?></p>
                             <p class="leader-description"><?php echo mb_strimwidth(get_field('emw_quote_excerpt',$leader),0,100,'...'); ?></p>
                             <div class="leader-popup-text"><?php echo get_field('emw_full_quote',$leader) ?></div>
                             <a href="#" class="more">Read More</a>
