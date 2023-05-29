@@ -1,6 +1,9 @@
 .cols-info-block{
     width: 100%;
-    padding:46px 0;
+    padding: 25px 0;
+    @include laptop{
+        padding: 46px 0; 
+    }
     .container{
         .section-title,.section-description{
             max-width: 100%;

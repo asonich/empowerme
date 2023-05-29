@@ -1,5 +1,8 @@
 .leaders-block{
-    padding-bottom: 46px;
+    padding: 25px 0;
+    @include laptop{
+        padding: 46px 0; 
+    }
     .container{
         width:100;
         max-width: 1280px;

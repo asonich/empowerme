@@ -1,5 +1,8 @@
 .big-features{
-    padding: 46px 0;
+    padding: 25px 0;
+    @include laptop{
+        padding: 46px 0; 
+    } 
     .container{
         .section-title,.section-description{
             text-align: left;

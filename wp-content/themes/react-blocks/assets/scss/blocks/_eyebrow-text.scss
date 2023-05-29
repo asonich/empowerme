@@ -1,8 +1,8 @@
 .eyebrow-text{
     width: 100%;
-    padding: 26px 16px;
+    padding: 25px 0;
     @include laptop{
-        padding: 46px 16px;
+        padding: 46px 0; 
     }
     .container{
         width: 100%;
