@@ -39,7 +39,12 @@ $video_image = get_field('video_image');
         <?php if ($description) { ?>
         <div class="page-description"><?php echo esc_html( $description ); ?></div>
         <?php } ?>
+       
         <img class="hero-image" src="<?php echo $video_image['url']?>" alt="<?php echo $video_image['alt']?>">
+
+       
+
+
 
     </div>
     

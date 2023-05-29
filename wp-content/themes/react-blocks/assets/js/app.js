@@ -3,10 +3,14 @@ const toggles = document.querySelectorAll(".sub-menu-btn");
 const toggles2 = document.querySelectorAll(".sub-2");
 const open_menu = document.getElementById('open');
 const close_menu = document.getElementById('close');
+const close_banner = document.getElementById('close-banner');
+let header_banner = document.querySelector('.upper-header-banner');
+
+
 let header = document.getElementById('masthead');
 open_menu.addEventListener("click",()=>{
   header.classList.add("open")
-});
+}); 
 close_menu.addEventListener("click",()=>{
   header.classList.remove("open");
 });  
@@ -75,4 +79,11 @@ if (document.getElementById("popup") !== null) {
     
     } 
       close_button.addEventListener('click', popupClose, false);   
+}
+
+function banner_close() {
+  header_banner.classList.add('closed_banner');
+}
+if (close_banner !== null) {
+  close_banner.addEventListener('click',banner_close,false);
 }

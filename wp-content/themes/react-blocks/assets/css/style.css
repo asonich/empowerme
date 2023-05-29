@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.cdnfonts.com/css/gotham");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html, body, div, ul, ol, li, a, img, span, p, b, input, label {
 	margin: 0;
 	padding: 0;
@@ -68,6 +68,14 @@ html {
 	}
 }
 
+.divider {
+	width: 56px;
+	height: 1px;
+	background-color: #A4CD39;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
 .page-title {
 	font-size: 2.25rem;
 	font-weight: 700;
@@ -111,7 +119,6 @@ html {
 	line-height: 2.375rem;
 	color: #006098;
 	margin: 0 auto;
-	margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
@@ -142,6 +149,7 @@ html {
 	line-height: 1.75rem;
 	color: #006098;
 	margin: 0 auto;
+	margin-bottom: 20px;
 	display: block;
 }
 
@@ -255,18 +263,35 @@ header {
 
 header .container {
 	align-items: center;
+	justify-content: space-between;
+}
+
+header .container .logo-col {
+	width: 50%;
+}
+
+@media (min-width: 993px) {
+	header .container .logo-col {
+		width: unset;
+	}
 }
 
 header .container .logo-col .site-logo {
 	width: 100%;
-	max-width: 136px;
+	max-width: 202px;
 }
 
 header .container .navigation {
 	display: flex;
 	align-items: center;
-	width: 87%;
+	width: 40%;
 	justify-content: flex-end;
+}
+
+@media (min-width: 993px) {
+	header .container .navigation {
+		width: 87%;
+	}
 }
 
 header .container .navigation nav {
@@ -485,6 +510,56 @@ header .mobile-menu .button-container .secondary {
 	display: block;
 }
 
+.upper-header-banner {
+	padding: 14px 10px;
+	background-color: #A4CD39;
+	text-align: left;
+	position: relative;
+}
+
+@media (min-width: 768px) {
+	.upper-header-banner {
+		text-align: center;
+	}
+}
+
+.upper-header-banner .banner-text {
+	margin: 0 auto;
+}
+
+.upper-header-banner .banner-text p {
+	color: #ffffff;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	font-weight: 700;
+	max-width: 275px;
+}
+
+.upper-header-banner .banner-text p a {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+	.upper-header-banner .banner-text p {
+		max-width: unset;
+	}
+}
+
+.upper-header-banner .close-banner {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 16px;
+	top: 16px;
+	background-image: url("../../assets/images/x-close-banner.svg");
+	cursor: pointer;
+}
+
+.closed_banner {
+	display: none;
+}
+
 footer {
 	width: 100%;
 	position: relative;
@@ -626,6 +701,7 @@ footer .with-white .upper-block {
 footer .with-white .cta-block {
 	background-color: #ffffff;
 	padding: 0 3px;
+	margin-top: 30px;
 }
 
 footer .with-white .cta-block .cta-heading {
@@ -1657,7 +1733,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 }
 
 .features {
-	padding: 0 16px;
+	padding: 26px 16px;
 }
 
 @media (min-width: 768px) {
@@ -1673,11 +1749,13 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	gap: 26px;
 }
 
 @media (min-width: 768px) {
 	.features .container {
 		flex-wrap: nowrap;
+		gap: 0;
 	}
 }
 
@@ -1757,7 +1835,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 .title-video-hero {
 	width: 100%;
-	padding: 64px 0;
+	padding: 4px 0;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -1829,7 +1907,13 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 .eyebrow-text {
 	width: 100%;
-	padding: 46px 16px;
+	padding: 26px 16px;
+}
+
+@media (min-width: 993px) {
+	.eyebrow-text {
+		padding: 46px 16px;
+	}
 }
 
 .eyebrow-text .container {
@@ -1921,6 +2005,10 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.cols-info-block .container .one {
+	grid-template-columns: 1fr;
 }
 
 @media (min-width: 768px) {
@@ -2249,6 +2337,10 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	font-weight: 400;
 	color: #475467;
 	line-height: 1.5rem;
+}
+
+.staggered-cols-info-block .container .cols .col .divider {
+	margin-bottom: 26px;
 }
 
 .staggered-cols-info-block .container .cols .col .col-link {

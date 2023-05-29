@@ -28,9 +28,17 @@
  $nav = get_field('menu', 'option');
  $login_bnt = get_field('login_button', 'option');
  $partners_bnt = get_field('partners_button', 'option');
+ $banner_text = get_field('banner_text','option');
 ?>
 <div id="page">
+	<?php if ($banner_text) { ?>
+	<div class="upper-header-banner">
+		<div class="banner-text"><?php echo $banner_text; ?></div>
+		<div id="close-banner" class="close-banner"></div>
+	</div>
+	<?php } ?>
 	<header id="masthead" class="site-header">
+		
 		<div class="container flex">
 			<div class="logo-col"><a href="/"><img  src="<?php echo $logo['url'] ;?>" alt="<?php echo $logo['alt'] ;?>" class="site-logo"></a></div>
 			<div class="navigation">

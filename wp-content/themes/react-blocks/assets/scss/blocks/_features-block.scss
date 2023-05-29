@@ -1,5 +1,5 @@
 .features{
-    padding: 0 16px;
+    padding: 26px 16px;
     @include tablet{
         padding: 46px 0;
     }
@@ -11,8 +11,10 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        gap: 26px;
         @include tablet{
             flex-wrap: nowrap;
+            gap: 0;
         }
         .text-col{
             max-width: 624px;

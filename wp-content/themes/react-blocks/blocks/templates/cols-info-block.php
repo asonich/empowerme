@@ -62,8 +62,12 @@ $background = get_field('background_color');
                     <p class="col-description"><?php echo $col['description'] ?></p>
                 <?php } ?>
                 </div>
+                
                 <?php if ($col['link']){ ?>
-                    <a href="<?php echo $col['link']['url'] ?>" class="col-link" target="<?php if ($col['link']['target']){ echo $col['link']['target']; } else { echo '_self';} ?>"><?php echo $col['link']['title'] ?></a>
+                    <div class="new-cta">
+                        <div class="divider"></div>
+                        <a href="<?php echo $col['link']['url'] ?>" class="col-link" target="<?php if ($col['link']['target']){ echo $col['link']['target']; } else { echo '_self';} ?>"><?php echo $col['link']['title'] ?></a>
+                    </div>
                 <?php } ?>
             </div>
             <?php } ?>

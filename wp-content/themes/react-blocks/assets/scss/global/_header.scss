@@ -13,19 +13,26 @@ header{
     .container{
        
         align-items: center;
+        justify-content: space-between;
         .logo-col{
-           
+           width: 50%;
+           @include laptop{
+            width:unset;
+           }
             .site-logo{
                 width: 100%;
-                max-width: 136px;
+                max-width: 202px;
+                
             }
         }
         .navigation{
             display: flex;
             align-items: center;
-            width: 87%;
+            width: 40%;
             justify-content: flex-end;
-           
+            @include laptop{
+                width:87%;
+            }
             
             nav{
                 display:none;
@@ -232,4 +239,42 @@ header{
         display: block;
     }
 }
-    
+.upper-header-banner{
+    padding:14px 10px;
+    background-color: $green-2;
+    text-align: left;
+    position: relative;
+    @include tablet {
+        text-align: center;
+    }
+    .banner-text{
+        
+        margin: 0 auto;
+        p{
+            color:$white;
+            font-size: rem(16);
+            line-height: rem(24);
+            font-weight: 700;
+            max-width:275px;
+            a{
+                color:$white;
+                text-decoration: underline;
+            }
+           @include tablet{
+              max-width: unset;
+           } 
+        }
+    }
+    .close-banner{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 16px;
+        top:16px;
+        background-image: url("../../assets/images/x-close-banner.svg");
+        cursor: pointer;
+    }
+}
+.closed_banner{
+    display: none;
+}    

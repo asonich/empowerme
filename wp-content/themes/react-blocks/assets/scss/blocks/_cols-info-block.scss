@@ -76,6 +76,9 @@
             }
 
         }
+        .one {
+            grid-template-columns: 1fr;
+        }
         .two{
             @include tablet {
                 grid-template-columns: 1fr 1fr;
