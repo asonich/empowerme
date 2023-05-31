@@ -79,6 +79,44 @@
 
                     
                 }
+                .bottom-swooshes{
+                    display: none;
+                } 
+            }
+            .colored{
+                padding-bottom: 64px;
+                position: relative;
+                .bottom-swooshes{
+                    display: block;
+                    width: 100%;
+                    height: 20px;
+                    background-image: url("../../assets/images/bottom-stagerred.svg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    background-position: center;
+                    bottom: 0;
+                    left: 0;
+                    border-radius: 0px 0px 16px 16px;
+                }
+            }
+            .not-colored{
+                .bottom-swooshes{
+                    display: none;
+                }
+            }
+            .divider-on {
+                .divider{
+                    display: block;
+                }
+            }
+            .divider-off {
+                .new-cta{
+                    margin-top: 20px;
+                }
+                .divider{
+                    display: none;
+                }
             }
             .left-col,.right-col{
                 row-gap:24px;

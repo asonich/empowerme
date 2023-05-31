@@ -2031,6 +2031,45 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	background-size: cover;
 }
 
+.cols-info-block .container .cols .col .bottom-swooshes {
+	display: none;
+}
+
+.cols-info-block .container .cols .colored {
+	padding-bottom: 64px;
+	position: relative;
+}
+
+.cols-info-block .container .cols .colored .bottom-swooshes {
+	display: block;
+	width: 100%;
+	height: 20px;
+	background-image: url("../../assets/images/bottom-stagerred.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	background-position: center;
+	bottom: 0;
+	left: 0;
+	border-radius: 0px 0px 16px 16px;
+}
+
+.cols-info-block .container .cols .not-colored .bottom-swooshes {
+	display: none;
+}
+
+.cols-info-block .container .cols .divider-on .divider {
+	display: block;
+}
+
+.cols-info-block .container .cols .divider-off .new-cta {
+	margin-top: 20px;
+}
+
+.cols-info-block .container .cols .divider-off .divider {
+	display: none;
+}
+
 .cols-info-block .container .one {
 	grid-template-columns: 1fr;
 }
@@ -2391,6 +2430,45 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	width: max-content;
 	padding: 10px 24px;
 	border-radius: 40px;
+}
+
+.staggered-cols-info-block .container .cols .col .bottom-swooshes {
+	display: none;
+}
+
+.staggered-cols-info-block .container .cols .colored {
+	padding-bottom: 64px;
+	position: relative;
+}
+
+.staggered-cols-info-block .container .cols .colored .bottom-swooshes {
+	display: block;
+	width: 100%;
+	height: 20px;
+	background-image: url("../../assets/images/bottom-stagerred.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	background-position: center;
+	bottom: 0;
+	left: 0;
+	border-radius: 0px 0px 16px 16px;
+}
+
+.staggered-cols-info-block .container .cols .not-colored .bottom-swooshes {
+	display: none;
+}
+
+.staggered-cols-info-block .container .cols .divider-on .divider {
+	display: block;
+}
+
+.staggered-cols-info-block .container .cols .divider-off .new-cta {
+	margin-top: 20px;
+}
+
+.staggered-cols-info-block .container .cols .divider-off .divider {
+	display: none;
 }
 
 .staggered-cols-info-block .container .cols .left-col, .staggered-cols-info-block .container .cols .right-col {

@@ -33,6 +33,8 @@ $cols = get_field( 'columns' );
 $length = count($cols);
 $eyebrow = get_field('eyebrow');
 $background = get_field('background_color');
+$cols_bottom = get_field('box_bottom_style');
+$divider = get_field('divider');
 
 ?>
 <?php if ($cols): ?> 
@@ -52,7 +54,7 @@ $background = get_field('background_color');
             <div class="left-col flex">
                 <?php foreach($cols as $key => $col){  ?>
                   <?php if (($key % 2) == 0) { ?>  
-                        <div class="col">
+                        <div class="col <?php if ($cols_bottom) echo " ".$cols_bottom; if ($divider) echo " ".$divider; ?>">
                             <div class="col-info">
                             <?php if ($col['icon']){ ?>   
                                 <img src="<?php echo $col['icon']['url'] ?>" alt="<?php echo $col['icon']['alt'] ?>" class="col-icon">
@@ -71,6 +73,7 @@ $background = get_field('background_color');
                                     <a href="<?php echo $col['link']['url'] ?>" class="col-link" target="<?php if ($col['link']['target']){ echo $col['link']['target']; } else { echo '_self';} ?>"><?php echo $col['link']['title'] ?></a>
                                 </div>    
                                 <?php } ?>
+                                <div class="bottom-swooshes"></div>
                         </div>
                     <?php } ?>   
                 <?php } ?>
@@ -78,7 +81,7 @@ $background = get_field('background_color');
             <div class="right-col flex">
                 <?php foreach($cols as $key => $col){  ?>
                     <?php if (($key % 2) != 0) { ?>  
-                            <div class="col">
+                            <div class="col <?php if ($cols_bottom) echo " ".$cols_bottom; if ($divider) echo " ".$divider; ?>">
                                 <div class="col-info">
                                 <?php if ($col['icon']){ ?>   
                                     <img src="<?php echo $col['icon']['url'] ?>" alt="<?php echo $col['icon']['alt'] ?>" class="col-icon">
@@ -97,6 +100,7 @@ $background = get_field('background_color');
                                     <a href="<?php echo $col['link']['url'] ?>" class="col-link" target="<?php if ($col['link']['target']){ echo $col['link']['target']; } else { echo '_self';} ?>"><?php echo $col['link']['title'] ?></a>
                                 </div>
                                 <?php } ?>
+                                <div class="bottom-swooshes"></div>
                             </div>
                         <?php } ?>   
                     <?php } ?>                
@@ -104,7 +108,7 @@ $background = get_field('background_color');
         </div>
         <div class="cols grid mobile <?php if ($cols_style) echo " ".$cols_style;?>">
         <?php foreach ($cols as $col) {?>
-            <div class="col">
+            <div class="col <?php if ($cols_bottom) echo " ".$cols_bottom; if ($divider) echo " ".$divider; ?>">
                 <div class="col-info">
                 <?php if ($col['icon']){ ?>   
                     <img src="<?php echo $col['icon']['url'] ?>" alt="<?php echo $col['icon']['alt'] ?>" class="col-icon">
@@ -123,6 +127,7 @@ $background = get_field('background_color');
                                     <a href="<?php echo $col['link']['url'] ?>" class="col-link" target="<?php if ($col['link']['target']){ echo $col['link']['target']; } else { echo '_self';} ?>"><?php echo $col['link']['title'] ?></a>
                     </div>
                 <?php } ?>
+                <div class="bottom-swooshes"></div>
             </div>
             <?php } ?>
         </div>
