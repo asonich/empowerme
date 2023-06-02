@@ -2727,14 +2727,14 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 }
 
 .video-popup iframe {
-	padding: 20px;
+	padding: 50px;
 	border-radius: 20px;
 }
 
 .video-popup .close-popup {
 	position: absolute;
 	right: 20px;
-	top: 20px;
+	top: 50px;
 	width: 25px;
 	height: 25px;
 	background-image: url("../../assets/images/x-close-white.svg");
