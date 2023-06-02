@@ -20,10 +20,21 @@
             color:$white;
             text-align: center;
         }
-        .hero-image{
+        .video-hook{
             display: block;
             margin: 61px auto;
             border-radius: 36px;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 128px;
+                height: 128px;
+                background-image: url("../../assets/images/play-button.svg");
+                right: 16px;
+                bottom: 16px;
+                display: block;
+            }
         }
     }
 }

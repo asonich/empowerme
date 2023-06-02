@@ -34,7 +34,7 @@ $feature = get_field('link');
 
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name );?>">
     <div class="container <?php if ($align) echo " ".$align; ?>">
-        <img src="<?php echo $image["url"]?>" alt="<?php echo $image["alt"]?>" class="features-image">
+        <img src="<?php echo $image["url"]?>" alt="<?php echo $image["alt"]?>" class="video-hook">
         <div class="text-col">
             <p class="section-title" ><?php echo esc_html( $title ); ?></p>
             <p class="section-description"><?php echo esc_html( $description ); ?></p>

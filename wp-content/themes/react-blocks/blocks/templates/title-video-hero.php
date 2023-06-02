@@ -29,6 +29,7 @@ $background = get_field( 'background' );
 $title = get_field( 'title' );
 $description = get_field( 'description' );
 $video_image = get_field('video_image');
+$video_url = get_field('video_url');
 ?>
 
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); if ($background) echo " ".$background; ?>">
@@ -40,8 +41,8 @@ $video_image = get_field('video_image');
         <div class="page-description"><?php echo esc_html( $description ); ?></div>
         <?php } ?>
        
-        <img class="hero-image" src="<?php echo $video_image['url']?>" alt="<?php echo $video_image['alt']?>">
-
+        <img class="video-hook" video-data="<?php echo $video_url ?>" src="<?php echo $video_image['url']?>" alt="<?php echo $video_image['alt']?>">
+        
        
 
 
