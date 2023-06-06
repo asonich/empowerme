@@ -40,13 +40,12 @@ $video_url = get_field('video_url');
         <?php if ($description) { ?>
         <div class="page-description"><?php echo esc_html( $description ); ?></div>
         <?php } ?>
-       
-        <img class="video-hook" video-data="<?php echo $video_url ?>" src="<?php echo $video_image['url']?>" alt="<?php echo $video_image['alt']?>">
-        
-       
-
-
-
+        <?php if ($video_url) { ?>
+        <div class="video-hook" video-data="<?php echo $video_url ?>">
+            <img  src="<?php echo $video_image['url']?>" alt="<?php echo $video_image['alt']?>">
+        </div>    
+        <?php } else { ?>
+        <img class="block-image"  src="<?php echo $video_image['url']?>" alt="<?php echo $video_image['alt']?>">     
+        <?php } ?>       
     </div>
-    
 </div>

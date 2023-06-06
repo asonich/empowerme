@@ -30,11 +30,18 @@ $title = get_field( 'title' ) ?: 'Your title here...';
 $description = get_field( 'description' ) ;
 $image = get_field('image');
 $feature = get_field('link');
+$video_link = get_field('video_link');
 ?>
 
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name );?>">
     <div class="container <?php if ($align) echo " ".$align; ?>">
-        <img src="<?php echo $image["url"]?>" alt="<?php echo $image["alt"]?>" class="video-hook">
+        <?php if ($video_link) { ?>
+            <div class="video-hook" video-data="<?php echo $video_link?>">
+                <img src="<?php echo $image["url"]?>" alt="<?php echo $image["alt"]?>" class="features-image" video-data="<?php echo $video_url ?>">
+            </div>
+        <?php } else { ?>
+            <img src="<?php echo $image["url"]?>" alt="<?php echo $image["alt"]?>" class="features-image" >
+        <?php } ?>    
         <div class="text-col">
             <p class="section-title" ><?php echo esc_html( $title ); ?></p>
             <p class="section-description"><?php echo esc_html( $description ); ?></p>

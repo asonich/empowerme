@@ -25,6 +25,7 @@
             margin: 61px auto;
             border-radius: 36px;
             position: relative;
+            width: max-content;
             &::before{
                 content: '';
                 position: absolute;
@@ -35,6 +36,12 @@
                 bottom: 16px;
                 display: block;
             }
+        }
+        .block-image{
+            display: block;
+            margin: 61px auto;
+            border-radius: 36px;
+            position: relative;
         }
     }
 }
