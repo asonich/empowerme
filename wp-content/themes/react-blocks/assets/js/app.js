@@ -10,10 +10,10 @@ let header_banner = document.querySelector('.upper-header-banner');
 let header = document.getElementById('masthead');
 open_menu.addEventListener("click",()=>{
   header.classList.add("open")
-}); 
+});
 close_menu.addEventListener("click",()=>{
   header.classList.remove("open");
-});  
+});
 
 
 
@@ -55,7 +55,7 @@ if (document.getElementById("popup") !== null) {
     let popup_leader_info = popup_content.querySelector(".leader-info");
     let close_button = document.querySelector('.close-popup');
     let popupOpen = function(e) {
-          e.preventDefault(); 
+          e.preventDefault();
         popup_modal.classList.add('active');
         let leader_content = this.parentNode.querySelector('.leader-popup-text').textContent;
         let leader_image = this.parentNode.previousElementSibling.getAttribute('src');
@@ -71,14 +71,14 @@ if (document.getElementById("popup") !== null) {
         elements[i].addEventListener('click', popupOpen, false);
     }
     let popupClose = function() {
-      
+
       popup_modal.classList.remove('active');
       popup_leader_info.querySelector('.leader-name').textContent='';
       popup_leader_info.querySelector('.leader-description').textContent='';
       popup_leader_info.querySelector('.leader-position').textContent='';
-    
-    } 
-      close_button.addEventListener('click', popupClose, false);   
+
+    }
+      close_button.addEventListener('click', popupClose, false);
 }
 
 function banner_close() {
@@ -92,6 +92,7 @@ let videos = document.querySelectorAll('.video-hook');
 let video_popup = document.getElementById('video-popup');
 let video_empower = document.getElementById('empower-video');
 let sources = video_empower.getElementsByTagName("iframe");
+let iframe = document.querySelector('iframe');
 
 function updateSrc(pos, arr, src) {
   return arr[pos] ? arr[pos].src = src : false;
@@ -100,10 +101,12 @@ function updateSrc(pos, arr, src) {
 
 
  function openVideo (e) {
-    let video_src = this.getAttribute('video-data');  
+    let video_src = this.getAttribute('video-data');
     console.log(video_src);
     updateSrc(0, sources, video_src);
     video_popup.classList.add('activated');
+     var player = new Vimeo.Player(iframe);
+     player.play();
 
  }
 
@@ -123,13 +126,15 @@ function stopVideo( element ) {
 	if ( video ) {
 		video.pause();
 	}
+
 };
 
 
 
 function closeVideo () {
-  
+  var player = new Vimeo.Player(iframe);
+  player.pause();
   video_popup.classList.remove('activated');
 }
- 
+
 close_video.addEventListener('click', closeVideo, false);
