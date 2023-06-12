@@ -2891,14 +2891,28 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 }
 
 .drop-down-faq-block .container .drop-down-rows {
-	column-gap: 24px;
-	row-gap: 24px;
-	padding: 20px;
+	display: block;
+}
+
+@media (min-width: 993px) {
+	.drop-down-faq-block .container .drop-down-rows {
+		column-gap: 24px;
+		row-gap: 24px;
+		padding: 20px;
+		display: grid;
+	}
 }
 
 .drop-down-faq-block .container .drop-down-rows .drop-down-row .cols {
-	column-gap: 24px;
-	row-gap: 24px;
+	display: block;
+}
+
+@media (min-width: 993px) {
+	.drop-down-faq-block .container .drop-down-rows .drop-down-row .cols {
+		column-gap: 24px;
+		row-gap: 24px;
+		display: grid;
+	}
 }
 
 .drop-down-faq-block .container .drop-down-rows .drop-down-row .cols .col {

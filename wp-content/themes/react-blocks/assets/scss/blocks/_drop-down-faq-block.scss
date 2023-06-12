@@ -22,14 +22,23 @@
 
         }
         .drop-down-rows {
-            column-gap: 24px;
-            row-gap: 24px;
-            padding: 20px;
+            display: block;
+            @include laptop{
+                column-gap: 24px;
+                row-gap: 24px;
+                padding: 20px;
+                display: grid;
+            }
             .drop-down-row {
 
                 .cols {
-                    column-gap: 24px;
-                    row-gap: 24px;
+                    display: block;
+                    @include laptop{
+                        column-gap: 24px;
+                        row-gap: 24px;
+                        display: grid;
+                    }
+
 
                     .col {
                         background-color: $white;
