@@ -2,13 +2,13 @@
     width: 100%;
     padding: 25px 0;
     @include laptop{
-        padding: 46px 0; 
+        padding: 46px 0;
     }
     .container{
         .section-title,.section-description{
             max-width: 100%;
             @include tablet{
-               
+
             }
         }
         .section-title{
@@ -19,12 +19,22 @@
             margin-bottom: 64px;
             text-align: left;
             color:#475467;
+
+        }
+        .progress-description{
+            margin-bottom: 64px;
+            text-align: left;
+            color:#475467;
+            max-width: 100%;
+            @include laptop{
+                max-width: 60%;
+            }
         }
         .eyebrow{
             @include laptop{
                 max-width: 60%;
             }
-            
+
             margin: 0;
             margin-bottom: 64px;
         }
@@ -48,7 +58,7 @@
                         line-height: rem(38);
                         font-weight: 700;
                         color: $blue-1;
-                        margin-bottom: 8px;    
+                        margin-bottom: 8px;
                     }
                     .col-description{
                         font-size: rem(16);
@@ -57,7 +67,7 @@
                         line-height: rem(24);
                     }
                 }
-                
+
                 .col-link{
                     margin-top: 20px;
                     font-size: rem(16);
@@ -74,11 +84,22 @@
                         background-position: center center;
                         background-repeat: no-repeat;
                         background-size: cover;
-                    } 
+                    }
+                }
+                .col-link-progress{
+                    margin-top: 20px;
+                    font-size: rem(16);
+                    line-height: rem(24);
+                    color: $white;
+                    background-color: $blue-9;
+                    font-weight: 700;
+                    width: max-content;
+                    padding: 10px 24px;
+                    border-radius: 40px;
                 }
                 .bottom-swooshes{
                     display: none;
-                } 
+                }
             }
             .colored{
                 padding-bottom: 64px;
@@ -110,6 +131,13 @@
             .divider-off {
                 .new-cta{
                     margin-top: 20px;
+                }
+                .new-cta-progress{
+                    margin-top: 20px;
+                    margin-bottom: 24px;
+                    @include laptop{
+                        margin-top: 72px;
+                    }
                 }
                 .divider{
                     display: none;
@@ -151,14 +179,52 @@
             box-shadow: none;
                 border-radius: 0;
         }
-    } 
+        .progress-on {
+            padding-left: 32px;
+            position: relative;
+            @include laptop{
+                padding-left: 52px;
+            }
+
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 1px;
+                background: $green-3;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                height: calc(100% - 10px);
+            }
+            .progress{
+                position: relative;
+                padding-left: 25px;
+                margin-bottom:15px;
+
+                &:before{
+                    content:"";
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    background: $green-3;
+                    position: absolute;
+                    left:-39px;
+                    top:45px;
+                    border-radius: 10px;
+                    @include laptop{
+                        left: -59px;
+                    }
+                }
+            }
+        }
+    }
 }
 .gray{
     background-color:$gray-5;
 }
 .white{
     background-color: $white;
-} 
+}
 .blue{
     background-color: $blue-8;
 }

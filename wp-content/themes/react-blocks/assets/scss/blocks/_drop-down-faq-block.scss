@@ -1,0 +1,198 @@
+.drop-down-faq-block{
+    width: 100%;
+    padding: 25px 0;
+    @include laptop{
+        padding: 46px 0;
+    }
+    .container{
+        .section-title,.section-description{
+            max-width: 100%;
+            @include tablet{
+
+            }
+        }
+        .section-title{
+            color: $blue-1;
+            text-align: left;
+        }
+        .section-description{
+            margin-bottom: 64px;
+            text-align: left;
+            color:#475467;
+
+        }
+        .drop-down-rows {
+            column-gap: 24px;
+            row-gap: 24px;
+            padding: 20px;
+            .drop-down-row {
+
+                .cols {
+                    column-gap: 24px;
+                    row-gap: 24px;
+
+                    .col {
+                        background-color: $white;
+                        padding: 24px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        margin-bottom: 48px;
+
+                        .drop-down-info {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 0px;
+                            @include laptop{
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 0px;
+                            }
+                            &::after{
+                                content: '';
+                                margin-left: auto;
+                                margin-right: 0px;
+                                width: 32px;
+                                height: 16px;
+                                display: inline-block;
+                                background-image: url("../../assets/images/icon-arrow-down.svg");
+                                background-position: center center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                @include laptop{
+                                    margin-right: 8px;
+                                }
+                            }
+                            .col-icon {
+                                width: 56px;
+                                height: 56px;
+                                margin-right: 33px;
+                            }
+
+                            .col-title {
+                                display: none;
+                                @include laptop{
+                                    font-size: rem(30);
+                                    line-height: rem(38);
+                                    font-weight: 700;
+                                    color: $blue-1;
+                                    margin-bottom: 8px;
+                                    display: block;
+                                }
+                            }
+
+                            .col-drop-icon {
+                                content: '';
+                                margin-left: auto;
+                                margin-right: 0px;
+                                width: 32px;
+                                height: 16px;
+                                display: inline-block;
+                                background-image: url("../../assets/images/icon-arrow-down.svg");
+                                background-position: center center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                @include laptop{
+                                    margin-right: 8px;
+                                }
+                                .active{
+                                    background-image: url("../../assets/images/icon-arrow-up.png");
+                                }
+
+                            }
+
+                        }
+                        .active {
+                            margin-bottom: 28px;
+                            &::after{
+                                content: '';
+                                margin-left: auto;
+                                margin-right: 0px;
+                                width: 32px;
+                                height: 16px;
+                                display: inline-block;
+                                background-image: url("../../assets/images/icon-arrow-up.svg");
+                                background-position: center center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                @include laptop{
+                                    margin-right: 8px;
+                                }
+                            }
+                        }
+
+                        .col-title-mobile{
+                            font-size: rem(30);
+                            line-height: rem(38);
+                            font-weight: 700;
+                            color: $blue-1;
+                            margin-bottom: 8px;
+                            @include laptop{
+                                display: none;
+                            }
+                        }
+                        .drop-down-content{
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: max-height 0.2s ease-out;
+                            .col-description {
+                                font-size: rem(16);
+                                font-weight: 400;
+                                color: $gray-6;
+                                line-height: rem(24);
+                                margin-bottom: 18px;
+                            }
+                            .col-link {
+                                margin-top: 20px;
+                                font-size: rem(16);
+                                line-height: rem(24);
+                                color: $blue-1;
+                                font-weight: 700;
+
+                                &::after {
+                                    content: '';
+                                    margin-left: 8px;
+                                    width: 11.67px;
+                                    height: 11.67px;
+                                    display: inline-block;
+                                    background-image: url("../../assets/images/icon-arrow.svg");
+                                    background-position: center center;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .one {
+                    grid-template-columns: 1fr;
+                }
+                .two{
+                    @include tablet {
+                        grid-template-columns: 1fr 1fr;
+                    }
+                }
+                .box{
+                    .col {
+                        box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+                        border-radius: 16px;
+                    }
+                }
+                .no-box{
+                    box-shadow: none;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}
+.gray{
+    background-color:$gray-5;
+}
+.white{
+    background-color: $white;
+}
+.blue{
+    background-color: $blue-8;
+}

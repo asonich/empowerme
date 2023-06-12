@@ -20,8 +20,9 @@ $gray-5:#F2F4F7;
 $gray-6:#475467;
 $green-1:#12B76A;
 $green-2:#A4CD39;
+$green-3:#93D500;
 $pink-1:#F4EBFF;
-// Breakpoints 
+// Breakpoints
 $phone: 320px;
 $phone-lg:480px;
 $tablet: 768px;
@@ -53,14 +54,14 @@ $breakpoints: (
 @mixin tablet {
     @media (min-width: $tablet) {
         @content;
-    } 
+    }
 }
-@mixin laptop {  
+@mixin laptop {
     @media (min-width: $laptop) {
         @content;
     }
 }
-@mixin desktop { 
+@mixin desktop {
     @media (min-width: $desktop) {
         @content;
     }
@@ -68,11 +69,11 @@ $breakpoints: (
 @mixin full-width {
     @media (min-width: $full-width) {
         @content;
-    } 
+    }
 }
 @mixin full-width-xl {
     @media (min-width: $full-width-xl) {
         @content;
-    } 
+    }
 }
-  
+

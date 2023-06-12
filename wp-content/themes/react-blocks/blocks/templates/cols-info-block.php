@@ -34,8 +34,9 @@ $eyebrow = get_field('eyebrow');
 $background = get_field('background_color');
 $cols_bottom = get_field('box_bottom_style');
 $divider = get_field('divider');
+$progress = get_field('progress');
 ?>
-<?php if ($cols): ?> 
+<?php if ($cols): ?>
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); if ($cols_setup) echo " ".$cols_setup; if ($background) echo " ".$background; ?>">
     <div class="container">
         <div class="section-heading-block">
@@ -43,32 +44,32 @@ $divider = get_field('divider');
                 <div class="section-title" ><?php echo esc_html( $title ); ?></div>
             <?php } ?>
             <?php if ($description){ ?>
-                <div class="section-description"><?php echo esc_html( $description ); ?></div>
-            <?php } ?> 
+                <div class="<?php echo ($progress == "progress-on") ? "progress-description" : "section-description";?>"><?php echo esc_html( $description ); ?></div>
+            <?php } ?>
             <?php if ($eyebrow){ ?>
                 <div class="eyebrow"><?php echo  $eyebrow; ?></div>
-            <?php } ?>      
-        </div>  
-      
-        <div class="cols grid <?php if ($cols_setup) echo " ".$cols_setup;?> <?php if ($cols_style) echo " ".$cols_style;?>">
+            <?php } ?>
+        </div>
+
+        <div class="cols grid <?php if ($cols_setup) echo " ".$cols_setup; if ($progress) echo " ".$progress; if ($cols_style) echo " ".$cols_style;?>">
         <?php foreach ($cols as $col) {?>
-            <div class="col <?php if ($cols_bottom) echo " ".$cols_bottom; if ($divider) echo " ".$divider; ?>">
+            <div class="col <?php if ($cols_bottom) echo " ".$cols_bottom; if ($divider) echo " ".$divider; if ($progress == "progress-on") echo " progress";?>">
                 <div class="col-info">
-                <?php if ($col['icon']){ ?>   
+                <?php if ($col['icon']){ ?>
                     <img src="<?php echo $col['icon']['url'] ?>" alt="<?php echo $col['icon']['alt'] ?>" class="col-icon">
                 <?php } ?>
                 <?php if ($col['title']){ ?>
                     <p class="col-title"><?php echo $col['title'] ?></p>
                <?php } ?>
-               <?php if ($col['description']){ ?>    
+               <?php if ($col['description']){ ?>
                     <p class="col-description"><?php echo $col['description'] ?></p>
                 <?php } ?>
                 </div>
-                
+
                 <?php if ($col['link']){ ?>
-                    <div class="new-cta">
+                    <div class="<?php echo ($progress == "progress-on") ? "new-cta-progress" : "new-cta";?>">
                         <div class="divider"></div>
-                        <a href="<?php echo $col['link']['url'] ?>" class="col-link" target="<?php if ($col['link']['target']){ echo $col['link']['target']; } else { echo '_self';} ?>"><?php echo $col['link']['title'] ?></a>
+                        <a href="<?php echo $col['link']['url'] ?>" class="<?php echo ($progress == "progress-on") ? "col-link-progress" : "col-link";?>" target="<?php if ($col['link']['target']){ echo $col['link']['target']; } else { echo '_self';} ?>"><?php echo $col['link']['title'] ?></a>
                     </div>
                 <?php } ?>
                 <div class="bottom-swooshes"></div>
@@ -76,7 +77,7 @@ $divider = get_field('divider');
             <?php } ?>
         </div>
     </div>
-    
+
 </div>
 <?php elseif (is_admin()) : ?>
     <p><?php _e('No content added'); ?></p>

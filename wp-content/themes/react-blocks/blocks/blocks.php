@@ -26,7 +26,7 @@ $blocks = [
         'category'        => 'happen-blocks',
         'icon'            => 'block-default',
     ],
-    'title_video_hero' => [ 
+    'title_video_hero' => [
         'name'            => 'title_video_hero',
         'title'           => ('Title Video Hero '),
         'description'     => ('Description'),
@@ -66,6 +66,14 @@ $blocks = [
         'category'        => 'happen-blocks',
         'icon'            => 'block-default',
     ],
+    'drop_down_faq_block' => [
+        'name'            => 'drop_down_faq_block',
+        'title'           => ('Drop down FAQ Title'),
+        'description'     => ('Drop down FAQ description'),
+        'render_callback' => 'render_acf_block_callback',
+        'category'        => 'happen-blocks',
+        'icon'            => 'block-default',
+    ],
     'eyebrow_video_text_block' => [
         'name'            => 'eyebrow_video_text_block',
         'title'           => ('Eyebrow Video text block'),
@@ -87,7 +95,7 @@ $blocks = [
         'title'           => ('Staggered Cols Info Title'),
         'description'     => ('Staggered Cols Info description'),
         'render_callback' => 'render_acf_block_callback',
-        'category'        => 'happen-blocks', 
+        'category'        => 'happen-blocks',
         'icon'            => 'block-default',
     ],
     'related_blog_posts_block' => [
@@ -114,9 +122,9 @@ $blocks = [
         'category'        => 'happen-blocks',
         'icon'            => 'block-default',
     ],
-    
- 
 
-    
+
+
+
 
 ];
