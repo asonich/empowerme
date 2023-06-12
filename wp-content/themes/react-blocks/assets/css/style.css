@@ -3033,6 +3033,16 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	transition: max-height 0.2s ease-out;
 }
 
+.drop-down-faq-block .container .drop-down-rows .drop-down-row .cols .col .drop-down-content ul li {
+	display: list-item;
+	list-style-position: inside;
+	list-style-type: disc;
+}
+
+.drop-down-faq-block .container .drop-down-rows .drop-down-row .cols .col .drop-down-content ul li .list-item {
+	margin-left: 20px;
+}
+
 .drop-down-faq-block .container .drop-down-rows .drop-down-row .cols .col .drop-down-content .col-description {
 	font-size: 1rem;
 	font-weight: 400;

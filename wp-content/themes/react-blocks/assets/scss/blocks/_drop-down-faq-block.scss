@@ -138,6 +138,16 @@
                             max-height: 0;
                             overflow: hidden;
                             transition: max-height 0.2s ease-out;
+                            ul{
+                                li{
+                                    display: list-item;
+                                    list-style-position: inside;
+                                    list-style-type: disc;
+                                    .list-item{
+                                        margin-left: 20px;
+                                    }
+                                }
+                            }
                             .col-description {
                                 font-size: rem(16);
                                 font-weight: 400;
