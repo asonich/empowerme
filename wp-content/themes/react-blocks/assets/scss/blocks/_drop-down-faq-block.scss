@@ -38,20 +38,22 @@
                         flex-direction: column;
                         justify-content: space-between;
                         margin-bottom: 48px;
+                        height: fit-content;
 
                         .drop-down-info {
                             display: flex;
-                            align-items: center;
+                            align-items: flex-start;
                             margin-bottom: 0px;
                             @include laptop{
                                 display: flex;
-                                align-items: center;
+                                align-items: flex-start;
                                 margin-bottom: 0px;
                             }
                             &::after{
                                 content: '';
                                 margin-left: auto;
                                 margin-right: 0px;
+                                margin-top: 16px;
                                 width: 32px;
                                 height: 16px;
                                 display: inline-block;
@@ -78,6 +80,7 @@
                                     color: $blue-1;
                                     margin-bottom: 8px;
                                     display: block;
+                                    width: 80%;
                                 }
                             }
 

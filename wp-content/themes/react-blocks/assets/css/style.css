@@ -2908,18 +2908,19 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	flex-direction: column;
 	justify-content: space-between;
 	margin-bottom: 48px;
+	height: fit-content;
 }
 
 .drop-down-faq-block .container .drop-down-rows .drop-down-row .cols .col .drop-down-info {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	margin-bottom: 0px;
 }
 
 @media (min-width: 993px) {
 	.drop-down-faq-block .container .drop-down-rows .drop-down-row .cols .col .drop-down-info {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		margin-bottom: 0px;
 	}
 }
@@ -2928,6 +2929,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	content: '';
 	margin-left: auto;
 	margin-right: 0px;
+	margin-top: 16px;
 	width: 32px;
 	height: 16px;
 	display: inline-block;
@@ -2961,6 +2963,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 		color: #006098;
 		margin-bottom: 8px;
 		display: block;
+		width: 80%;
 	}
 }
 
