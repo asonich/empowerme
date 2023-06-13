@@ -2949,7 +2949,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	content: '';
 	margin-left: auto;
 	margin-right: 0px;
-	margin-top: 16px;
+	margin-top: 20px;
 	width: 32px;
 	height: 16px;
 	display: inline-block;
@@ -2973,6 +2973,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 .drop-down-faq-block .container .drop-down-rows .drop-down-row .cols .col .drop-down-info .col-title {
 	display: none;
+	margin-top: 10px;
 }
 
 @media (min-width: 993px) {
@@ -3020,6 +3021,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	margin-right: 0px;
 	width: 32px;
 	height: 16px;
+	margin-top: 20px;
 	display: inline-block;
 	background-image: url("../../assets/images/icon-arrow-up.svg");
 	background-position: center center;
@@ -3034,6 +3036,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 }
 
 .drop-down-faq-block .container .drop-down-rows .drop-down-row .cols .col .col-title-mobile {
+	margin-top: 28px;
 	font-size: 1.875rem;
 	line-height: 2.375rem;
 	font-weight: 700;
