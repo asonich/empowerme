@@ -56,7 +56,7 @@ $progress = get_field('progress');
             <div class="col <?php if ($cols_bottom) echo " ".$cols_bottom; if ($divider) echo " ".$divider; if ($progress == "progress-on") echo " progress";?>">
                 <div class="col-info">
                 <?php if ($col['icon']){ ?>
-                    <img src="<?php echo $col['icon']['url'] ?>" alt="<?php echo $col['icon']['alt'] ?>" class="col-icon">
+                    <img src="<?php echo $col['icon']['url'] ?>" alt="<?php echo $col['icon']['alt'] ?>" class="<?php echo ($col['icon_size']) ? "".$col['icon_size'] : "col-icon"; ?>">
                 <?php } ?>
                 <?php if ($col['title']){ ?>
                     <p class="col-title"><?php echo $col['title'] ?></p>
