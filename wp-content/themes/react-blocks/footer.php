@@ -11,15 +11,15 @@
 
 ?>
 <?php
-	$logo = get_field('footer_logo', 'option'); 
+	$logo = get_field('footer_logo', 'option');
 	$navs = get_field('footer_navigation', 'option');
 	$social = get_field('social_links', 'option');
 	$additional = get_field('additional_links', 'option');
 	$builtby = get_field('build_by', 'option');
 	$copyright= get_field('copyright_text', 'option');
-	$footer_style = get_field('footer_style', 'option'); 
+	$footer_style = get_field('footer_style', 'option');
 ?>
- 
+
 	<footer id="colophon" class="site-footer">
 		<div id="video-popup" class="video-popup">
 			<div id="close-video" class="close-popup"></div>
@@ -27,7 +27,7 @@
 			<!-- <video id="empower-video"  width="100%" height="100%" controls>
 				<source  type="video/mp4" src="">
 			</video> -->
-			
+
 			<iframe src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Purpose-Driven Care (National Ad Spot)"></iframe>
 			<script src="https://player.vimeo.com/api/player.js"></script>
 			</div>
@@ -36,7 +36,7 @@
 			<div class="upper-block"></div>
 			<div class="cta-block">
 				<p class="cta-heading">Ready to get started with EmpowerMe Wellness?</p>
-				<a href="" class="btn btn__md secondary">Learn more</a>
+				<a href="https://info.empowerme.com/connect" target="_blank" class="btn btn__md secondary">Learn more</a>
 			</div>
 			<div class="bottom-block"></div>
 		</div>
@@ -76,7 +76,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
