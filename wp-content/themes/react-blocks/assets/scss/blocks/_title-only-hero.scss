@@ -7,6 +7,9 @@
     @include tablet {
         padding: 96px 0;
     }
+    @include laptop {
+        padding: 111px 0;
+    }
     @include full-width{
         padding: 111px 0;
     }
@@ -22,22 +25,22 @@
         .page-description {
             color:$white;
             text-align: center;
-        } 
+        }
     }
-    
+
 }
 .short-right{
     background-image: url("../../assets/images/small-hero-section-bg-3-mobile.svg");
     @include tablet{
         background-image: url("../../assets/images/small-hero-section-bg-3.svg");
     }
-   
+
 }
 .short-left{
     background-image: url("../../assets/images/small-hero-section-bg-1-mobile.svg");
     @include tablet{
         background-image: url("../../assets/images/small-hero-section-bg-1.svg");
-    } 
+    }
 }
 .long-right{
     background-image: url("../../assets/images/small-hero-section-bg-4-mobile.svg");
@@ -56,4 +59,4 @@
     @include tablet{
         background-image: url("../../assets/images/small-hero-section-bg-5.svg");
     }
-} 
+}
