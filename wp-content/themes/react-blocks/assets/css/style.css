@@ -1329,6 +1329,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 .category-grid .container .tab-wrapper .tab-btns {
 	display: flex;
 	align-items: center;
+	margin-bottom: 40px;
 }
 
 .category-grid .container .tab-wrapper .tab-btns .btn {
@@ -1443,7 +1444,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 .category-grid .container .pagination {
 	display: block;
 	text-align: center;
-	margin-top: 32px;
+	margin-top: 40px;
 }
 
 .category-grid .container .pagination .nav-links .page-numbers {
