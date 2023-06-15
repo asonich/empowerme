@@ -1,14 +1,14 @@
 .leaders-block{
     padding: 25px 0;
     @include laptop{
-        padding: 46px 0; 
+        padding: 46px 0;
     }
     .container{
         width:100;
         max-width: 1280px;
         padding: 0 24px;
         margin: 0 auto;
-        
+
         @include laptop{
             padding:0;
         }
@@ -22,7 +22,7 @@
         .leaders{
             grid-template-columns: 1fr;
             row-gap: 32px;
-            
+
             @include tablet{
                 column-gap:32px;
                 row-gap: 64px;
@@ -55,13 +55,13 @@
 
                 .leader-info{
                     color:$blue-1;
-                    
+
                     .leader-name{
                         margin-bottom: 4px;
                         font-weight: 700;
                         font-size: rem(18);
                         line-height: rem(28);
-                        
+
                         @include laptop{
                             margin-bottom: 8px;
                             font-size: rem(30);
@@ -97,8 +97,8 @@
                     }
                 }
             }
-        }  
-      
+        }
+
     }
 }
 .popup{
@@ -111,14 +111,18 @@
     position: fixed;
     top: 0;
     left: 0;
-    padding: 16px;
+    padding: 5px;
     z-index: 1;
     .popup-content{
-        max-width: 980px;
+        max-width: 100%;
         background-color: #fafafa;
         border-radius: 30px;
-        padding: 45px 50px 50px 40px;
+        padding: 20px 25px;
         position: relative;
+        @include laptop{
+            max-width: 980px;
+            padding: 45px 50px 50px 40px;
+        }
         .popup-container{
             flex-wrap: wrap;
             @include tablet {
@@ -129,7 +133,7 @@
                 aspect-ratio: 1/1;
                 object-fit: cover;
                 margin-bottom: 20px;
-                max-width: 280px; 
+                max-width: 280px;
                 @include tablet {
                     margin-bottom:0;
                 }
@@ -184,7 +188,7 @@
 }
 .active{
     display: flex;
-} 
+}
 .testimonial {
     padding-top:46px;
     .leader-photo{

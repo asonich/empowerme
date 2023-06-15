@@ -259,7 +259,7 @@ header {
 	background-color: #006098;
 	position: relative;
 	margin-bottom: -1px;
-	z-index: 5;
+	z-index: 1;
 }
 
 @media (min-width: 993px) {
@@ -1682,7 +1682,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 .title-only-hero {
 	width: 100%;
 	position: relative;
-	padding: 111px 0;
+	padding: 112px 0;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -1695,13 +1695,13 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 @media (min-width: 993px) {
 	.title-only-hero {
-		padding: 111px 0;
+		padding: 112px 0;
 	}
 }
 
 @media (min-width: 1600px) {
 	.title-only-hero {
-		padding: 111px 0;
+		padding: 112px 0;
 	}
 }
 
@@ -1908,16 +1908,23 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	position: fixed;
 	top: 0;
 	left: 0;
-	padding: 16px;
+	padding: 5px;
 	z-index: 1;
 }
 
 .popup .popup-content {
-	max-width: 980px;
+	max-width: 100%;
 	background-color: #fafafa;
 	border-radius: 30px;
-	padding: 45px 50px 50px 40px;
+	padding: 20px 25px;
 	position: relative;
+}
+
+@media (min-width: 993px) {
+	.popup .popup-content {
+		max-width: 980px;
+		padding: 45px 50px 50px 40px;
+	}
 }
 
 .popup .popup-content .popup-container {
