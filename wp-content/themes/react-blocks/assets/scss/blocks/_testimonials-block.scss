@@ -2,20 +2,26 @@
     width: 100%;
     padding: 25px 0;
     @include laptop{
-        padding: 46px 0; 
+        padding: 46px 0;
     }
     .container{
         .section-title{
             max-width: 773px;
-            line-height: rem(60);  
+            @include laptop{
+                line-height: rem(60);
+            }
         }
         .section-description{
-            margin-bottom: 48px;
             color:#475467;
+            margin-bottom: 25px;
+            @include laptop{
+                margin-bottom: 48px;
+            }
         }
         .testimonial{
             border-radius: 24px;
             flex-wrap: wrap;
+            padding-top: 0;
             @include tablet{
                 flex-wrap:nowrap;
             }
@@ -38,14 +44,14 @@
                     left: 0;
                     z-index: 1;
                     background-size: cover;
-                    background-repeat: no-repeat; 
+                    background-repeat: no-repeat;
 
                 }
                 @include tablet{
                     padding: 20px 12px;
                 }
                 @include desktop{
-                   
+
                     padding: 64px;
                 }
                 .testimonial-info{
@@ -55,11 +61,10 @@
                     color: $white;
                     z-index: 2;
                     position: relative;
-                    margin-bottom: 32px;
                     @include desktop{
                         font-size: rem(24);
                         line-height: rem(32);
-                       
+
                         font-weight: 500;
                         max-width: 686px;
                     }
@@ -79,17 +84,17 @@
                     color: $white;
                     z-index: 4;
                 }
-                
+
             }
             .testimonial-image{
                 display: none;
                 @include tablet{
                     object-fit: cover;
                     display: block;
-                   
+
                     max-width: 50%;
                 }
-                
+
             }
             .mobile-image{
                 object-fit: cover;
@@ -109,24 +114,24 @@
                         content:'';
                         background-image:  url("../../assets/images/left-group.svg");
                         position: absolute;
-                       
+
                         height: 100%;
                         left:100%;
                         top:0;
                         bottom: 0;
                         background-size: cover;
-                        background-repeat: no-repeat; 
+                        background-repeat: no-repeat;
                     }
                 }
-               
-                
+
+
             }
             .testimonial-image{
                 @include tablet{
                     border-radius: 0 24px 24px 0px;
                 }
             }
-            
+
         }
         .right{
             flex-direction: row-reverse;
@@ -143,7 +148,7 @@
                         top:0;
                         bottom: 0;
                         background-size: cover;
-                        background-repeat: no-repeat; 
+                        background-repeat: no-repeat;
                     }
                     &::after{
                         display: none;
@@ -155,4 +160,4 @@
             }
         }
     }
-}  
+}
