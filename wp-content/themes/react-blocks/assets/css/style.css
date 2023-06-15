@@ -259,7 +259,7 @@ header {
 	background-color: #006098;
 	position: relative;
 	margin-bottom: -1px;
-	z-index: 999;
+	z-index: 3;
 }
 
 @media (min-width: 993px) {
@@ -2590,6 +2590,13 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	right: 34px;
 	bottom: 57px;
 	display: block;
+}
+
+.eyebrow-video-text .container .video-hook img {
+	display: block;
+	margin: 61px auto;
+	border-radius: 32px;
+	position: relative;
 }
 
 .eyebrow-video-text .container .block-image {
