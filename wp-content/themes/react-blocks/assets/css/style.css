@@ -2191,6 +2191,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	border-radius: 36px;
 	position: relative;
 	width: fit-content;
+	max-width: 75%;
 }
 
 .title-video-hero .container .video-hook::before {
@@ -2202,6 +2203,13 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	right: 16px;
 	bottom: 16px;
 	display: block;
+}
+
+.title-video-hero .container .video-hook img {
+	display: block;
+	margin: 61px auto;
+	border-radius: 32px;
+	position: relative;
 }
 
 .title-video-hero .container .block-image {
