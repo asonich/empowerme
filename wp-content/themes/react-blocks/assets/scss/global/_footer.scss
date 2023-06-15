@@ -212,13 +212,44 @@ footer{
                     }
                     .additional-pages{
                         margin-bottom: 16px;
-                        display: flex;
-                        justify-content: flex-end;
+                        display: grid;
+                        grid-auto-flow: column;
+                        justify-content: center;
+                        grid-template:
+                                    'a b'
+                                    'c c'
+                                    'd d';
+                        row-gap: 16px;
+                        @include tablet{
+                            display: flex;
+                            flex-direction: row;
+                        }
                         .additional-link{
+                            &:nth-child(1){
+                                grid-area: a;
+                            }
+                            &:nth-child(2){
+                                grid-area: b;
+
+                            }
+                            &:nth-child(3){
+                                grid-area: c;
+                                text-align: center;
+                            }
+                            &:nth-child(4){
+                                grid-area: d;
+                                text-align: center;
+                            }
                             color:$white;
                             font-size: rem(12);
                             padding: 0 10px;
-                            border-right: 1px solid;
+                            border-right: none;
+                            &:first-child{
+                                border-right: 1px solid;
+                            }
+                            @include tablet{
+                                border-right: 1px solid;
+                            }
                             &:last-of-type{
                                 border:none;
                                 padding-right: 0;
@@ -227,13 +258,26 @@ footer{
                         }
                     }
                     .footer-info{
-                        justify-content: flex-end;
+                        flex-direction: column;
+                        row-gap: 16px;
+                        justify-content: center;
+                        @include tablet{
+                            flex-direction: row;
+                            justify-content: flex-end;
+                        }
+
                         a,p{
                             color:$white;
                             font-size: rem(12);
+                            text-align: center;
+                            @include tablet{
+                                text-align: end;
+                            }
                         }
                         a{
-                            padding-right: 10px;
+                            @include tablet{
+                                padding-right: 10px;
+                            }
                         }
                     }
                 }
