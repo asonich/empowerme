@@ -1050,7 +1050,8 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 @media (min-width: 768px) {
 	.post-hero .container .post-info-col .post-title-block .section-title {
-		line-height: 3.75rem;
+		font-size: 2.375rem;
+		line-height: 3rem;
 	}
 }
 
@@ -1230,10 +1231,10 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 }
 
 .post-content .side-content .social-block .social-links {
-	grid-template-columns: repeat(4, 1fr);
-	column-gap: 12px;
+	grid-template-columns: repeat(5, 1fr);
+	column-gap: 10px;
 	width: 100%;
-	max-width: 196px;
+	max-width: 250px;
 }
 
 .post-content .side-content .social-block .social-links .social-link {
@@ -1379,7 +1380,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 }
 
 .post-content .post-testimonial .author-block {
-	width: max-content;
+	width: fit-content;
 	margin: 24px auto;
 	font-size: 1rem;
 	line-height: 1.5rem;
