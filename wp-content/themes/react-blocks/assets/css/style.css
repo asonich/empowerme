@@ -2214,6 +2214,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	right: 16px;
 	bottom: 16px;
 	display: block;
+	z-index: 9;
 }
 
 .title-video-hero .container .video-hook img {
