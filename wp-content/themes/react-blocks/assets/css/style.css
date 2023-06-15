@@ -2224,16 +2224,18 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	}
 }
 
-.title-video-hero .container .video-hook::before {
-	content: '';
-	position: absolute;
-	width: 128px;
-	height: 128px;
-	background-image: url("../../assets/images/play-button.svg");
-	right: 16px;
-	bottom: 16px;
-	display: block;
-	z-index: 9;
+@media (min-width: 993px) {
+	.title-video-hero .container .video-hook::before {
+		content: '';
+		position: absolute;
+		width: 128px;
+		height: 128px;
+		background-image: url("../../assets/images/play-button.svg");
+		right: 16px;
+		bottom: 16px;
+		display: block;
+		z-index: 9;
+	}
 }
 
 .title-video-hero .container .video-hook img {

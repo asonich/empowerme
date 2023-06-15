@@ -43,15 +43,18 @@
                 max-width: 75%;
             }
             &::before{
-                content: '';
-                position: absolute;
-                width: 128px;
-                height: 128px;
-                background-image: url("../../assets/images/play-button.svg");
-                right: 16px;
-                bottom: 16px;
-                display: block;
-                z-index: 9;
+                @include laptop{
+                    content: '';
+                    position: absolute;
+                    width: 128px;
+                    height: 128px;
+                    background-image: url("../../assets/images/play-button.svg");
+                    right: 16px;
+                    bottom: 16px;
+                    display: block;
+                    z-index: 9;
+                }
+
             }
             img{
                 display: block;
