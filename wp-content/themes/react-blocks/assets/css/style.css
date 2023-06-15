@@ -258,6 +258,8 @@ header {
 	padding: 17px 12px;
 	background-color: #006098;
 	position: relative;
+	margin-bottom: -1px;
+	z-index: 999;
 }
 
 @media (min-width: 993px) {
@@ -282,8 +284,7 @@ header .container .logo-col {
 }
 
 header .container .logo-col .site-logo {
-	width: 100%;
-	max-width: 202px;
+	width: 110%;
 }
 
 header .container .navigation {
@@ -324,7 +325,8 @@ header .container .navigation nav .nav-item .nav-link {
 	margin-right: 8px;
 }
 
-header .container .navigation nav .nav-item .sub-menu-btn {
+header .container .navigation nav .nav-item .sub-menu-btn,
+header .container .navigation nav .nav-item .mobile-sub-menu-btn {
 	width: 20px;
 	height: 20px;
 	display: block;
@@ -334,7 +336,8 @@ header .container .navigation nav .nav-item .sub-menu-btn {
 	cursor: pointer;
 }
 
-header .container .navigation nav .nav-item .sub-links {
+header .container .navigation nav .nav-item .sub-links,
+header .container .navigation nav .nav-item .mobile-sub-links {
 	display: none;
 	position: absolute;
 	flex-direction: column;
@@ -346,18 +349,21 @@ header .container .navigation nav .nav-item .sub-links {
 	left: 0px;
 }
 
-header .container .navigation nav .nav-item .sub-links .nav-link {
+header .container .navigation nav .nav-item .sub-links .nav-link,
+header .container .navigation nav .nav-item .mobile-sub-links .nav-link {
 	font-weight: 400;
 	color: #000;
 	padding: 10px 20px;
 	font-style: 0.875rem;
 }
 
-header .container .navigation nav .nav-item .sub-links .sub-2 {
+header .container .navigation nav .nav-item .sub-links .sub-2,
+header .container .navigation nav .nav-item .mobile-sub-links .sub-2 {
 	cursor: pointer;
 }
 
-header .container .navigation nav .nav-item .sub-links .sub-sub-links {
+header .container .navigation nav .nav-item .sub-links .sub-sub-links,
+header .container .navigation nav .nav-item .mobile-sub-links .sub-sub-links {
 	position: absolute;
 	left: 108%;
 	top: 0;
@@ -368,15 +374,37 @@ header .container .navigation nav .nav-item .sub-links .sub-sub-links {
 	border-radius: 10px;
 }
 
-header .container .navigation nav .nav-item .sub-links .active .sub-sub-links {
+header .container .navigation nav .nav-item .sub-links .active .sub-sub-links,
+header .container .navigation nav .nav-item .mobile-sub-links .active .sub-sub-links {
 	display: flex;
 }
 
-header .container .navigation nav .active .sub-links {
+header .container .navigation nav .nav-item .sub-links .active-sub .sub-sub-links,
+header .container .navigation nav .nav-item .mobile-sub-links .active-sub .sub-sub-links {
 	display: flex;
 }
 
-header .container .navigation nav .active .sub-links .sub-menu-btn {
+header .container .navigation nav .active .sub-links,
+header .container .navigation nav .active .mobile-sub-links {
+	display: flex;
+}
+
+header .container .navigation nav .active .sub-links .sub-menu-btn,
+header .container .navigation nav .active .sub-links .mobile-sub-menu-btn,
+header .container .navigation nav .active .mobile-sub-links .sub-menu-btn,
+header .container .navigation nav .active .mobile-sub-links .mobile-sub-menu-btn {
+	background-image: none;
+}
+
+header .container .navigation nav .active-sub .sub-links,
+header .container .navigation nav .active-sub .mobile-sub-links {
+	display: flex;
+}
+
+header .container .navigation nav .active-sub .sub-links .sub-menu-btn,
+header .container .navigation nav .active-sub .sub-links .mobile-sub-menu-btn,
+header .container .navigation nav .active-sub .mobile-sub-links .sub-menu-btn,
+header .container .navigation nav .active-sub .mobile-sub-links .mobile-sub-menu-btn {
 	background-image: none;
 }
 
@@ -468,7 +496,8 @@ header .mobile-menu .mobile-menu-container .nav-item .nav-link {
 	width: 90%;
 }
 
-header .mobile-menu .mobile-menu-container .nav-item .sub-links {
+header .mobile-menu .mobile-menu-container .nav-item .sub-links,
+header .mobile-menu .mobile-menu-container .nav-item .mobile-sub-links {
 	display: none;
 	box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
 	border: 1px solid #EAECF0;
@@ -479,11 +508,15 @@ header .mobile-menu .mobile-menu-container .nav-item .sub-links {
 	flex-direction: column;
 }
 
-header .mobile-menu .mobile-menu-container .nav-item .sub-links .nav-item .sub-links .nav-link {
+header .mobile-menu .mobile-menu-container .nav-item .sub-links .nav-item .sub-links .nav-link,
+header .mobile-menu .mobile-menu-container .nav-item .sub-links .nav-item .mobile-sub-links .nav-link,
+header .mobile-menu .mobile-menu-container .nav-item .mobile-sub-links .nav-item .sub-links .nav-link,
+header .mobile-menu .mobile-menu-container .nav-item .mobile-sub-links .nav-item .mobile-sub-links .nav-link {
 	padding: 6px 0;
 }
 
-header .mobile-menu .mobile-menu-container .nav-item .sub-menu-btn {
+header .mobile-menu .mobile-menu-container .nav-item .sub-menu-btn,
+header .mobile-menu .mobile-menu-container .nav-item .mobile-sub-menu-btn {
 	width: 20px;
 	height: 20px;
 	display: block;
@@ -495,7 +528,13 @@ header .mobile-menu .mobile-menu-container .nav-item .sub-menu-btn {
 	width: 10%;
 }
 
-header .mobile-menu .mobile-menu-container .active .sub-links {
+header .mobile-menu .mobile-menu-container .active .sub-links,
+header .mobile-menu .mobile-menu-container .active .mobile-sub-links {
+	display: flex;
+}
+
+header .mobile-menu .mobile-menu-container .active-sub .sub-links,
+header .mobile-menu .mobile-menu-container .active-sub .mobile-sub-links {
 	display: flex;
 }
 
@@ -759,6 +798,8 @@ footer .with-white .bottom-block {
 footer .main-footer {
 	background-color: #006098;
 	padding-bottom: 64px;
+	margin-top: -1px;
+	z-index: 999;
 }
 
 footer .main-footer .container {
@@ -804,7 +845,7 @@ footer .main-footer .container .bottom-footer .footer-navigation {
 
 footer .main-footer .container .bottom-footer .footer-navigation .nav-col .nav-heading {
 	color: #99BFD6;
-	font-size: 0.875rem;
+	font-size: 1.125rem;
 	font-weight: 700;
 }
 
@@ -1580,7 +1621,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 .title-only-hero {
 	width: 100%;
 	position: relative;
-	padding: 64px 0;
+	padding: 111px 0;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -2089,7 +2130,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	margin: 61px auto;
 	border-radius: 36px;
 	position: relative;
-	width: max-content;
+	width: fit-content;
 }
 
 .title-video-hero .container .video-hook::before {
@@ -2456,7 +2497,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 }
 
 .eyebrow-video-text .container .video-hook {
-	max-width: max-content;
+	max-width: fit-content;
 	position: relative;
 }
 

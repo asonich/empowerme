@@ -12,6 +12,7 @@
 
 <?php
 
+$time_to_read = get_field("time_to_read");
 $subtitle = get_field("subtitle");
 $subparagraph = get_field("subparagraph");
 $flex_content = get_field("post_flex_content");
@@ -19,12 +20,12 @@ $contributors = get_field("contributors");
 $contributors_title = get_field("c_title");
 $social = get_field('social_links', 'option');
 $post = get_post();
-// echo "<pre>"; var_dump($subtitle); echo "</pre>"; 
-// echo "<pre>"; var_dump($subparagraph); echo "</pre>"; 
-//echo "<pre>"; var_dump($flex_content); echo "</pre>"; 
+// echo "<pre>"; var_dump($subtitle); echo "</pre>";
+// echo "<pre>"; var_dump($subparagraph); echo "</pre>";
+//echo "<pre>"; var_dump($flex_content); echo "</pre>";
 $post_categories = get_the_category($post);
 
-	
+
 
 ?>
 
@@ -35,17 +36,17 @@ $post_categories = get_the_category($post);
 					<div class="post-category-box">
 					<p class="category-name">
 							<?php
-								$categoty_list = array(); 
+								$categoty_list = array();
 								foreach( $post_categories as $category) array_push($categoty_list, $category->name);
 								echo ( implode(", ", $categoty_list) );
 							?>
-					</p>	
-						<p class="time-to-read">8 min read</p>
+					</p>
+						<p class="time-to-read"><?php echo ($time_to_read) ? "".$time_to_read : "8 min read";?></p>
 					</div>
 					<div class="post-title-block">
 						<h1 class="section-title"><?php echo get_the_title($post);?></h1>
 						<p class="section-description"><?php echo $subtitle; ?></p>
-					</div>	
+					</div>
 				</div>
 				<div class="image-col">
 					<img src="<?php echo get_the_post_thumbnail_url($post); ?>" alt="" class="post-image">
@@ -58,13 +59,13 @@ $post_categories = get_the_category($post);
 					<div class="anchor-nav-block col">
 						<p class="title">Table of contents</p>
 						<div class="links-container flex">
-							<?php foreach($flex_content as $key => $section) { 
+							<?php foreach($flex_content as $key => $section) {
 								if ($section['title']) {?>
-								<a href="#block-<?php echo $key;?>" class="post-content-link"><?php echo $section['title']?></a>	
+								<a href="#block-<?php echo $key;?>" class="post-content-link"><?php echo $section['title']?></a>
 							<?php	} ?>
 							<?php } ?>
 						</div>
-						 
+
 					</div>
 					<div class="contributors-block col">
 						<p class="title"><?php echo $contributors_title;?></p>
@@ -76,7 +77,7 @@ $post_categories = get_the_category($post);
 									<p class="position"><?php echo $contributor['position'];?></p>
 								</div>
 							</div>
-						<?php } ?>	
+						<?php } ?>
 					</div>
 					<div class="subscribe-block col">
 						<div class="title">Subscribe to our newsletter</div>
@@ -93,20 +94,20 @@ $post_categories = get_the_category($post);
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 			<div class="main-content">
 				<div class="sub-text"><p><?php echo $subparagraph ?></p></div>
-				<?php 
+				<?php
 					foreach($flex_content as $key => $section) {
 						$template = 'blog-flex-sections/'.$section["acf_fc_layout"];
 						//var_dump($template);
 						$section['key']= $key;
 						get_template_part( $template, null, $section);
-					}			
+					}
 				?>
 			</div>
-			
+
 		</div>
 
 	</main><!-- #main -->

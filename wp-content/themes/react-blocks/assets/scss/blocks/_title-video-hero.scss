@@ -4,7 +4,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     @include tablet {
-        padding: 96px 0; 
+        padding: 96px 0;
     }
     @include full-width{
         padding: 111px 0;
@@ -25,7 +25,7 @@
             margin: 61px auto;
             border-radius: 36px;
             position: relative;
-            width: max-content;
+            width: fit-content;
             &::before{
                 content: '';
                 position: absolute;

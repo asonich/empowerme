@@ -24,7 +24,7 @@
 <?php wp_body_open(); ?>
 <?php
  $logo = get_field('logo_image', 'option');
- $logo_mobile = get_field('logo_image_mobile','option'); 
+ $logo_mobile = get_field('logo_image_mobile','option');
  $nav = get_field('menu', 'option');
  $login_bnt = get_field('login_button', 'option');
  $partners_bnt = get_field('partners_button', 'option');
@@ -38,7 +38,7 @@
 	</div>
 	<?php } ?>
 	<header id="masthead" class="site-header">
-		
+
 		<div class="container flex">
 			<div class="logo-col"><a href="/"><img  src="<?php echo $logo['url'] ;?>" alt="<?php echo $logo['alt'] ;?>" class="site-logo"></a></div>
 			<div class="navigation">
@@ -46,7 +46,7 @@
 				<?php foreach( $nav as $link) {?>
 					<div class="nav-item">
 						<a href="<?php echo $link['parent_link']['url']?>" class="nav-link"><?php echo $link['parent_link']['title']?></a>
-						
+
 						<?php if ($link['sub_links']) { ?>
 							<span class="sub-menu-btn"></span>
 							<div class="sub-links">
@@ -54,30 +54,30 @@
 									<div class="nav-item">
 										<a href="<?php echo $sub_link['link']['url']?>" class="nav-link"><?php echo $sub_link['link']['title']?></a>
 											<?php if ($sub_link['sub_links']) { ?>
-												<span class="sub-2">❯</span>
+												<span class="sub-2"></span>
 												<div class="sub-sub-links">
 													<?php foreach( $sub_link['sub_links'] as $sub_sub_link) {?>
-														
+
 															<a href="<?php echo $sub_sub_link['link']['url']?>" class="nav-link"><?php echo $sub_sub_link['link']['title']?></a>
-														
-													<?php } ?>	
+
+													<?php } ?>
 												</div>
 											<?php } ?>
 									</div>
-									
+
 								<?php } ?>
 							</div>
-							
+
 						<?php } ?>
 					</div>
-					
-				<?php };?>	
+
+				<?php };?>
 				</nav>
 				<div class="button-col">
 					<a href="" class="btn btn__md secondary">Community Login</a>
 					<a href="" class="btn btn__md primary">Partner With Us</a>
 				</div>
-				
+
 			</div>
 			<div id="open" class="burger-button">
 					<span></span>
@@ -94,7 +94,7 @@
 				<?php foreach( $nav as $link) {?>
 						<div class="nav-item">
 							<a href="<?php echo $link['parent_link']['url']?>" class="nav-link"><?php echo $link['parent_link']['title']?></a>
-							
+
 							<?php if ($link['sub_links']) { ?>
 								<span class="sub-menu-btn"></span>
 								<div class="sub-links">
@@ -102,29 +102,27 @@
 										<div class="nav-item">
 											<a href="<?php echo $sub_link['link']['url']?>" class="nav-link"><?php echo $sub_link['link']['title']?></a>
 												<?php if ($sub_link['sub_links']) { ?>
-													<span class="sub-menu-btn"></span>
-													<div class="sub-links">
+                                                    <span class="mobile-sub-menu-btn"></span>
+													<div class="mobile-sub-links">
 														<?php foreach( $sub_link['sub_links'] as $sub_sub_link) {?>
-															
 																<a href="<?php echo $sub_sub_link['link']['url']?>" class="nav-link"><?php echo $sub_sub_link['link']['title']?></a>
-															
-														<?php } ?>	
+														<?php } ?>
 													</div>
 												<?php } ?>
-										</div> 
-										
+										</div>
+
 									<?php } ?>
 								</div>
-								
+
 							<?php } ?>
 						</div>
-						
-				<?php };?>										
+
+				<?php };?>
 			</div>
 			<div class="button-container">
-				<a href="" class="btn btn__md secondary">Community Login</a>
-				<a href="" class="btn btn__md primary">Partner With Us</a>
+				<a href="<?php echo $login_bnt; ?>" class="btn btn__md secondary">Community Login</a>
+				<a href="<?php echo $partners_bnt; ?>" class="btn btn__md primary">Partner With Us</a>
 			</div>
-		
+
 		</div>
 	</header><!-- #masthead -->

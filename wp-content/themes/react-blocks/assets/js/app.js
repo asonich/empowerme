@@ -1,5 +1,6 @@
 const toggles = document.querySelectorAll( '.sub-menu-btn' );
 const toggles2 = document.querySelectorAll( '.sub-2' );
+const toggles_mobile = document.querySelectorAll('.mobile-sub-menu-btn');
 const open_menu = document.getElementById( 'open' );
 const close_menu = document.getElementById( 'close' );
 const close_banner = document.getElementById( 'close-banner' );
@@ -24,20 +25,23 @@ function toggleAccord( e ) {
 		this.parentNode.classList.add( 'active' );
 	}
 }
+
+
 function toggleAccord2( e ) {
 	e.preventDefault();
-	if ( this.parentNode.classList.contains( 'active' ) ) {
-		this.parentNode.classList.remove( 'active' );
+	if ( this.parentNode.classList.contains( 'active-sub' ) ) {
+		this.parentNode.classList.remove( 'active-sub' );
 	} else {
 		for ( i = 0; i < toggles2.length; i++ ) {
-			toggles2[ i ].parentNode.classList.remove( 'active' );
+			toggles2[ i ].parentNode.classList.remove( 'active-sub' );
 		}
-		this.parentNode.classList.add( 'active' );
+		this.parentNode.classList.add( 'active-sub' );
 	}
 }
 for ( i = 0; i < toggles.length; i++ ) {
 	toggles[ i ].addEventListener( 'click', toggleAccord );
 }
+
 
 for ( i = 0; i < toggles2.length; i++ ) {
 	toggles2[ i ].addEventListener( 'click', toggleAccord2 );
@@ -139,6 +143,22 @@ for ( i = 0; i < acc.length; i++ ) {
 		}
 	} );
 }
+
+const acc2 = document.getElementsByClassName( 'mobile-sub-menu-btn' );
+var i;
+
+for (i = 0; i < acc2.length; i++) {
+	acc[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var panel = this.nextElementSibling;
+		if (panel.style.display === "block") {
+			panel.style.display = "none";
+		} else {
+			panel.style.display = "block";
+		}
+	});
+}
+
 const resource_media_tab_link = document.getElementsByClassName('resource-media-tab-link');
 var i;
 
