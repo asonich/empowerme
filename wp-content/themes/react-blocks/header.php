@@ -54,7 +54,7 @@
 									<div class="nav-item">
 										<a href="<?php echo $sub_link['link']['url']?>" class="nav-link"><?php echo $sub_link['link']['title']?></a>
 											<?php if ($sub_link['sub_links']) { ?>
-												<span class="sub-2"></span>
+												<span class="sub-2">❯</span>
 												<div class="sub-sub-links">
 													<?php foreach( $sub_link['sub_links'] as $sub_sub_link) {?>
 
