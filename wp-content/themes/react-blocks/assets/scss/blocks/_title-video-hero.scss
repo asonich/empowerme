@@ -9,9 +9,19 @@
     @include full-width{
         padding: 111px 0;
     }
+    @include _md_lg{
+         padding: 20px 0 10px 0;
+    }
+    @include _xl{
+        padding: 65px 0 10px 0;
+    }
+    @include _xxl{
+        padding: 111px 0 10px 0;
+    }
     @include full-width-xl{
         padding: 143px 0;
     }
+
     .container{
         width: 100%;
         max-width: 1280px;
@@ -71,7 +81,7 @@
     }
 }
 .bottom-bg{
-    background-image: url("../../assets/images/hero-video-bg-3-mobile.svg");
+    background-image: url("../../assets/images/hero-video-bg-3-mobile2.svg");
     @include tablet{
         background-image: url("../../assets/images/hero-video-bg-3.svg");
     }

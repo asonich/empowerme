@@ -1,13 +1,13 @@
 .post-hero{
     width:100%;
     position: relative;
-    background-image: url(../../assets/images/header-section-blog-bg-mob.svg);
-    background-size: cover;
+    background-image: url(../../assets/images/header-section-blog-bg-mob2.svg);
+    background-size: contain;
     background-repeat: no-repeat;
-    padding: 32px 0;
+    padding: 111px 0 10px 0;
     @include tablet{
         padding: 64px 0;
-        background-image: url(../../assets/images/header-section-blog-bg.svg);
+        background-image: url(../../assets/images/header-section-blog-bg2.svg);
     }
     .container {
         display: flex;

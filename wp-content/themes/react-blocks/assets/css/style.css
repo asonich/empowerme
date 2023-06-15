@@ -979,16 +979,16 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 .post-hero {
 	width: 100%;
 	position: relative;
-	background-image: url(../../assets/images/header-section-blog-bg-mob.svg);
-	background-size: cover;
+	background-image: url(../../assets/images/header-section-blog-bg-mob2.svg);
+	background-size: contain;
 	background-repeat: no-repeat;
-	padding: 32px 0;
+	padding: 111px 0 10px 0;
 }
 
 @media (min-width: 768px) {
 	.post-hero {
 		padding: 64px 0;
-		background-image: url(../../assets/images/header-section-blog-bg.svg);
+		background-image: url(../../assets/images/header-section-blog-bg2.svg);
 	}
 }
 
@@ -2169,6 +2169,24 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	}
 }
 
+@media (min-width: 768px) and (max-width: 1199.98px) {
+	.title-video-hero {
+		padding: 20px 0 10px 0;
+	}
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+	.title-video-hero {
+		padding: 65px 0 10px 0;
+	}
+}
+
+@media (min-width: 1440px) {
+	.title-video-hero {
+		padding: 111px 0 10px 0;
+	}
+}
+
 @media (min-width: 1920px) {
 	.title-video-hero {
 		padding: 143px 0;
@@ -2253,7 +2271,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 }
 
 .bottom-bg {
-	background-image: url("../../assets/images/hero-video-bg-3-mobile.svg");
+	background-image: url("../../assets/images/hero-video-bg-3-mobile2.svg");
 }
 
 @media (min-width: 768px) {
