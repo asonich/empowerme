@@ -2191,10 +2191,15 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	border-radius: 36px;
 	position: relative;
 	width: fit-content;
-	max-width: 75%;
 }
 
 @media (min-width: 768px) {
+	.title-video-hero .container .video-hook {
+		max-width: 75%;
+	}
+}
+
+@media (min-width: 993px) {
 	.title-video-hero .container .video-hook {
 		max-width: 75%;
 	}
