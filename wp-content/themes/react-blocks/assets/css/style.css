@@ -3148,7 +3148,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	top: 0;
 	left: 0;
 	padding: 16px;
-	z-index: 5;
+	z-index: 10;
 }
 
 .video-popup iframe {
