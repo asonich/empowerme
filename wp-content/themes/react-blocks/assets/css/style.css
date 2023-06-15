@@ -2194,6 +2194,12 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	max-width: 75%;
 }
 
+@media (min-width: 768px) {
+	.title-video-hero .container .video-hook {
+		max-width: 75%;
+	}
+}
+
 .title-video-hero .container .video-hook::before {
 	content: '';
 	position: absolute;
