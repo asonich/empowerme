@@ -74,8 +74,8 @@
 				<?php };?>
 				</nav>
 				<div class="button-col">
-					<a href="" class="btn btn__md secondary">Community Login</a>
-					<a href="" class="btn btn__md primary">Partner With Us</a>
+					<a href="<?php echo $login_bnt; ?>" class="btn btn__md secondary">Community Login</a>
+					<a href="<?php echo $partners_bnt; ?>" class="btn btn__md primary">Partner With Us</a>
 				</div>
 
 			</div>
