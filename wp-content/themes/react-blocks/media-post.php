@@ -39,7 +39,6 @@ $categories = get_categories('');
                                     <?php  $args = array(
                                             'post_type' => 'media_post',
                                             'posts_per_page' => 9,
-                                            'order' => 'ASC',
                                             'paged' => get_query_var('paged') ? get_query_var('paged') : 1
                                         );
                                         $the_query = new WP_Query( $args ); ?>
