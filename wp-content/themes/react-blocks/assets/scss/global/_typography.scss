@@ -3,24 +3,24 @@
 // @font-face {
 //     font-family: 'Gotham';
 //     src:  url('../fonts/Gotham-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
-      
-//      font-weight: 700; 
+
+//      font-weight: 700;
 //      font-style: normal;
 //    }
-  
-//   @font-face {
-//     font-family: 'Gotham';  
-//     src: url('../fonts/GothamMedium.ttf')  format('truetype'); /* Safari, Android, iOS */
-      
-//      font-weight: 400;
-//      font-style: normal; 
-//    }
-  
+
 //   @font-face {
 //     font-family: 'Gotham';
-  
+//     src: url('../fonts/GothamMedium.ttf')  format('truetype'); /* Safari, Android, iOS */
+
+//      font-weight: 400;
+//      font-style: normal;
+//    }
+
+//   @font-face {
+//     font-family: 'Gotham';
+
 //     src: url('../fonts/Gotham-Thin.ttf')  format('truetype'); /* Safari, Android, iOS */
-    
+
 //      font-weight: 300;
 //      font-style: normal;
 //    }
@@ -43,7 +43,7 @@
     @include tablet {
         font-size: rem(60);
         line-height: rem(72);
-       
+
     }
 
 }
@@ -54,7 +54,7 @@
 
     @include tablet {
         font-size: rem(30);
-        line-height: rem(38); 
+        line-height: rem(38);
     }
 }
 .section-pre-title{
@@ -90,19 +90,19 @@
 }
 .eyebrow{
     max-width: 1056px;
-    font-size: rem(18);
-    line-height: rem(28);
+    font-size: rem(30);
+    line-height: rem(38);
     color: $blue-1;
     margin: 0 auto;
     margin-bottom: 20px;
-    display: block; 
+    display: block;
     b{
       color: $blue-9;
     }
- 
+
     @include tablet {
-        font-size: rem(20);
-        line-height: rem(30);
+        font-size: rem(30);
+        line-height: rem(38);
     }
     @include laptop {
         font-size: rem(48);

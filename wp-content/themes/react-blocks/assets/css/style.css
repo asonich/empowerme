@@ -150,8 +150,8 @@ p iframe {
 
 .eyebrow {
 	max-width: 1056px;
-	font-size: 1.125rem;
-	line-height: 1.75rem;
+	font-size: 1.875rem;
+	line-height: 2.375rem;
 	color: #006098;
 	margin: 0 auto;
 	margin-bottom: 20px;
@@ -164,8 +164,8 @@ p iframe {
 
 @media (min-width: 768px) {
 	.eyebrow {
-		font-size: 1.25rem;
-		line-height: 1.875rem;
+		font-size: 1.875rem;
+		line-height: 2.375rem;
 	}
 }
 
