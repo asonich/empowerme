@@ -926,11 +926,12 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	background-image: url(../../assets/images/header-section-blog-bg-mob.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding: 64px 0;
+	padding: 32px 0;
 }
 
 @media (min-width: 768px) {
 	.post-hero {
+		padding: 64px 0;
 		background-image: url(../../assets/images/header-section-blog-bg.svg);
 	}
 }
@@ -951,11 +952,13 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 }
 
 .post-hero .container .post-info-col {
+	margin-top: 32px;
 	width: 100%;
 }
 
 @media (min-width: 993px) {
 	.post-hero .container .post-info-col {
+		margin-top: 64px;
 		max-width: 419px;
 	}
 }
