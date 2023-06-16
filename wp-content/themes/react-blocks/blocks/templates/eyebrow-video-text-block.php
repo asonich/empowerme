@@ -9,7 +9,7 @@
  *          This is either the post ID currently being displayed inside a query loop,
  *          or the post ID of the post hosting this block.
  * @param   array $context The context provided to the block by the post or it's parent block.
- */ 
+ */
 
 // Support custom "anchor" values.
 $anchor = '';
@@ -34,10 +34,10 @@ $video_url = get_field('video_url');
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); if ($background) echo " ".$background; ?>">
     <div class="container">
         <p class="eyebrow"><?php echo  $eyebrow ; ?></p>
-        <div class="video-hook" video-data="<?php echo $video_url ?>">
+        <div class="video-hook" video-data="<?php echo $video_url.'&amp;autopause=1&amp;autoplay=1'; ?>">
             <img class="block-image"  src="<?php echo $video_image['url']?>" alt="<?php echo $video_image['alt']?>">
         </div>
-        
+
     </div>
 </div>
 

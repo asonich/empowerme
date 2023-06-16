@@ -1942,19 +1942,21 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	aspect-ratio: 1/1;
 	object-fit: cover;
 	margin-bottom: 20px;
-	max-width: 280px;
+	max-width: 200px;
+	margin-left: 10px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 993px) {
 	.popup .popup-content .popup-container .leader-image {
 		margin-bottom: 0;
+		max-width: 300px;
 	}
 }
 
 .popup .popup-content .popup-container .leader-info {
 	max-height: 427px;
 	overflow: auto;
-	margin-left: 20px;
+	margin-left: 10px;
 }
 
 .popup .popup-content .popup-container .leader-info .leader-name {

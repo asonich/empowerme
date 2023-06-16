@@ -133,15 +133,17 @@
                 aspect-ratio: 1/1;
                 object-fit: cover;
                 margin-bottom: 20px;
-                max-width: 280px;
-                @include tablet {
+                max-width: 200px;
+                margin-left: 10px;
+                @include laptop {
                     margin-bottom:0;
+                    max-width: 300px;
                 }
             }
             .leader-info{
                 max-height: 427px;
                 overflow: auto;
-                margin-left: 20px;
+                margin-left: 10px;
                 .leader-name{
                     margin-bottom: 4px;
                     font-weight: 700;
