@@ -2231,6 +2231,18 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	}
 }
 
+.title-video-hero .container .video-hook::before {
+	content: '';
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	background-image: url("../../assets/images/play-button-64.svg");
+	right: 25px;
+	bottom: 20px;
+	display: block;
+	z-index: 1;
+}
+
 @media (min-width: 993px) {
 	.title-video-hero .container .video-hook::before {
 		content: '';
@@ -2610,14 +2622,29 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 }
 
 .eyebrow-video-text .container .video-hook:before {
-	content: "";
+	content: '';
 	position: absolute;
-	width: 128px;
-	height: 128px;
-	background-image: url(../../assets/images/play-button.svg);
-	right: 34px;
-	bottom: 57px;
+	width: 64px;
+	height: 64px;
+	background-image: url("../../assets/images/play-button-64.svg");
+	right: 25px;
+	bottom: 75px;
 	display: block;
+	z-index: 1;
+}
+
+@media (min-width: 1200px) {
+	.eyebrow-video-text .container .video-hook:before {
+		content: "";
+		position: absolute;
+		width: 128px;
+		height: 128px;
+		background-image: url(../../assets/images/play-button.svg);
+		right: 25px;
+		bottom: 75px;
+		display: block;
+		z-index: 1;
+	}
 }
 
 .eyebrow-video-text .container .video-hook img {
