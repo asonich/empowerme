@@ -2190,13 +2190,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 @media (min-width: 1440px) {
 	.title-video-hero {
-		padding: 111px 0 10px 0;
-	}
-}
-
-@media (min-width: 1920px) {
-	.title-video-hero {
-		padding: 143px 0;
+		padding: 10px 0 167px 0;
 	}
 }
 
@@ -2298,6 +2292,12 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 @media (min-width: 768px) {
 	.bottom-bg {
 		background-image: url("../../assets/images/hero-video-bg-3.svg");
+	}
+}
+
+@media (min-width: 1440px) {
+	.bottom-bg {
+		background-position: 50% 100%;
 	}
 }
 

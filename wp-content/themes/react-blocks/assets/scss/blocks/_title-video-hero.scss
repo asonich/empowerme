@@ -16,10 +16,7 @@
         padding: 65px 0 10px 0;
     }
     @include _xxl{
-        padding: 111px 0 10px 0;
-    }
-    @include full-width-xl{
-        padding: 143px 0;
+        padding: 10px 0 167px 0;
     }
 
     .container{
@@ -96,5 +93,8 @@
     background-image: url("../../assets/images/hero-video-bg-3-mobile22.svg");
     @include tablet{
         background-image: url("../../assets/images/hero-video-bg-3.svg");
+    }
+    @include _xxl{
+        background-position: 50% 100%;
     }
 }
