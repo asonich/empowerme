@@ -3210,12 +3210,18 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	top: 0;
 	left: 0;
 	padding: 16px;
-	z-index: 10;
+	z-index: 99;
 }
 
 .video-popup iframe {
 	padding: 20px;
 	border-radius: 20px;
+}
+
+@media (min-width: 993px) {
+	.video-popup iframe {
+		padding: 80px;
+	}
 }
 
 .video-popup .close-popup {
@@ -3228,7 +3234,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	background-size: cover;
 	background-repeat: no-repeat;
 	cursor: pointer;
-	z-index: 99;
+	z-index: 999;
 }
 
 .activated {
