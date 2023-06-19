@@ -1,4 +1,7 @@
 .leaders-block{
+    margin-top: -1px;
+    position: relative;
+    background-color: white;
     padding: 25px 0;
     @include laptop{
         padding: 46px 0;

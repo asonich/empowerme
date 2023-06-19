@@ -1,8 +1,11 @@
 .big-features{
     padding: 25px 0;
+    margin-top: -1px;
+    position: relative;
+    background-color: white;
     @include laptop{
-        padding: 46px 0; 
-    } 
+        padding: 46px 0;
+    }
     .container{
         .section-title,.section-description{
             text-align: left;
@@ -63,8 +66,8 @@
                             color: $blue-1;
                         }
                     }
-                    
-                    
+
+
                 }
             }
         }
@@ -73,6 +76,6 @@
         .features-content{
             flex-direction: row-reverse;
         }
-       
+
     }
-}  
+}

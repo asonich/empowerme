@@ -2,15 +2,18 @@
     width: 100%;
     padding: 25px 0;
     background-color: #F2F4F7;
+    margin-top: -1px;
+    position: relative;
+    background-color: white;
     @include laptop{
-        padding: 46px 0; 
+        padding: 46px 0;
     }
-    
+
     .container{
         .section-title,.section-description{
             max-width: 100%;
             @include tablet{
-                max-width: 60%; 
+                max-width: 60%;
             }
         }
         .section-title{
@@ -27,15 +30,15 @@
                 max-width: 60%;
                 margin-bottom: 64px;
             }
-             
-            
+
+
         }
         .cols{
             column-gap: 24px;
             row-gap: 24px;
             grid-template-columns: 1fr;
             @include tablet{
-                grid-template-columns: 1fr 1fr;  
+                grid-template-columns: 1fr 1fr;
             }
             .col{
                 background-color: $white;
@@ -54,7 +57,7 @@
                         line-height: rem(38);
                         font-weight: 700;
                         color: $blue-1;
-                        margin-bottom: 8px;    
+                        margin-bottom: 8px;
                     }
                     .col-description{
                         font-size: rem(16);
@@ -77,11 +80,11 @@
                     padding: 10px 24px;
                     border-radius: 40px;
 
-                    
+
                 }
                 .bottom-swooshes{
                     display: none;
-                } 
+                }
             }
             .colored{
                 padding-bottom: 64px;
@@ -163,7 +166,7 @@
 }
 .white{
     background-color: $white;
-} 
+}
 .blue{
     background-color: $blue-8;
 }
