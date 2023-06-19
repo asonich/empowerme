@@ -16,26 +16,58 @@ close_menu.addEventListener( 'click', () => {
 
 function toggleAccord( e ) {
 	e.preventDefault();
+	e.stopPropagation();
 	if ( this.parentNode.classList.contains( 'active' ) ) {
+		e.preventDefault();
+		e.stopPropagation();
 		this.parentNode.classList.remove( 'active' );
 	} else {
 		for ( i = 0; i < toggles.length; i++ ) {
+			e.preventDefault();
+			e.stopPropagation();
 			toggles[ i ].parentNode.classList.remove( 'active' );
 		}
+		e.preventDefault();
+		e.stopPropagation();
 		this.parentNode.classList.add( 'active' );
 	}
 }
-
+function toggleAccordMobile( e ) {
+	e.preventDefault();
+	e.stopPropagation();
+	if ( this.parentNode.classList.contains( 'active-mobile' ) ) {
+		e.preventDefault();
+		e.stopPropagation();
+		this.parentNode.classList.remove( 'active-mobile' );
+	} else {
+		for ( i = 0; i < toggles_mobile.length; i++ ) {
+			e.preventDefault();
+			e.stopPropagation();
+			toggles_mobile[ i ].parentNode.classList.remove( 'active-mobile' );
+		}
+		e.preventDefault();
+		e.stopPropagation();
+		this.parentNode.classList.add( 'active-mobile' );
+	}
+}
 
 function toggleAccord2( e ) {
 	e.preventDefault();
+	e.stopPropagation();
 	if ( this.parentNode.classList.contains( 'active-sub' ) ) {
+		e.preventDefault();
+		e.stopPropagation();
 		this.parentNode.classList.remove( 'active-sub' );
 	} else {
 		for ( i = 0; i < toggles2.length; i++ ) {
+			e.preventDefault();
+			e.stopPropagation();
 			toggles2[ i ].parentNode.classList.remove( 'active-sub' );
 		}
+		e.preventDefault();
+		e.stopPropagation();
 		this.parentNode.classList.add( 'active-sub' );
+
 	}
 }
 for ( i = 0; i < toggles.length; i++ ) {
@@ -46,6 +78,11 @@ for ( i = 0; i < toggles.length; i++ ) {
 for ( i = 0; i < toggles2.length; i++ ) {
 	toggles2[ i ].addEventListener( 'click', toggleAccord2 );
 }
+
+for ( i = 0; i < toggles2.length; i++ ) {
+	toggles_mobile[ i ].addEventListener( 'click', toggleAccordMobile );
+}
+
 if ( document.getElementById( 'popup' ) !== null ) {
 	const popup_modal = document.querySelector( '.popup' );
 	const popup = document.getElementById( 'popup' );

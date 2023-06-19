@@ -39,7 +39,7 @@
             @include laptop{
                 max-width: 75%;
             }
-            &::before{
+            &::after{
                 content: '';
                 position: absolute;
                 width: 64px;
@@ -48,7 +48,6 @@
                 right: 25px;
                 bottom: 20px;
                 display: block;
-                z-index: 1;
                 @include laptop{
                     content: '';
                     position: absolute;

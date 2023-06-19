@@ -99,13 +99,13 @@
 								<span class="sub-menu-btn"></span>
 								<div class="sub-links">
 									<?php foreach( $link['sub_links'] as $sub_link) {?>
-										<div class="nav-item">
-											<a href="<?php echo $sub_link['link']['url']?>" class="nav-link"><?php echo $sub_link['link']['title']?></a>
+										<div class="mobile-nav-item">
+											<a href="<?php echo $sub_link['link']['url']?>" class="mobile-nav-link"><?php echo $sub_link['link']['title']?></a>
 												<?php if ($sub_link['sub_links']) { ?>
                                                     <span class="mobile-sub-menu-btn"></span>
 													<div class="mobile-sub-links">
 														<?php foreach( $sub_link['sub_links'] as $sub_sub_link) {?>
-																<a href="<?php echo $sub_sub_link['link']['url']?>" class="nav-link"><?php echo $sub_sub_link['link']['title']?></a>
+																<a href="<?php echo $sub_sub_link['link']['url']?>" class="mobile-nav-link"><?php echo $sub_sub_link['link']['title']?></a>
 														<?php } ?>
 													</div>
 												<?php } ?>
