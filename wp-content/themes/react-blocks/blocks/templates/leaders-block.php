@@ -34,15 +34,11 @@ $leaders = get_posts([
     'posts_per_page' => -1,
     'fields' => 'ids',
     'meta_key'          => 'order_position',
-    'orderby'           => 'meta_value',
+    'orderby'           => 'meta_value_num',
     'order'             => 'ASC'
   ]);
 
 ?>
-
-
-
-
 
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name );?>">
     <div class="container">
