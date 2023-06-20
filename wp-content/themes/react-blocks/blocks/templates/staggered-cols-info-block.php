@@ -37,7 +37,7 @@ $cols_bottom = get_field('box_bottom_style');
 $divider = get_field('divider');
 
 ?>
-<?php if ($cols): ?> 
+<?php if ($cols): ?>
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); if ($cols_setup) echo " ".$cols_setup; if ($background) echo " ".$background; ?>">
     <div class="container">
     <?php if ($title){ ?>
@@ -45,82 +45,103 @@ $divider = get_field('divider');
     <?php } ?>
     <?php if ($description){ ?>
         <div class="section-description"><?php echo esc_html( $description ); ?></div>
-        <?php } ?> 
+        <?php } ?>
     <?php if ($eyebrow){ ?>
         <div class="eyebrow"><?php echo  $eyebrow; ?></div>
-    <?php } ?>        
+    <?php } ?>
         <div class="cols grid desktop <?php if ($cols_style) echo " ".$cols_style;?> <?php if(($length % 2) == 0) echo " even"; ?>">
 
             <div class="left-col flex">
                 <?php foreach($cols as $key => $col){  ?>
-                  <?php if (($key % 2) == 0) { ?>  
-                        <div class="col <?php if ($cols_bottom) echo " ".$cols_bottom; if ($divider) echo " ".$divider; ?>">
+                  <?php if (($key % 2) == 0) { ?>
+                        <div class="col <?php if ($cols_bottom) echo " ".$cols_bottom; if ($divider) echo " ".$divider; if ($col['desktop_view'] == "desktop_view") echo " with-desktop-view";?>">
+                            <?php if ($col['desktop_view'] == "desktop_view"){ ?>
+                                <div class="col-desktop-image">
+                                    <img src="<?php echo $col['icon']['url'] ?>" alt="<?php echo $col['icon']['alt'] ?>" class="col-desktop_image">
+                                </div>
+                                <div class="col-desktop-right">
+                            <?php } ?>
                             <div class="col-info">
-                            <?php if ($col['icon']){ ?>   
+                            <?php if ($col['icon'] && $col['desktop_view'] !== "desktop_view"){ ?>
                                 <img src="<?php echo $col['icon']['url'] ?>" alt="<?php echo $col['icon']['alt'] ?>" class="col-icon">
                             <?php } ?>
                             <?php if ($col['title']){ ?>
                                 <p class="col-title"><?php echo $col['title'] ?></p>
                             <?php } ?>
-                            <?php if ($col['description']){ ?>    
+                            <?php if ($col['description']){ ?>
                                 <p class="col-description"><?php echo $col['description'] ?></p>
                             <?php } ?>
                             </div>
-                            
+
                             <?php if ($col['link']){ ?>
                                 <div class="new-cta">
                                     <div class="divider"></div>
                                     <a href="<?php echo $col['link']['url'] ?>" class="col-link" target="<?php if ($col['link']['target']){ echo $col['link']['target']; } else { echo '_self';} ?>"><?php echo $col['link']['title'] ?></a>
-                                </div>    
-                                <?php } ?>
-                                <div class="bottom-swooshes"></div>
+                                </div>
+                            <?php } ?>
+                            <?php if ($col['desktop_view'] == "desktop_view"){ ?>
+                                </div>
+                            <?php } ?>
+                            <div class="bottom-swooshes"></div>
                         </div>
-                    <?php } ?>   
+                    <?php } ?>
                 <?php } ?>
             </div>
             <div class="right-col flex">
                 <?php foreach($cols as $key => $col){  ?>
-                    <?php if (($key % 2) != 0) { ?>  
-                            <div class="col <?php if ($cols_bottom) echo " ".$cols_bottom; if ($divider) echo " ".$divider; ?>">
-                                <div class="col-info">
-                                <?php if ($col['icon']){ ?>   
+                    <?php if (($key % 2) != 0) { ?>
+                            <div class="col <?php if ($cols_bottom) echo " ".$cols_bottom; if ($divider) echo " ".$divider; if ($col['desktop_view'] == "desktop_view") echo " with-desktop-view";?>">
+                                <?php if ($col['desktop_view'] == "desktop_view"){ ?>
+                                <div class="col-desktop-image">
+                                    <img src="<?php echo $col['icon']['url'] ?>" alt="<?php echo $col['icon']['alt'] ?>" class="col-desktop_image">
+                                </div>
+                                <div class="col-desktop-right">
+                                <?php } ?>
+                                    <div class="col-info">
+                                <?php if ($col['icon'] && $col['desktop_view'] !== "desktop_view"){ ?>
                                     <img src="<?php echo $col['icon']['url'] ?>" alt="<?php echo $col['icon']['alt'] ?>" class="col-icon">
                                 <?php } ?>
                                 <?php if ($col['title']){ ?>
                                     <p class="col-title"><?php echo $col['title'] ?></p>
                                 <?php } ?>
-                                <?php if ($col['description']){ ?>    
+                                <?php if ($col['description']){ ?>
                                     <p class="col-description"><?php echo $col['description'] ?></p>
                                 <?php } ?>
                                 </div>
-                                
-                                <?php if ($col['link']){ ?>
+
+                                    <?php if ($col['link']){ ?>
                                     <div class="new-cta">
-                                    <div class="divider"></div>
-                                    <a href="<?php echo $col['link']['url'] ?>" class="col-link" target="<?php if ($col['link']['target']){ echo $col['link']['target']; } else { echo '_self';} ?>"><?php echo $col['link']['title'] ?></a>
+                                        <div class="divider"></div>
+                                        <a href="<?php echo $col['link']['url'] ?>" class="col-link" target="<?php if ($col['link']['target']){ echo $col['link']['target']; } else { echo '_self';} ?>"><?php echo $col['link']['title'] ?></a>
+                                    </div>
+                                <?php } ?>
+
+                                <?php if ($col['desktop_view'] == "desktop_view"){ ?>
                                 </div>
                                 <?php } ?>
+
+
                                 <div class="bottom-swooshes"></div>
                             </div>
-                        <?php } ?>   
-                    <?php } ?>                
+                        <?php } ?>
+                    <?php } ?>
             </div>
         </div>
         <div class="cols grid mobile <?php if ($cols_style) echo " ".$cols_style;?>">
         <?php foreach ($cols as $col) {?>
             <div class="col <?php if ($cols_bottom) echo " ".$cols_bottom; if ($divider) echo " ".$divider; ?>">
                 <div class="col-info">
-                <?php if ($col['icon']){ ?>   
+                <?php if ($col['icon']){ ?>
                     <img src="<?php echo $col['icon']['url'] ?>" alt="<?php echo $col['icon']['alt'] ?>" class="col-icon">
                 <?php } ?>
                 <?php if ($col['title']){ ?>
                     <p class="col-title"><?php echo $col['title'] ?></p>
                <?php } ?>
-               <?php if ($col['description']){ ?>    
+               <?php if ($col['description']){ ?>
                     <p class="col-description"><?php echo $col['description'] ?></p>
                 <?php } ?>
                 </div>
-                
+
                 <?php if ($col['link']){ ?>
                     <div class="new-cta">
                                     <div class="divider"></div>
@@ -132,7 +153,7 @@ $divider = get_field('divider');
             <?php } ?>
         </div>
     </div>
-    
+
 </div>
 <?php elseif (is_admin()) : ?>
     <p><?php _e('No content added'); ?></p>

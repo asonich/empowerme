@@ -86,6 +86,24 @@
                     display: none;
                 }
             }
+            .with-desktop-view{
+                display: flex;
+                flex-direction: row;
+                column-gap: 16px;
+                .col-desktop-image{
+                    flex: 35%;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                    img {
+                        width: 100%;
+                        max-width: 150px;
+                    }
+                }
+                .col-desktop-right{
+                    flex: 65%;
+                }
+            }
             .colored{
                 padding-bottom: 64px;
                 position: relative;
