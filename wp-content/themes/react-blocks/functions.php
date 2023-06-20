@@ -32,7 +32,7 @@ function react_blocks_setup() {
 		array(
 			'name' 	=> 	esc_attr('strong magenta', 'themeLangDomain' ),
 			'slug' 	=> 	'strong-magenta',
-			'color' => 	'#a156b4',			
+			'color' => 	'#a156b4',
 		),
 		array(
 			'name' 	=> esc_attr__('very light gray','themeLangDomain'),
@@ -202,3 +202,53 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 require get_template_directory() . '/inc/acf-blocks-handler.php';
+
+$post_type = 'leaders';
+$leaders = get_posts([
+    'post_type' => 'leaders',
+    'post_status' => 'publish',
+    'posts_per_page' => -1,
+    'fields' => 'ids'
+]);
+
+// Register the columns.
+add_filter( "manage_{$post_type}_posts_columns", function ( $defaults ) {
+
+    $defaults['category'] = 'Category';
+    $defaults['order_position'] = 'Order position';
+
+    return $defaults;
+} );
+
+// Handle the value for each of the new columns.
+add_action( "manage_{$post_type}_posts_custom_column", function ( $column_name, $post_id ) {
+
+    if ( $column_name == 'category' ) {
+        echo get_field( 'category', $post_id );
+    }
+
+    if ( $column_name == 'order_position' ) {
+        // Display an ACF field
+        echo get_field( 'order_position', $post_id );
+    }
+
+}, 10, 2 );
+
+add_filter( "manage_edit-{$post_type}_sortable_columns", "my_sortable_{$post_type}_column" );
+function my_sortable_leaders_column( $columns ) {
+    $columns['order_position'] = 'order_position';
+    return $columns;
+}
+
+add_action( 'pre_get_posts', 'leaders_posts_orderby' );
+function leaders_posts_orderby( $query ) {
+    if( ! is_admin() || ! $query->is_main_query() ) {
+        return;
+    }
+
+    if ( 'order_position' === $query->get( 'orderby') ) {
+        $query->set( 'orderby', 'meta_value' );
+        $query->set( 'meta_key', 'order_position' );
+        $query->set( 'meta_type', 'numeric' );
+    }
+}

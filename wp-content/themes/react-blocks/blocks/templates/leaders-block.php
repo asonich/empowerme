@@ -32,9 +32,12 @@ $leaders = get_posts([
     'post_type' => 'leaders',
     'post_status' => 'publish',
     'posts_per_page' => -1,
-    'fields' => 'ids'
+    'fields' => 'ids',
+    'meta_key'          => 'order_position',
+    'orderby'           => 'meta_value',
+    'order'             => 'ASC'
   ]);
- 
+
 ?>
 
 
@@ -43,23 +46,23 @@ $leaders = get_posts([
 
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name );?>">
     <div class="container">
-        <?php 
+        <?php
         $categories = [];
         foreach ($leaders as $leader) {
             $leader_category = get_field("category", $leader);
             if ($leader_category) array_push($categories, $leader_category);
         }
         $categories = array_unique($categories);
-        
+        $pre_sort_categories = array("Corporate Leadership", "Diagnostics", "Pharmacy");
 
-        foreach ($categories as $category) {
+        foreach ($pre_sort_categories as $category) {
             echo "<div class='section-title' >".$category."</div>";
             echo "<div class='leaders grid'>";
             foreach ($leaders as $leader) {
                 $leader_category = get_field("category", $leader);
                 if ($leader_category == $category) { ?>
                     <div class='leader-col'>
-                        <img src="<?php echo get_field('member_image',$leader) ?>" alt="<?php echo get_field('member_image_alt',$leader) ?>" class="leader-photo"> 
+                        <img src="<?php echo get_field('member_image',$leader) ?>" alt="<?php echo get_field('member_image_alt',$leader) ?>" class="leader-photo">
                         <div class="leader-info">
                             <p class="leader-name"><?php echo get_the_title($leader);?></p>
                             <p class="leader-position"><?php echo get_field('member_designation',$leader); ?></p>
@@ -67,14 +70,14 @@ $leaders = get_posts([
                             <div class="leader-popup-text"><?php echo apply_filters('the_content',get_post($leader)->post_content); ?></div>
                             <a href="#" class="more">Read More</a>
 
-                        </div>   
+                        </div>
                     </div>
                 <?php } ?>
             <?php } ?>
         </div>
         <?php } ?>
     </div>
-    
+
 </div>
 <div class="popup">
         <div class="popup-content" id="popup">
