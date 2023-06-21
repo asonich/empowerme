@@ -2176,6 +2176,9 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 .title-text-block {
 	padding: 25px 0;
 	width: 100%;
+	margin-top: -1px;
+	position: relative;
+	background-color: white;
 }
 
 @media (min-width: 993px) {
