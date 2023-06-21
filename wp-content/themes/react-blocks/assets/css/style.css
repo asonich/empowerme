@@ -922,7 +922,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .addition
 	display: grid;
 	grid-auto-flow: column;
 	justify-content: center;
-	grid-template: 'a b' 'c c' 'd d';
+	grid-template: 'a b' 'c c' 'd d' 'e e';
 	row-gap: 16px;
 }
 
@@ -955,6 +955,11 @@ footer .main-footer .container .bottom-footer .footer-additional-links .addition
 
 footer .main-footer .container .bottom-footer .footer-additional-links .additional-pages .additional-link:nth-child(4) {
 	grid-area: d;
+	text-align: center;
+}
+
+footer .main-footer .container .bottom-footer .footer-additional-links .additional-pages .additional-link:nth-child(5) {
+	grid-area: e;
 	text-align: center;
 }
 

@@ -217,7 +217,8 @@ footer{
                         grid-template:
                                     'a b'
                                     'c c'
-                                    'd d';
+                                    'd d'
+                                    'e e';
                         row-gap: 16px;
                         @include tablet{
                             display: flex;
@@ -237,6 +238,10 @@ footer{
                             }
                             &:nth-child(4){
                                 grid-area: d;
+                                text-align: center;
+                            }
+                            &:nth-child(5){
+                                grid-area: e;
                                 text-align: center;
                             }
                             color:$white;
