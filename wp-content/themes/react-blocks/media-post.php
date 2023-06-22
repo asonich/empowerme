@@ -51,7 +51,11 @@ $categories = get_categories('');
                                                     $author = get_field('author');
                                                     $link = get_field('read_more_link');
                                                 ?>
+
                                                 <div class="col colored divider-off">
+                                                    <?php if ($link){ ?>
+                                                    <a href="<?php echo $link['url'] ?>" target="_blank">
+                                                        <?php } ?>
                                                     <div class="col-info">
                                                         <?php if ($title){ ?>
                                                             <p class="col-title"><?php echo $title; ?></p>
@@ -69,7 +73,11 @@ $categories = get_categories('');
                                                         </div>
                                                     <?php } ?>
                                                     <div class="bottom-swooshes"></div>
+                                                        <?php if ($link){ ?>
+                                                    </a>
+                                                <?php } ?>
                                                 </div>
+
                                                 <?php endwhile; ?>
                                             </div>
                                             <div class="pagination">
