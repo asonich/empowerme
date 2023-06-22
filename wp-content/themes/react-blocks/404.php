@@ -17,7 +17,7 @@ get_header();
             </div>
         </div>
 
-		<div >
+		<div>
 
           <p>404</p>
         </div>
