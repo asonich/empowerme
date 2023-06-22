@@ -9,6 +9,15 @@
         padding: 46px 0;
     }
     .container{
+        .section-heading-block{
+            margin-bottom: 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            @include laptop {
+                margin-bottom: 64px;
+            }
+        }
         .section-title,.section-description{
             max-width: 100%;
             @include tablet{

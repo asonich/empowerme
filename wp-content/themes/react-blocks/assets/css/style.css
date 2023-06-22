@@ -65,9 +65,6 @@ p iframe {
 
 .section-heading-block {
 	margin-bottom: 30px;
-	text-align: center;
-	display: flex;
-	justify-content: center;
 }
 
 @media (min-width: 993px) {
@@ -2379,6 +2376,19 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 @media (min-width: 993px) {
 	.cols-info-block {
 		padding: 46px 0;
+	}
+}
+
+.cols-info-block .container .section-heading-block {
+	margin-bottom: 30px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+@media (min-width: 993px) {
+	.cols-info-block .container .section-heading-block {
+		margin-bottom: 64px;
 	}
 }
 
