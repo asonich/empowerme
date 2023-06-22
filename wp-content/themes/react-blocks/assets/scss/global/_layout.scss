@@ -14,10 +14,13 @@
 .grid{
     display:grid;
 }
- 
+
 
 .section-heading-block{
     margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
     @include laptop {
         margin-bottom: 64px;
     }
@@ -28,4 +31,4 @@
     background-color: #A4CD39;
     margin-bottom: 20px;
     margin-top: 20px;
-}    
+}

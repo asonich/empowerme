@@ -12,7 +12,10 @@
         flex-direction: column;
         align-items: center;
         .eyebrow{
-            margin-bottom: 120px;
+            margin-bottom: 40px;
+            @include desktop{
+                margin-bottom: 120px;
+            }
         }
         .video-hook{
             width: 100%;

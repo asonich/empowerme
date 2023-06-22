@@ -11,6 +11,7 @@
     .container{
         .section-title{
             max-width: 773px;
+            margin-bottom: 24px;
             @include laptop{
                 line-height: rem(60);
             }

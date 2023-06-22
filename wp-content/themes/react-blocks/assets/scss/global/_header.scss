@@ -21,7 +21,7 @@ header{
             width:unset;
            }
             .site-logo{
-                width: 110%;
+                width: 168px;
             }
         }
         .navigation{
@@ -46,7 +46,6 @@ header{
                     .nav-link{
                         font-size: rem(16);
                         line-height: rem(24);
-                        font-weight: 700;
                         color:$white;
                         margin-right: 8px;
 
@@ -265,13 +264,11 @@ header{
 .upper-header-banner{
     padding:14px 10px;
     background-color: $green-2;
-    text-align: left;
+    text-align: center;
     position: relative;
-    @include tablet {
-        text-align: center;
-    }
     .banner-text{
-
+        display: flex;
+        justify-content: center;
         margin: 0 auto;
         p{
             color:$white;
@@ -352,6 +349,9 @@ header{
     .active-mobile{
         .mobile-sub-links {
             display: flex;
+            a {
+                margin: 12px auto;
+            }
         }
     }
 }

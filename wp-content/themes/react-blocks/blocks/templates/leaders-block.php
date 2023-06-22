@@ -51,12 +51,12 @@ $leaders = get_posts([
         $categories = array_unique($categories);
         $pre_sort_categories = array("Corporate Leadership", "Diagnostics", "Pharmacy");
 
-        foreach ($pre_sort_categories as $category) {
-            echo "<div class='section-title' >".$category."</div>";
-            echo "<div class='leaders grid'>";
+        ?>
+        <div class='leaders grid'>
+            <?php
             foreach ($leaders as $leader) {
                 $leader_category = get_field("category", $leader);
-                if ($leader_category == $category) { ?>
+                ?>
                     <div class='leader-col'>
                         <img src="<?php echo get_field('member_image',$leader) ?>" alt="<?php echo get_field('member_image_alt',$leader) ?>" class="leader-photo">
                         <div class="leader-info">
@@ -68,10 +68,9 @@ $leaders = get_posts([
 
                         </div>
                     </div>
-                <?php } ?>
+
             <?php } ?>
         </div>
-        <?php } ?>
     </div>
 
 </div>

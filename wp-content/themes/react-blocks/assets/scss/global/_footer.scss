@@ -167,6 +167,7 @@ footer{
                     max-width: 700px;
                     grid-template-columns: repeat(2,1fr);
                     column-gap: 30px;
+                    row-gap: 24px;
                     @include tablet{
                         grid-template-columns: repeat(5,1fr);
                     }
@@ -181,7 +182,6 @@ footer{
 
                             .nav-item{
                                 color:$blue-3;
-                                font-weight: 700;
                                 line-height: rem(20);
                                 padding-bottom: 12px;
                                 display: block;
