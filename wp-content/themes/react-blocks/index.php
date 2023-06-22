@@ -29,7 +29,7 @@ $categories = get_categories('');
                 <div class="tab-wrapper">
                     <div class="tab-btns">
                         <button class="btn tab-btn active" data-target="Resources">Resources</button>
-                        <a class="btn tab-btn" href="<?php echo get_site_url().'/media/';?>" data-target="Media">Media</a>
+                        <a class="btn tab-btn" href="<?php echo get_site_url().'/resources/media/';?>" data-target="Media">Media</a>
                     </div>
 
                         <div class="content active" id="Resources">
