@@ -181,21 +181,6 @@ for ( i = 0; i < acc.length; i++ ) {
 	} );
 }
 
-const acc2 = document.getElementsByClassName( 'mobile-sub-menu-btn' );
-var i;
-
-for (i = 0; i < acc2.length; i++) {
-	acc[i].addEventListener("click", function() {
-		this.classList.toggle("active");
-		var panel = this.nextElementSibling;
-		if (panel.style.display === "block") {
-			panel.style.display = "none";
-		} else {
-			panel.style.display = "block";
-		}
-	});
-}
-
 const resource_media_tab_link = document.getElementsByClassName('resource-media-tab-link');
 var i;
 
