@@ -2137,15 +2137,14 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	border-radius: 16px;
 }
 
-.features .container .video-hook:before {
-	content: "";
+.features .container .video-hook::after {
+	content: '';
 	position: absolute;
-	width: 128px;
-	height: 128px;
-	background-image: url(../../assets/images/play-button.svg);
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	width: 64px;
+	height: 64px;
+	background-image: url("../../assets/images/play-button-64.svg");
+	right: 25px;
+	bottom: 20px;
 	display: block;
 }
 
