@@ -18,6 +18,8 @@
 	$builtby = get_field('build_by', 'option');
 	$copyright= get_field('copyright_text', 'option');
 	$footer_style = get_field('footer_style', 'option');
+    $ctas = get_field('cta-footer', 'options');
+    $defaultctas = get_field('defalt_cta', 'options')
 ?>
 
 	<footer id="colophon" class="site-footer">
@@ -31,8 +33,24 @@
 		<div class="footer-cta <?php if ($footer_style) echo " ".$footer_style; ?>">
 			<div class="upper-block"></div>
 			<div class="cta-block">
-				<p class="cta-heading">Ready to get started with EmpowerMe Wellness?</p>
-				<a href="https://info.empowerme.com/connect" target="_blank" class="btn btn__md secondary">Learn more</a>
+                <?php
+                global $wp;
+                $url = home_url( $wp->request );
+                $not_default = false;
+                foreach ($ctas as $cta){
+                    $current_url = $cta['current_page'];
+                    if(substr($url , -strlen($current_url)) == $current_url){ ?>
+                    <p class="cta-heading"><?php echo $cta['cta_text']?></p>
+                    <a href="<?php echo $cta['link']?>" target="_blank" class="btn btn__md secondary"><?php echo $cta['button_text']?></a>
+                    <?php
+                        $not_default = true;
+                        break;
+                    }
+                }
+                if ($not_default === false) { ?>
+                    <p class="cta-heading"><?php echo $defaultctas['default_cta_text']?></p>
+                    <a href="<?php echo $defaultctas['default_link']?>" target="_blank" class="btn btn__md secondary"><?php echo $defaultctas['default_button_text']?></a>
+                <?php } ?>
 			</div>
 			<div class="bottom-block"></div>
 		</div>
