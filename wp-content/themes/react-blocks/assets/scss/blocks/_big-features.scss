@@ -26,6 +26,7 @@
                 @include laptop{
                     margin-bottom: 0px;
                     max-width: 528px;
+                    max-height: 386px;
                 }
             }
             .features-list {
@@ -37,7 +38,7 @@
                 }
                 .feature{
                     align-items: flex-start;
-                    margin-bottom: 48px;
+                    margin-bottom: 24px;
                     &:last-of-type{
                         margin-bottom: 0;
                     }

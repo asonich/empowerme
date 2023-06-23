@@ -2245,7 +2245,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 .title-video-hero {
 	width: 100%;
-	padding: 10px 0 48px 0;
+	padding: 48px 0;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -3415,6 +3415,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	.big-features .container .features-content .features-image {
 		margin-bottom: 0px;
 		max-width: 528px;
+		max-height: 386px;
 	}
 }
 
@@ -3432,7 +3433,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 .big-features .container .features-content .features-list .feature {
 	align-items: flex-start;
-	margin-bottom: 48px;
+	margin-bottom: 24px;
 }
 
 .big-features .container .features-content .features-list .feature:last-of-type {
