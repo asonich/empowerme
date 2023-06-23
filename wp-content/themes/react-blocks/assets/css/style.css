@@ -2492,26 +2492,24 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 .cols-info-block .container .cols .col .col-info .col-icon {
 	width: 56px;
-	height: 56px;
-	margin-bottom: 48px;
+	margin: 12px 0 24px 0;
 }
 
 .cols-info-block .container .cols .col .col-info .col-icon2w {
 	width: 112px;
-	height: 56px;
-	margin-bottom: 48px;
+	margin: 12px 0 24px 0;
 }
 
 .cols-info-block .container .cols .col .col-info .col-icon2h {
 	width: 56px;
 	height: 112px;
-	margin-bottom: 48px;
+	margin: 12px 0 24px 0;
 }
 
 .cols-info-block .container .cols .col .col-info .col-icon2w2h {
 	width: 112px;
 	height: 112px;
-	margin-bottom: 48px;
+	margin: 12px 0 24px 0;
 }
 
 .cols-info-block .container .cols .col .col-info .col-title {
