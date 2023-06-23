@@ -3315,6 +3315,10 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	}
 }
 
+.related-blog-posts-block .container .section-description {
+	color: #006098;
+}
+
 .related-blog-posts-block .container .posts {
 	grid-template-columns: 1fr;
 	padding: 0 32px;
