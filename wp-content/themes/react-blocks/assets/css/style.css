@@ -3392,13 +3392,13 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 }
 
 .big-features .container .features-content {
-	margin-top: 64px;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
 @media (min-width: 993px) {
 	.big-features .container .features-content {
+		margin-top: 64px;
 		flex-wrap: nowrap;
 	}
 }

@@ -11,10 +11,10 @@
             text-align: left;
         }
         .features-content{
-            margin-top: 64px;
             justify-content: space-between;
             flex-wrap: wrap;
             @include laptop{
+                margin-top: 64px;
                 flex-wrap: nowrap;
             }
             .features-image{
