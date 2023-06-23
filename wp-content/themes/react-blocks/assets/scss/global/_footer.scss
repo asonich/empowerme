@@ -235,14 +235,23 @@ footer{
                             &:nth-child(3){
                                 grid-area: c;
                                 text-align: center;
+                                @include tablet{
+                                    text-align: left;
+                                }
                             }
                             &:nth-child(4){
                                 grid-area: d;
                                 text-align: center;
+                                @include tablet{
+                                    text-align: left;
+                                }
                             }
                             &:nth-child(5){
                                 grid-area: e;
                                 text-align: center;
+                                @include tablet{
+                                    text-align: left;
+                                }
                             }
                             color:$white;
                             font-size: rem(12);

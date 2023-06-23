@@ -1,22 +1,25 @@
 .title-video-hero{
     width:100%;
-    padding: 4px 0;
+    padding: 10px 0 48px 0;
     background-size: cover;
     background-repeat: no-repeat;
+    @include phone-lg{
+        padding: 65px 0 166px 0;
+    }
     @include tablet {
         padding: 96px 0;
     }
-    @include full-width{
-        padding: 111px 0;
-    }
-    @include _md_lg{
+    @include laptop{
          padding: 20px 0 10px 0;
     }
-    @include _xl{
+    @include desktop{
         padding: 65px 0 10px 0;
     }
-    @include _xxl{
+    @include full-width{
         padding: 10px 0 167px 0;
+    }
+    @include full-width-xl{
+        padding: 46px 0 145px 0;
     }
 
     .container{

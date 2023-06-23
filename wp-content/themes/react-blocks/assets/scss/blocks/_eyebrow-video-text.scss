@@ -7,6 +7,12 @@
     @include laptop{
         padding: 46px 0;
     }
+    @include full-width{
+        padding: 46px 0 245px 0;
+    }
+    @include full-width-xl{
+        padding: 75px 0 250px 0;
+    }
     .container{
         display:flex;
         flex-direction: column;

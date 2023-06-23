@@ -26,6 +26,18 @@
             color:$white;
             text-align: center;
         }
+        .not-found{
+            margin-bottom: 48px;
+        }
+        .not-found-button-wrap{
+            text-align: center;
+            padding: 24px;
+            .not-found-button{
+                background-color: #A4CD39;
+                color: #ffffff;
+                padding: 12px 48px;
+            }
+        }
     }
 
 }
