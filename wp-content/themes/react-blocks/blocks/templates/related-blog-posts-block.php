@@ -44,11 +44,12 @@ $posts = get_field('related_posts');
                 </p>
            <?php } ?>
         </div>
-       
+
         <div class="posts grid">
-         <?php  foreach ($posts as $post) {?> 
-             
+         <?php  foreach ($posts as $post) {?>
+
             <div class="post">
+                <a href="<?php echo get_post_permalink($post);  ?>" target="_blank">
                 <?php echo (get_the_post_thumbnail($post));?>
                 <div class="post-info">
                     <p class="post-title"><?php echo (get_the_title($post)); ?></p>
@@ -57,9 +58,10 @@ $posts = get_field('related_posts');
                 <div class="post-navigation">
                     <a href="<?php echo get_post_permalink($post);  ?>" target="_blank" class="post-link">Read More</a>
                 </div>
+                </a>
             </div>
-         <?php } ?>   
+         <?php } ?>
         </div>
     </div>
-    
+
 </div>

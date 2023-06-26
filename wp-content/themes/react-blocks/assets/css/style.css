@@ -2230,6 +2230,8 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	width: 100%;
 	max-width: 1280px;
 	margin: 0 auto;
+	font-size: 1.25rem;
+	line-height: 1.875rem;
 }
 
 .title-text-block .container .section-title {
@@ -2241,6 +2243,16 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	max-width: 768px;
 	margin: 0 auto;
 	text-align: left;
+}
+
+.title-text-block .container ul li {
+	display: list-item;
+	list-style-position: inside;
+	list-style-type: disc;
+}
+
+.title-text-block .container ul .list-item {
+	margin-left: 20px;
 }
 
 .title-video-hero {
