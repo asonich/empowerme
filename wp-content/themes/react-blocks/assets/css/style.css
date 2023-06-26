@@ -2249,9 +2249,6 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	display: list-item;
 	list-style-position: inside;
 	list-style-type: disc;
-}
-
-.title-text-block .container ul .list-item {
 	margin-left: 20px;
 }
 
