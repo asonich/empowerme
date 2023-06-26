@@ -30,6 +30,7 @@ $laptop: 993px;
 $desktop: 1200px;
 $full-width: 1600px;
 $full-width-xl:1920px;
+$big-desktop: 2100px;
 
 $breakpoints: (
         'phone': $phone,
@@ -39,6 +40,7 @@ $breakpoints: (
         'desktop': $desktop,
         'full-width': $full-width,
         'full-width-xl': $full-width-xl,
+        'big-desktop': $big-desktop
 );
 //mixins
 @mixin phone {
@@ -73,6 +75,11 @@ $breakpoints: (
 }
 @mixin full-width-xl {
     @media (min-width: $full-width-xl) {
+        @content;
+    }
+}
+@mixin big-desktop {
+    @media (min-width: $big-desktop) {
         @content;
     }
 }

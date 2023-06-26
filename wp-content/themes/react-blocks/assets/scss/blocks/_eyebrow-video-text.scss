@@ -13,6 +13,9 @@
     @include full-width-xl{
         padding: 75px 0 250px 0;
     }
+    @include big-desktop {
+        padding: 10rem 0 25rem 0;
+    }
     .container{
         display:flex;
         flex-direction: column;
@@ -61,6 +64,9 @@
         .block-image{
             width: 100%;
             max-width: 916px;
+            @include big-desktop {
+                max-width: 100%;
+            }
 
         }
     }

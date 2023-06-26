@@ -21,6 +21,10 @@
     @include full-width-xl{
         padding: 110px 0 185px 0;
     }
+    @include big-desktop{
+        padding: 15rem 0 25rem 0;
+    }
+
 
     .container{
         width: 100%;
@@ -41,6 +45,9 @@
             }
             @include laptop{
                 max-width: 75%;
+            }
+            @include big-desktop {
+                max-width: fit-content;
             }
             &::after{
                 content: '';

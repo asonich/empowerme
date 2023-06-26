@@ -800,12 +800,14 @@ footer .with-white .bottom-block {
 
 @media (min-width: 480px) {
 	footer .with-white .bottom-block {
+		min-height: 22rem;
 		background-image: url("../../assets/images/footer-white-cta-botom-block-375.svg");
 	}
 }
 
 @media (min-width: 768px) {
 	footer .with-white .bottom-block {
+		min-height: 250px;
 		background-image: url("../../assets/images/footer-white-cta-botom-block-768.svg");
 	}
 }
@@ -819,14 +821,21 @@ footer .with-white .bottom-block {
 
 @media (min-width: 1200px) {
 	footer .with-white .bottom-block {
-		min-height: 249px;
+		min-height: 268px;
 		background-image: url("../../assets/images/footer-white-cta-botom-block-1440.svg");
 	}
 }
 
 @media (min-width: 1600px) {
 	footer .with-white .bottom-block {
-		min-height: 246px;
+		min-height: 268px;
+		background-image: url("../../assets/images/footer-white-cta-botom-block-1920.svg");
+	}
+}
+
+@media (min-width: 2100px) {
+	footer .with-white .bottom-block {
+		min-height: 20rem;
 		background-image: url("../../assets/images/footer-white-cta-botom-block-1920.svg");
 	}
 }
@@ -2295,6 +2304,12 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	}
 }
 
+@media (min-width: 2100px) {
+	.title-video-hero {
+		padding: 15rem 0 25rem 0;
+	}
+}
+
 .title-video-hero .container {
 	width: 100%;
 	max-width: 1280px;
@@ -2323,6 +2338,12 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 @media (min-width: 993px) {
 	.title-video-hero .container .video-hook {
 		max-width: 75%;
+	}
+}
+
+@media (min-width: 2100px) {
+	.title-video-hero .container .video-hook {
+		max-width: fit-content;
 	}
 }
 
@@ -2841,6 +2862,12 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	}
 }
 
+@media (min-width: 2100px) {
+	.eyebrow-video-text {
+		padding: 10rem 0 25rem 0;
+	}
+}
+
 .eyebrow-video-text .container {
 	display: flex;
 	flex-direction: column;
@@ -2904,6 +2931,12 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 .eyebrow-video-text .container .block-image {
 	width: 100%;
 	max-width: 916px;
+}
+
+@media (min-width: 2100px) {
+	.eyebrow-video-text .container .block-image {
+		max-width: 100%;
+	}
 }
 
 .testimonials-block {

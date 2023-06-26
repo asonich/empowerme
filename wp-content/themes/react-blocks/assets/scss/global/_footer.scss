@@ -119,10 +119,11 @@ footer{
 
             background-image: url("../../assets/images/footer-white-cta-botom-block-320.svg");
             @include phone-lg {
+                min-height: 22rem;
                 background-image: url("../../assets/images/footer-white-cta-botom-block-375.svg");
             }
             @include tablet {
-
+                min-height: 250px;
                 background-image: url("../../assets/images/footer-white-cta-botom-block-768.svg");
             }
             @include laptop {
@@ -130,11 +131,15 @@ footer{
                 background-image: url("../../assets/images/footer-white-cta-botom-block-1280.svg");
             }
             @include desktop {
-                min-height: 249px;
+                min-height: 268px;
                 background-image: url("../../assets/images/footer-white-cta-botom-block-1440.svg");
             }
             @include full-width{
-                min-height: 246px;
+                min-height: 268px;
+                background-image: url("../../assets/images/footer-white-cta-botom-block-1920.svg");
+            }
+            @include big-desktop{
+                min-height: 20rem;
                 background-image: url("../../assets/images/footer-white-cta-botom-block-1920.svg");
             }
         }
