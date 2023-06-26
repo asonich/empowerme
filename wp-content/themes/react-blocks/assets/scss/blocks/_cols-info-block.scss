@@ -12,7 +12,6 @@
         .section-heading-block{
             margin-bottom: 30px;
             text-align: center;
-            display: flex;
             justify-content: center;
             @include laptop {
                 margin-bottom: 64px;
@@ -46,6 +45,7 @@
         .eyebrow{
             @include laptop{
                 max-width: 60%;
+                margin: 0 auto;
             }
 
             margin: 0;

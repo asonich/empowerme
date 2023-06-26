@@ -2483,7 +2483,6 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 .cols-info-block .container .section-heading-block {
 	margin-bottom: 30px;
 	text-align: center;
-	display: flex;
 	justify-content: center;
 }
 
@@ -2528,6 +2527,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 @media (min-width: 993px) {
 	.cols-info-block .container .eyebrow {
 		max-width: 60%;
+		margin: 0 auto;
 	}
 }
 
