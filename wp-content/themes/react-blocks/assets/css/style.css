@@ -2392,6 +2392,24 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	position: relative;
 }
 
+@media (min-width: 768px) {
+	.title-video-hero .container .block-image {
+		max-width: 75%;
+	}
+}
+
+@media (min-width: 993px) {
+	.title-video-hero .container .block-image {
+		max-width: 75%;
+	}
+}
+
+@media (min-width: 2100px) {
+	.title-video-hero .container .block-image {
+		max-width: fit-content;
+	}
+}
+
 .top-bg {
 	background-image: url("../../assets/images/hero-video-bg-1-mobile.svg");
 }

@@ -83,6 +83,15 @@
             margin: 61px auto;
             border-radius: 36px;
             position: relative;
+            @include tablet{
+                max-width: 75%;
+            }
+            @include laptop{
+                max-width: 75%;
+            }
+            @include big-desktop {
+                max-width: fit-content;
+            }
         }
     }
 }
