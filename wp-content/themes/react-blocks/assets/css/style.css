@@ -2895,6 +2895,12 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	}
 }
 
+@media (min-width: 2100px) {
+	.eyebrow-video-text .container .video-hook {
+		max-width: 100%;
+	}
+}
+
 .eyebrow-video-text .container .video-hook:before {
 	content: '';
 	position: absolute;
