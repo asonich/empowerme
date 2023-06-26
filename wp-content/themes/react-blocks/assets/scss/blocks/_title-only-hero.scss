@@ -16,6 +16,9 @@
     @include full-width-xl{
         padding: 143px 0;
     }
+    @include big-desktop{
+        padding: 13rem 0;
+    }
     .container {
         width: 100%;
         max-width: 1280px;
