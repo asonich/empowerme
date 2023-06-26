@@ -2294,19 +2294,19 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 @media (min-width: 1200px) {
 	.title-video-hero {
-		padding: 65px 0 10px 0;
+		padding: 5rem 0 7rem 0;
 	}
 }
 
 @media (min-width: 1600px) {
 	.title-video-hero {
-		padding: 95px 0 167px 0;
+		padding: 7rem 0 12rem 0;
 	}
 }
 
 @media (min-width: 1920px) {
 	.title-video-hero {
-		padding: 110px 0 185px 0;
+		padding: 11rem 0 15rem 0;
 	}
 }
 
