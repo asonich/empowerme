@@ -13,13 +13,13 @@
          padding: 20px 0 10px 0;
     }
     @include desktop{
-        padding: 5rem 0 7rem 0;
+        padding: 3rem 0 10rem 0;
     }
     @include full-width{
-        padding: 7rem 0 12rem 0;
+        padding: 4rem 0 20rem 0;
     }
     @include full-width-xl{
-        padding: 11rem 0 15rem 0;
+        padding: 5rem 0 20rem 0;
     }
     @include big-desktop{
         padding: 15rem 0 25rem 0;
@@ -90,7 +90,7 @@
                 max-width: 75%;
             }
             @include big-desktop {
-                max-width: fit-content;
+                max-width: 100%;
             }
         }
     }
