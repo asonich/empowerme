@@ -1,206 +1,138 @@
-const toggles = document.querySelectorAll( '.sub-menu-btn' );
-const toggles2 = document.querySelectorAll( '.sub-2' );
-const toggles_mobile = document.querySelectorAll('.mobile-sub-menu-btn');
-const open_menu = document.getElementById( 'open' );
-const close_menu = document.getElementById( 'close' );
-const close_banner = document.getElementById( 'close-banner' );
-const header_banner = document.querySelector( '.upper-header-banner' );
+document.addEventListener('DOMContentLoaded', function() {
+	const toggles = document.querySelectorAll('.sub-menu-btn');
+	const toggles2 = document.querySelectorAll('.sub-2');
+	const togglesMobile = document.querySelectorAll('.mobile-sub-menu-btn');
+	const openMenu = document.getElementById('open');
+	const closeMenu = document.getElementById('close');
+	const closeBannerButton = document.getElementById('close-banner');
+	const headerBanner = document.querySelector('.upper-header-banner');
 
-const header = document.getElementById( 'masthead' );
-open_menu.addEventListener( 'click', () => {
-	header.classList.add( 'open' );
-} );
-close_menu.addEventListener( 'click', () => {
-	header.classList.remove( 'open' );
-} );
+	const header = document.getElementById('masthead');
+	openMenu.addEventListener('click', function() {
+		header.classList.add('open');
+	});
+	closeMenu.addEventListener('click', function() {
+		header.classList.remove('open');
+	});
 
-function toggleAccord( e ) {
-	e.preventDefault();
-	e.stopPropagation();
-	if ( this.parentNode.classList.contains( 'active' ) ) {
-		e.preventDefault();
-		e.stopPropagation();
-		this.parentNode.classList.remove( 'active' );
-	} else {
-		for ( i = 0; i < toggles.length; i++ ) {
-			e.preventDefault();
-			e.stopPropagation();
-			toggles[ i ].parentNode.classList.remove( 'active' );
-		}
-		e.preventDefault();
-		e.stopPropagation();
-		this.parentNode.classList.add( 'active' );
-	}
-}
-function toggleAccordMobile( e ) {
-	e.preventDefault();
-	e.stopPropagation();
-	if ( this.parentNode.classList.contains( 'active-mobile' ) ) {
-		e.preventDefault();
-		e.stopPropagation();
-		this.parentNode.classList.remove( 'active-mobile' );
-	} else {
-		for ( i = 0; i < toggles_mobile.length; i++ ) {
-			e.preventDefault();
-			e.stopPropagation();
-			toggles_mobile[ i ].parentNode.classList.remove( 'active-mobile' );
-		}
-		e.preventDefault();
-		e.stopPropagation();
-		this.parentNode.classList.add( 'active-mobile' );
-	}
-}
-
-function toggleAccord2( e ) {
-	e.preventDefault();
-	e.stopPropagation();
-	if ( this.parentNode.classList.contains( 'active-sub' ) ) {
-		e.preventDefault();
-		e.stopPropagation();
-		this.parentNode.classList.remove( 'active-sub' );
-	} else {
-		for ( i = 0; i < toggles2.length; i++ ) {
-			e.preventDefault();
-			e.stopPropagation();
-			toggles2[ i ].parentNode.classList.remove( 'active-sub' );
-		}
-		e.preventDefault();
-		e.stopPropagation();
-		this.parentNode.classList.add( 'active-sub' );
-
-	}
-}
-for ( i = 0; i < toggles.length; i++ ) {
-	toggles[ i ].addEventListener( 'click', toggleAccord );
-}
-
-
-for ( i = 0; i < toggles2.length; i++ ) {
-	toggles2[ i ].addEventListener( 'click', toggleAccord2 );
-}
-
-for ( i = 0; i < toggles2.length; i++ ) {
-	toggles_mobile[ i ].addEventListener( 'click', toggleAccordMobile );
-}
-
-if ( document.getElementById( 'popup' ) !== null ) {
-	const popup_modal = document.querySelector( '.popup' );
-	const popup = document.getElementById( 'popup' );
-	const elements = document.getElementsByClassName( 'more' );
-	const popup_content = document.querySelector( '#popup .popup-container' );
-	const popup_image = document.querySelector( '#popup .popup-container .leader-image' );
-	const popup_leader_info = popup_content.querySelector( '.leader-info' );
-	const close_button = document.querySelector( '.close-popup' );
-	const popupOpen = function( e ) {
-		e.preventDefault();
-		popup_modal.classList.add( 'active' );
-		const leader_content = this.parentNode.querySelector( '.leader-popup-text' ).textContent;
-		const leader_image = this.parentNode.previousElementSibling.getAttribute( 'src' );
-		const leader_name = this.parentNode.querySelector( '.leader-name' ).textContent;
-		const leader_position = this.parentNode.querySelector( '.leader-position' ).textContent;
-		popup_image.setAttribute( 'src', leader_image );
-		popup_leader_info.querySelector( '.leader-name' ).textContent += leader_name;
-		popup_leader_info.querySelector( '.leader-description' ).textContent += leader_content;
-		popup_leader_info.querySelector( '.leader-position' ).textContent += leader_position;
-	};
-
-	for ( var i = 0; i < elements.length; i++ ) {
-		elements[ i ].addEventListener( 'click', popupOpen, false );
-	}
-	const popupClose = function() {
-		popup_modal.classList.remove( 'active' );
-		popup_leader_info.querySelector( '.leader-name' ).textContent = '';
-		popup_leader_info.querySelector( '.leader-description' ).textContent = '';
-		popup_leader_info.querySelector( '.leader-position' ).textContent = '';
-	};
-	close_button.addEventListener( 'click', popupClose, false );
-}
-
-function banner_close() {
-	header_banner.classList.add( 'closed_banner' );
-}
-if ( close_banner !== null ) {
-	close_banner.addEventListener( 'click', banner_close, false );
-}
-const close_video = document.getElementById( 'close-video' );
-const videos = document.querySelectorAll( '.video-hook' );
-const video_popup = document.getElementById( 'video-popup' );
-const video_empower = document.getElementById( 'empower-video' );
-const sources = video_empower.getElementsByTagName( 'iframe' );
-const iframe = document.querySelector( 'iframe' );
-
-function updateSrc( pos, arr, src ) {
-	return arr[ pos ] ? arr[ pos ].src = src : false;
-}
-
-function openVideo( e ) {
-	const video_src = this.getAttribute( 'video-data' );
-	console.log( video_src );
-	updateSrc( 0, sources, video_src );
-	video_popup.classList.add( 'activated' );
-	const player = new Vimeo.Player( iframe );
-	player.play();
-}
-
-for ( var i = 0; i < videos.length; i++ ) {
-	videos[ i ].addEventListener( 'click', openVideo, false );
-}
-
-function stopVideo( element ) {
-	const iframe = element.querySelector( 'iframe' );
-	const video = element.querySelector( 'video' );
-	if ( iframe ) {
-		const iframeSrc = iframe.src;
-		iframe.src = iframeSrc;
-	}
-	if ( video ) {
-		video.pause();
-	}
-}
-
-function closeVideo() {
-	const player = new Vimeo.Player( iframe );
-	player.pause();
-	video_popup.classList.remove( 'activated' );
-}
-
-close_video.addEventListener( 'click', closeVideo, false );
-
-const acc = document.getElementsByClassName( 'drop-down-info' );
-var i;
-
-for ( i = 0; i < acc.length; i++ ) {
-	acc[ i ].addEventListener( 'click', function() {
-		this.classList.toggle( 'active' );
-		const panel = this.nextElementSibling.nextElementSibling;
-		if ( panel.style.maxHeight ) {
-			panel.style.maxHeight = null;
-		} else {
-			panel.style.maxHeight = panel.scrollHeight + 'px';
-		}
-	} );
-}
-
-const resource_media_tab_link = document.getElementsByClassName('resource-media-tab-link');
-var i;
-
-const tabWrapper = document.querySelector(".tab-wrapper");
-const tabBtns = document.querySelectorAll(".tab-btn");
-const tabContents = document.querySelectorAll(".tab-contents .content");
-
-tabWrapper.addEventListener("click", (e) => {
-	const id = e.target.dataset.target;
-	if (id) {
-		// remove active from other buttons
-		tabBtns.forEach((btn) => {
-			btn.classList.remove("active");
-			e.target.classList.add("active");
+	function toggleAccordion(toggles, className) {
+		toggles.forEach(function(toggle) {
+			toggle.addEventListener('click', function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+				const parent = this.parentNode;
+				parent.classList.toggle(className);
+				if (className === 'active') {
+					const siblings = Array.from(parent.parentNode.children).filter(function(child) {
+						return child !== parent;
+					});
+					siblings.forEach(function(sibling) {
+						sibling.classList.remove(className);
+					});
+				}
+			});
 		});
-		// hide other tabContents
-		tabContents.forEach((content) => {
-			content.classList.remove("active");
-		});
-		const currentContent = document.getElementById(id);
-		currentContent.classList.add("active");
 	}
+
+	toggleAccordion(toggles, 'active');
+	toggleAccordion(toggles2, 'active-sub');
+	toggleAccordion(togglesMobile, 'active-mobile');
+
+	const popupModal = document.querySelector('.popup');
+	if (popupModal) {
+		const elements = document.getElementsByClassName('more');
+		const popupContent = document.querySelector('#popup .popup-container');
+		const popupImage = document.querySelector('#popup .popup-container .leader-image');
+		const popupLeaderInfo = popupContent.querySelector('.leader-info');
+		const closeButton = document.querySelector('.close-popup');
+
+		function openPopup(e) {
+			e.preventDefault();
+			popupModal.classList.add('active');
+			const leaderContent = this.parentNode.querySelector('.leader-popup-text').textContent;
+			const leaderImage = this.parentNode.previousElementSibling.getAttribute('src');
+			const leaderName = this.parentNode.querySelector('.leader-name').textContent;
+			const leaderPosition = this.parentNode.querySelector('.leader-position').textContent;
+			popupImage.setAttribute('src', leaderImage);
+			popupLeaderInfo.querySelector('.leader-name').textContent = leaderName;
+			popupLeaderInfo.querySelector('.leader-description').textContent = leaderContent;
+			popupLeaderInfo.querySelector('.leader-position').textContent = leaderPosition;
+		}
+
+		for (let i = 0; i < elements.length; i++) {
+			elements[i].addEventListener('click', openPopup, false);
+		}
+
+		function closePopup() {
+			popupModal.classList.remove('active');
+			popupLeaderInfo.querySelector('.leader-name').textContent = '';
+			popupLeaderInfo.querySelector('.leader-description').textContent = '';
+			popupLeaderInfo.querySelector('.leader-position').textContent = '';
+		}
+
+		closeButton.addEventListener('click', closePopup, false);
+	}
+
+	function closeBanner() {
+		headerBanner.classList.add('closed_banner');
+	}
+
+	if (closeBannerButton) {
+		closeBannerButton.addEventListener('click', closeBanner, false);
+	}
+
+	const closeVideo = document.getElementById('close-video');
+	const videos = document.querySelectorAll('.video-hook');
+	const videoPopup = document.getElementById('video-popup');
+	const videoEmpower = document.getElementById('empower-video');
+	const iframe = videoEmpower.querySelector('iframe');
+
+	function openVideo(e) {
+		const videoSrc = this.getAttribute('video-data');
+		iframe.src = videoSrc;
+		videoPopup.classList.add('activated');
+	}
+
+	videos.forEach(function(video) {
+		video.addEventListener('click', openVideo, false);
+	});
+
+	function closeVideoPopup() {
+		iframe.src = '';
+		videoPopup.classList.remove('activated');
+	}
+
+	if (closeVideo) {
+		closeVideo.addEventListener('click', closeVideoPopup, false);
+	}
+
+	const accordions = document.getElementsByClassName('drop-down-info');
+
+	for (let i = 0; i < accordions.length; i++) {
+		accordions[i].addEventListener('click', function() {
+			this.classList.toggle('active');
+			const panel = this.nextElementSibling.nextElementSibling;
+			panel.style.maxHeight = panel.style.maxHeight ? null : panel.scrollHeight + 'px';
+		});
+	}
+
+	const resourceMediaTabLinks = document.getElementsByClassName('resource-media-tab-link');
+	const tabWrapper = document.querySelector('.tab-wrapper');
+	const tabBtns = document.querySelectorAll('.tab-btn');
+	const tabContents = document.querySelectorAll('.tab-contents .content');
+
+	tabWrapper.addEventListener('click', function(e) {
+		const targetId = e.target.dataset.target;
+		if (targetId) {
+			tabBtns.forEach(function(btn) {
+				btn.classList.remove('active');
+			});
+			e.target.classList.add('active');
+			tabContents.forEach(function(content) {
+				content.classList.remove('active');
+			});
+			const currentContent = document.getElementById(targetId);
+			currentContent.classList.add('active');
+		}
+	});
 });
