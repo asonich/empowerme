@@ -33,10 +33,10 @@ $description = get_field('description');
 if ($background) echo " " . $background; ?>">
     <div class="container">
         <?php if ($title) { ?>
-            <div class="page-title"><?php echo esc_html($title); ?></div>
+            <div class="page-title"><?php echo $title; ?></div>
         <?php } ?>
         <?php if ($description) { ?>
-            <div class="page-description"><?php echo esc_html($description); ?></div>
+            <div class="page-description"><?php echo $description; ?></div>
         <?php } ?>
     </div>
 </div>
