@@ -8,13 +8,13 @@
         padding:  24px 0px 238px 0px;
     }
     @include laptop {
-        padding: 112px 0;
+        padding: 65px 0 115px 0;
     }
     @include full-width{
-        padding: 112px 0;
+        padding: 85px 0 145px 0;
     }
     @include full-width-xl{
-        padding: 143px 0;
+        padding: 95px 0 195px 0;
     }
     @include big-desktop{
         padding: 13rem 0;

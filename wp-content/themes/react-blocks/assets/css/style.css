@@ -1765,19 +1765,19 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 @media (min-width: 993px) {
 	.title-only-hero {
-		padding: 112px 0;
+		padding: 65px 0 115px 0;
 	}
 }
 
 @media (min-width: 1600px) {
 	.title-only-hero {
-		padding: 112px 0;
+		padding: 85px 0 145px 0;
 	}
 }
 
 @media (min-width: 1920px) {
 	.title-only-hero {
-		padding: 143px 0;
+		padding: 95px 0 195px 0;
 	}
 }
 
