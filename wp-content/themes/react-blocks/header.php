@@ -28,6 +28,7 @@ $nav = get_field('menu', 'option');
 $login_bnt = get_field('login_button', 'option');
 $partners_bnt = get_field('partners_button', 'option');
 $banner_text = get_field('banner_text', 'option');
+
 ?>
 <div id="page">
     <?php if ($banner_text) { ?>

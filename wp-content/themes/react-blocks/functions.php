@@ -263,3 +263,30 @@ function leaders_posts_orderby($query)
         $query->set('meta_type', 'numeric');
     }
 }
+
+function screen_with(){
+    if (isset($_COOKIE['screenWidth'])) {
+        $screenWidth = $_COOKIE['screenWidth'];
+        return $screenWidth;
+    }
+}
+
+function image_size_depends_screen_width(){
+
+    if (isset($_COOKIE['screenWidth'])) {
+        $screen_width = screen_with();
+        if ($screen_width <= 480){
+            $image_size = "medium";
+        } elseif ($screen_width <= 768){
+            $image_size = "medium_large";
+        } elseif ($screen_width <= 1200){
+            $image_size = "large";
+        } elseif ($screen_width <= 1600){
+            $image_size = "1536x1536";
+        } elseif ($screen_width >= 1900){
+            $image_size = "2048x2048";
+        }
+
+        return $image_size;
+    }
+}

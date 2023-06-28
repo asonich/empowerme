@@ -135,4 +135,29 @@ document.addEventListener('DOMContentLoaded', function() {
 			currentContent.classList.add('active');
 		}
 	});
+
 });
+
+function setCookie(name, value, days) {
+	var expires = "";
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+		expires = "; expires=" + date.toUTCString();
+	}
+	document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function updateScreenWidthCookie() {
+	var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+	try {
+		setCookie("screenWidth", screenWidth, 365);
+		console.log("Screen width cookie updated successfully");
+	} catch (error) {
+		console.error("Error updating screen width cookie:", error);
+	}
+}
+
+// Add event listener for beforeunload event
+window.addEventListener('beforeunload', updateScreenWidthCookie);
