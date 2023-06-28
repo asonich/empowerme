@@ -3438,6 +3438,12 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	margin-bottom: 8px;
 }
 
+.related-blog-posts-block .container .posts .post .post-info .post-content-block {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: #475467;
+}
+
 .related-blog-posts-block .container .posts .post .post-navigation {
 	padding: 0 24px;
 }
