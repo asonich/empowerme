@@ -40,11 +40,11 @@ if ($background) echo " " . $background; ?>">
         <?php if ($description) { ?>
             <div class="page-description"><?php echo esc_html($description); ?></div>
         <?php } ?>
+        <?php
+        $image_size = image_size_depends_screen_width();
+        ?>
         <?php if ($video_url) { ?>
             <div class="video-hook" video-data="<?php echo $video_url . '&amp;autopause=1&amp;autoplay=1'; ?>">
-                <?php
-                $image_size = image_size_depends_screen_width();
-                ?>
                 <img src="<?php echo $video_image["sizes"]["$image_size"] ?>" alt="<?php echo $video_image['alt'] ?>">
             </div>
         <?php } else { ?>
