@@ -36,9 +36,13 @@ if ($background) echo " " . $background; ?>">
         <p class="eyebrow"><?php echo $eyebrow; ?></p>
         <div class="video-hook" video-data="<?php echo $video_url . '&amp;autopause=1&amp;autoplay=1'; ?>">
             <?php
+            if (isset($_COOKIE['screenWidth'])) {
             $image_size = image_size_depends_screen_width();
             ?>
             <img class="block-image" src="<?php echo $video_image["sizes"]["$image_size"] ?>" alt="<?php echo $video_image['alt'] ?>">
+            <?php } else { ?>
+                <img class="block-image" src="<?php echo $video_image['url'] ?>" alt="<?php echo $video_image['alt'] ?>">
+            <?php } ?>
         </div>
     </div>
 </div>

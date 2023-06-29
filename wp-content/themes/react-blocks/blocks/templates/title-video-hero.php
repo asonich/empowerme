@@ -41,6 +41,7 @@ if ($background) echo " " . $background; ?>">
             <div class="page-description"><?php echo esc_html($description); ?></div>
         <?php } ?>
         <?php
+        if (isset($_COOKIE['screenWidth'])) {
         $image_size = image_size_depends_screen_width();
         ?>
         <?php if ($video_url) { ?>
@@ -49,6 +50,20 @@ if ($background) echo " " . $background; ?>">
             </div>
         <?php } else { ?>
             <img class="block-image" src="<?php echo $video_image["sizes"]["$image_size"] ?>" alt="<?php echo $video_image['alt'] ?>">
+        <?php }
+        } else { ?>
+            <?php if ($video_url) { ?>
+                <div class="video-hook" video-data="<?php echo $video_url . '&amp;autopause=1&amp;autoplay=1'; ?>">
+                    <img src="<?php echo $video_image['url'] ?>" alt="<?php echo $video_image['alt'] ?>">
+                    <?php
+                    $image_size = image_size_depends_screen_width();
+                    ?>
+                    <img src="<?php echo $video_image["sizes"]["$image_size"] ?>" alt="<?php echo $video_image['alt'] ?>">
+                </div>
+            <?php } else { ?>
+                <img class="block-image" src="<?php echo $video_image['url'] ?>" alt="<?php echo $video_image['alt'] ?>">
+                <img class="block-image" src="<?php echo $video_image["sizes"]["$image_size"] ?>" alt="<?php echo $video_image['alt'] ?>">
+            <?php } ?>
         <?php } ?>
     </div>
 </div>

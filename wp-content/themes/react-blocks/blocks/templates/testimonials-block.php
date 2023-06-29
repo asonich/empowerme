@@ -49,12 +49,17 @@ $author_title = get_field('author_info');
                     <p class="author-info"><?php echo $author_title; ?></p>
                 </div>
                 <?php
+                if (isset($_COOKIE['screenWidth'])) {
                 $image_size = image_size_depends_screen_width();
                 ?>
                 <img class="testimonial-image" src="<?php echo $testimonial_image["sizes"]["$image_size"] ?>"
                      alt="<?php echo $testimonial_image['alt'] ?>">
                 <img class="mobile-image" src="<?php echo $mobile_image["sizes"]["$image_size"] ?>"
                      alt="<?php echo $mobile_image['alt'] ?>">
+                <?php } else { ?>
+                    <img class="testimonial-image" src="<?php echo $testimonial_image['url']?>" alt="<?php echo $testimonial_image['alt']?>">
+                    <img class="mobile-image" src="<?php echo $mobile_image['url']?>" alt="<?php echo $mobile_image['alt']?>">
+                <?php } ?>
             </div>
         </div>
     </div>
