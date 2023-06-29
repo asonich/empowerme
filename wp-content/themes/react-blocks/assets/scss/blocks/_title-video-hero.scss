@@ -97,8 +97,28 @@
 }
 .top-bg{
     background-image: url("../../assets/images/hero-video-bg-1-mobile.svg");
+    margin-bottom: -65px;
+    @include phone-lg{
+        margin-bottom: -65px;
+    }
     @include tablet{
         background-image: url("../../assets/images/hero-video-bg-1.svg");
+        margin-bottom: -65px;
+    }
+    @include laptop{
+        margin-bottom: -65px;
+    }
+    @include desktop{
+        margin-bottom: -111px;
+    }
+    @include full-width{
+        margin-bottom: -111px;
+    }
+    @include full-width-xl{
+        margin-bottom: -111px;
+    }
+    @include big-desktop{
+        margin-bottom: -10rem;
     }
 }
 .centered-bg{

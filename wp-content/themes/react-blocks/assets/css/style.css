@@ -2412,11 +2412,49 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 .top-bg {
 	background-image: url("../../assets/images/hero-video-bg-1-mobile.svg");
+	margin-bottom: -65px;
+}
+
+@media (min-width: 480px) {
+	.top-bg {
+		margin-bottom: -65px;
+	}
 }
 
 @media (min-width: 768px) {
 	.top-bg {
 		background-image: url("../../assets/images/hero-video-bg-1.svg");
+		margin-bottom: -65px;
+	}
+}
+
+@media (min-width: 993px) {
+	.top-bg {
+		margin-bottom: -65px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.top-bg {
+		margin-bottom: -111px;
+	}
+}
+
+@media (min-width: 1600px) {
+	.top-bg {
+		margin-bottom: -111px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.top-bg {
+		margin-bottom: -111px;
+	}
+}
+
+@media (min-width: 2100px) {
+	.top-bg {
+		margin-bottom: -10rem;
 	}
 }
 
