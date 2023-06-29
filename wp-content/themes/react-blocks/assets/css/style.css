@@ -3541,7 +3541,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 .big-features .container .features-content .features-list {
 	width: 100%;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 @media (min-width: 993px) {
@@ -3552,7 +3552,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 .big-features .container .features-content .features-list .feature {
 	align-items: flex-start;
-	margin-bottom: 24px;
+	margin-bottom: 12px;
 }
 
 .big-features .container .features-content .features-list .feature:last-of-type {

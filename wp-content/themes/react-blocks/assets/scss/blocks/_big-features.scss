@@ -32,13 +32,13 @@
             .features-list {
                 width: 100%;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: center;
                 @include laptop{
                     max-width: 624px;
                 }
                 .feature{
                     align-items: flex-start;
-                    margin-bottom: 24px;
+                    margin-bottom: 12px;
                     &:last-of-type{
                         margin-bottom: 0;
                     }
