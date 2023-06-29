@@ -109,16 +109,16 @@
         margin-bottom: -65px;
     }
     @include desktop{
-        margin-bottom: -111px;
+        margin-bottom: -85px;
     }
     @include full-width{
-        margin-bottom: -111px;
+        margin-bottom: -65px;
     }
     @include full-width-xl{
-        margin-bottom: -111px;
+        margin-bottom: -40px;
     }
     @include big-desktop{
-        margin-bottom: -10rem;
+        margin-bottom: -8rem;
     }
 }
 .centered-bg{

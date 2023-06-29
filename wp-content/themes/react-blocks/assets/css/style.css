@@ -2436,25 +2436,25 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 @media (min-width: 1200px) {
 	.top-bg {
-		margin-bottom: -111px;
+		margin-bottom: -85px;
 	}
 }
 
 @media (min-width: 1600px) {
 	.top-bg {
-		margin-bottom: -111px;
+		margin-bottom: -65px;
 	}
 }
 
 @media (min-width: 1920px) {
 	.top-bg {
-		margin-bottom: -111px;
+		margin-bottom: -40px;
 	}
 }
 
 @media (min-width: 2100px) {
 	.top-bg {
-		margin-bottom: -10rem;
+		margin-bottom: -8rem;
 	}
 }
 
