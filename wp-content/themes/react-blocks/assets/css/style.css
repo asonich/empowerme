@@ -3893,4 +3893,40 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 	background-color: #99BFD6;
 }
 
+.image-block-map {
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 25px 0;
+}
+
+.image-block-map .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.image-block-map .container .video-hook {
+	width: 100%;
+	position: relative;
+	max-width: 100%;
+}
+
+.image-block-map .container .video-hook img {
+	display: block;
+	margin: 61px auto;
+	border-radius: 32px;
+	position: relative;
+}
+
+.image-block-map .container .block-image {
+	width: 100%;
+}
+
+@media (min-width: 2100px) {
+	.image-block-map .container .block-image {
+		max-width: 100%;
+	}
+}
+
 /*# sourceMappingURL=style.css.map */

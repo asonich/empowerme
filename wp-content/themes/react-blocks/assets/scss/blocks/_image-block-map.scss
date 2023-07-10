@@ -1,0 +1,28 @@
+.image-block-map{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25px 0;
+        .container{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        .video-hook{
+            width: 100%;
+            position: relative;
+            max-width: 100%;
+            img{
+                display: block;
+                margin: 61px auto;
+                border-radius: 32px;
+                position: relative;
+            }
+        }
+        .block-image{
+            width: 100%;
+            @include big-desktop {
+                max-width: 100%;
+            }
+        }
+    }
+}

@@ -121,4 +121,12 @@ $blocks = [
         'category' => 'happen-blocks',
         'icon' => 'block-default',
     ],
+    'image_block' => [
+        'name' => 'image_block',
+        'title' => ('Image Block'),
+        'description' => ('Image Block'),
+        'render_callback' => 'render_acf_block_callback',
+        'category' => 'happen-blocks',
+        'icon' => 'block-default',
+    ],
 ];
