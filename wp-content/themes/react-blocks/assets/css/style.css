@@ -3914,7 +3914,7 @@ footer .main-footer .container .bottom-footer .footer-additional-links .footer-i
 
 .image-block-map .container .video-hook img {
 	display: block;
-	margin: 61px auto;
+	margin: 61px auto 0 auto;
 	border-radius: 32px;
 	position: relative;
 }
